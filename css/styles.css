@@ -24,3 +24,9 @@
     width: 200px;
     height:30px;
 }
+
+#navbar .navbar-nav #cadastro > a {
+    border:1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+}
