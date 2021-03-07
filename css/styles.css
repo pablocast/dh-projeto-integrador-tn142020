@@ -1,0 +1,26 @@
+#navbar {
+    position: relative;
+    background-color: #0052FB;
+    padding: 0.5rem 1rem;
+  }
+
+#navbar .navbar-nav > li> a {
+    color: #fff !important;
+    text-decoration: none !important;
+    margin: 0;
+    padding: 1.4rem 1rem 1.6rem;
+    color: #555;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border-top: .3rem solid transparent;
+
+}
+
+#navbar .navbar-brand > img {
+    object-fit: cover;
+    width: 200px;
+    height:30px;
+}
