@@ -25,9 +25,6 @@ body {
     font-weight: 6em;
     color: #fff;
     font-family: 'Roboto', sans-serif;
-
-    background-color: #0052FB;
-
 }
 .titulo{
     font-size: 2.625em;
@@ -52,7 +49,30 @@ body {
     background-color: #B58E02;
 }
 
+.comp-2 {
+    background-color: #0052FB;
+    display: flex;
+    height: 83vh;
+    width: 100%;
+}
 
+.esquerda {
+    display: flex;
+    align-items: flex-end;
+}
+
+.esquerda > img {
+    max-width: 90%;
+}
+
+.direita {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
 
 #navbar {
     position: relative;
