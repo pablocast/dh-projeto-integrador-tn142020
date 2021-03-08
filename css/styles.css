@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap');
+
+* { 
+   text-decoration: none;
+   list-style: none;
+   padding: 0px;
+   margin: 0px;
+}   
+
+.paragrafos {
+    font-size: 18px;
+    font-weight: 27px;
+    color: #020113;
+    font-family: 'Roboto', sans-serif;
+}
+
 #navbar {
     position: relative;
     background-color: #0052FB;
@@ -14,7 +32,7 @@
     padding: 1.4rem 1rem 1.6rem;
     color: #555;
     letter-spacing: 0.1em;
-    font-family: Inter,serif;
+    font-family: 'Roboto',sans-serif;
     font-size: 0.9rem;
     font-weight: normal;
     text-decoration: none;
