@@ -227,7 +227,6 @@ footer{
     line-height: 18px;
     color: #fff;
     font-family: 'Roboto', sans-serif;
-    margin-bottom: 15px;
 }
 
 .font-light{
@@ -239,12 +238,12 @@ footer{
 }
 /* carrousel */
 .background-carousel {
-    background: rgba(133, 132, 132,0.2);
+    position: relative;
+    background: #fff;
   }
 
 .container__title {
-    padding: 50px;
-    margin-bottom: 50px;
+    margin-left: 235px;
 }
 
 .container__title__left {
@@ -254,7 +253,8 @@ footer{
 
 .container__title__right {
     display: inline-block;
-    float:right;
+    margin-left: 400px;
+    margin-top: 10px;
 }
 
 .customNavigation a{
@@ -268,7 +268,9 @@ footer{
 .owl-carousel {
   display: inline-flex !important;
   align-items: stretch !important;
-  margin-top: 20px;
+  margin-top: 20px !important;
+  width: 75% !important;
+  float:right;
 }
     
 .testimonials .item {
