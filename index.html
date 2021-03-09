@@ -12,9 +12,14 @@
     <link rel="stylesheet" href='./css/style.css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    <!--OWL Carousel-->
+    <link rel="stylesheet" href="./vendor/owl.carousel/assets/owl.carousel.css">
+    <link rel="stylesheet" href="./vendor/owl.carousel/assets/owl.theme.default.css">
+
 </head>
 
 <body>
+    
     <!-- NAVBAR-->
     <header class="nav-holder make-sticky">
         <div id="navbar" role="navigation" class="navbar navbar-expand-lg">
@@ -37,6 +42,7 @@
             </div>
         </div>
     </header>
+
     <main>
         <main class="comp-2">
                 <div class="container">
@@ -107,6 +113,115 @@
 
             </div>
         </section>
+
+        <!-- COMP4-->
+        <section class="bar background-carousel">
+           
+          <div class="container">
+            
+            <div class="container__title">
+              <div class='container__title__left'>
+                <div class="heading">
+                  <h2>Lorem Ipsum is simply dummy text</h2>
+                </div>
+              </div>
+              <div class='container__title__right'>
+                <div class="customNavigation">
+                  <a class="btn prev"></a>
+                  <a class="btn next"></a>
+                </div>
+              </div>
+            </div>
+            
+
+              <!-- Carrousel Start-->
+            <ul class="owl-carousel testimonials list-unstyled equal-height">
+              <li class="item">
+                <div class="testimonial d-flex flex-wrap">
+                  <div class="text">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
+                  </div>
+                  <div class="bottom d-flex align-items-center justify-content-between align-self-end">
+                    <div class="testimonial-info d-flex">
+                      <div class="title">
+                        <h5>Lorem Ipsum</h5>
+                        <p>Lorem Ipsum is simply</p>
+                      </div>
+                      <div class="avatar"><img alt="" src="./img/person-1.jpg" class="img-fluid"></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <div class="testimonial d-flex flex-wrap">
+                  <div class="text">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
+                  </div>
+                  <div class="bottom d-flex align-items-center justify-content-between align-self-end">
+                    <div class="testimonial-info d-flex">
+                      <div class="title">
+                          <h5>Lorem Ipsum</h5>
+                          <p>Lorem Ipsum is simply</p>
+                      </div>
+                      <div class="avatar"><img alt="" src="./img/person-2.jpg" class="img-fluid"></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <div class="testimonial d-flex flex-wrap">
+                  <div class="text">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
+                  </div>
+                  <div class="bottom d-flex align-items-center justify-content-between align-self-end">
+                    <div class="testimonial-info d-flex">
+                      <div class="title">
+                          <h5>Lorem Ipsum</h5>
+                          <p>Lorem Ipsum is simply</p>
+                      </div>
+                      <div class="avatar"><img alt="" src="./img/person-3.png" class="img-fluid"></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <div class="testimonial d-flex flex-wrap">
+                  <div class="text">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
+                  </div>
+                  <div class="bottom d-flex align-items-center justify-content-between align-self-end">
+                    <div class="testimonial-info d-flex">
+                      <div class="title">
+                          <h5>Lorem Ipsum</h5>
+                          <p>Lorem Ipsum is simply</p>
+                      </div>
+                      <div class="avatar"><img alt="" src="./img/person-4.jpg" class="img-fluid"></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <div class="testimonial d-flex flex-wrap">
+                  <div class="text">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
+                  </div>
+                  <div class="bottom d-flex align-items-center justify-content-between align-self-end">
+                    <div class="icon"><i class="fa fa-quote-left"></i></div>
+                    <div class="testimonial-info d-flex">
+                      <div class="title">
+                          <h5>Lorem Ipsum</h5>
+                          <p>Lorem Ipsum is simply</p>
+                      </div>
+                      <div class="avatar"><img alt="" src="./img/person-1.jpg" class="img-fluid"></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+              <!-- Carrousel End-->
+          </div>
+        </section>
+
     </main>
 
     <footer>
@@ -154,13 +269,30 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
+    <script src="./vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="./vendor/owl.carousel2.thumbs/owl.carousel2.thumbs.min.js"></script>
 
     <script>
-        // Carrega navbar
-        $.get("./components/navbar.html", function (data) {
-            $("#nav-placeholder").replaceWith(data);
-        });
+      
+      $(document).ready(function() {
+
+      var owl = $(".owl-carousel");
+
+      owl.owlCarousel();
+
+      // Custom Navigation Events
+      $(".next").click(function(){
+        owl.trigger('owl.next');
+      })
+      $(".prev").click(function(){
+        owl.trigger('owl.prev');
+ })
+
+});
+
+
     </script>
+
 
 </body>
 
