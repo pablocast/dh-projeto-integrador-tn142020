@@ -257,12 +257,37 @@ footer{
     margin-top: 10px;
 }
 
-.customNavigation a{
+.customNavigation .btn {
   display: inline-block;
   width: 24px;
   height: 24px;
   border-radius: 50%;
   background: rgba(133, 132, 132,0.2);
+}
+
+.customNavigation .btn.active {
+    background-color:  #0052FB!important;
+  }
+
+
+.arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    position: absolute;
+    margin-left: -4px;
+    margin-top: 0.5px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
 }
 
 .owl-carousel {
