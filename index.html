@@ -104,8 +104,8 @@
               </div>
               <div class='container__title__right'>
                 <div class="customNavigation">
-                  <a class="btn prev"></a>
-                  <a class="btn next"></a>
+                  <a class="btn prev active"><i class="arrow left"></i></a>
+                  <a class="btn next"><i class="arrow right"></i></a>
                 </div>
               </div>
             </div>
@@ -197,6 +197,7 @@
           </div>
         </section>
 
+        <!--COMP 4-->
         <section class="comp-4">
             <div class="container">
                 <div class="esquerda_camp4">
@@ -220,6 +221,7 @@
         </section>
     </main>
 
+    <!--FOOTER-->
     <footer>
         <div class="container">
             <div class="conteudo-footer">
@@ -248,13 +250,6 @@
         </div>
     </footer>
 
-
-
-
-
-
-
-
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -269,7 +264,7 @@
     <script src="./vendor/owl.carousel2.thumbs/owl.carousel2.thumbs.min.js"></script>
 
     <script>
-      
+      /// butões carousel
       $(document).ready(function() {
 
       var owl = $(".owl-carousel");
@@ -278,14 +273,19 @@
 
       // Custom Navigation Events
       $(".next").click(function(){
-        owl.trigger('owl.next');
+        owl.trigger('next.owl.carousel');
       })
+
       $(".prev").click(function(){
-        owl.trigger('owl.prev');
- })
+        owl.trigger('prev.owl.carousel');
+      })
 
-});
-
+      });
+      
+      $(".customNavigation .btn").click(function(){
+      $(".customNavigation .btn").removeClass('active');
+      $(this).toggleClass('active'); 
+      });
 
     </script>
 
