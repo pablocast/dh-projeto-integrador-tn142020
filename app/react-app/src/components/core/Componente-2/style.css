@@ -1,0 +1,73 @@
+/* componente 2 */
+
+.titulo-banner {
+    font-size: 62px;
+    line-height: 83px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.titulo_menor {
+    font-size: 14px;
+    line-height: 21px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 15px;
+    margin-bottom: 30px;
+}
+
+
+.comp-2 {
+    background-color: #0052FB;
+    display: flex;
+    height: 83vh;
+    width: 100%;
+}
+
+.comp2-button {
+    display: flex;
+}
+
+.esquerda {
+    width: 40%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+
+img {
+    width: 100%;
+}
+
+.direita {
+    padding: 60px;
+    max-width: 60%;
+    align-items: flex-start;
+    flex-direction: column;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+p {
+    margin-top: 0px;
+}
+
+/* media queries */
+
+@media (min-width: 992px){
+    .container {
+        max-width: 960px;
+    }
+}

@@ -1,14 +1,14 @@
-import Container1 from '../Container-1'
-import Container2 from '../Container-2'
-import Container3 from '../Container-3'
+import Component2 from '../Componente-2'
+import Component3 from '../Componente-3'
+import Component4 from '../Componente-4'
 import './style.css'
 
 const Main = () => {
   return (
     <main className="main">
-      <Container1 />
-      <Container2 />
-      <Container3 />
+      <Component2 />
+      <Component3 />
+      <Component4 />
     </main>
   )
 }

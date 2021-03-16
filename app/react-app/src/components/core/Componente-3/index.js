@@ -1,6 +1,6 @@
 import './style.css'
 
-const Container3 = () => {
+const Component3 = () => {
 
     return (
         <div className='comp-3'> 
@@ -10,4 +10,4 @@ const Container3 = () => {
 
 }
 
-export default Container3
+export default Component3
