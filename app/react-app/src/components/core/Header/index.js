@@ -1,11 +1,21 @@
 import './style.css'
+import React from 'react'
+import logo from '../../../assets/logo.jpg'
 
 const Header = () => {
   return (
-    <section className="header">
-        <p>This is header</p>
-    </section>
-  )
+    <header className="Header">
+      <img src={logo} className ='logo' alt='logo' />
+      <nav className='Nav'>
+        <a href='/plataforma'>A Plataforma</a>
+        <a href='/cursos'>Cursos</a>
+        <a href='/empresas'>Empresas</a>
+        <a href='/contato'>Contato</a>
+        <a href='/cadastro' id="Cadastro">Cadastre-se</a>
+      </nav>
+    </header>
+  );
 }
 
-export default Header
+export default Header; 
+
