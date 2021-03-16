@@ -1,28 +1,21 @@
 import './style.css'
 import React from 'react'
-import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
-import Typography from '@material-ui/core/Typography'
-import Button from '@material-ui/core/Button'
-import IconButton from '@material-ui/core/IconButton'
-import MenuIcon from '@material-ui/icons/Menu'
+import logo from '../../../assets/logo.jpg'
 
 const Header = () => {
   return (
-    <div >
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton edge="start" color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6">
-            News
-          </Typography>
-          <Button color="inherit">Login</Button>
-        </Toolbar>
-      </AppBar>
-    </div>
+    <header className="Header">
+      <img src={logo} className ='logo' alt='logo' />
+      <nav className='Nav'>
+        <a href='/plataforma'>A Plataforma</a>
+        <a href='/cursos'>Cursos</a>
+        <a href='/empresas'>Empresas</a>
+        <a href='/contato'>Contato</a>
+        <a href='/cadastro' id="Cadastro">Cadastre-se</a>
+      </nav>
+    </header>
   );
 }
 
 export default Header; 
+
