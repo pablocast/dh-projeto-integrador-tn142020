@@ -1,0 +1,24 @@
+.Componente-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+.Componente-3 h2 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.Carousel-holder {
+    margin:40px 0px 0px 220px;
+}
+
+.Carousel-holder button {
+    background-color: white;
+} button:active {
+    background:#0052FB !important;
+} button:hover {
+    background:#0052FB !important;
+} button:focus {
+    background:#0052FB !important;
+}
