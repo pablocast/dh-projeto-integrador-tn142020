@@ -13,14 +13,7 @@ body {
   height: auto;
 }
 
-.titulo-banner {
-  font-size: 62px;
-  line-height: 83px;
-  color: #fff;
-  font-family: 'Roboto', sans-serif;
-  text-align: left;
-  margin-bottom: 50px;
-}
+
 
 .titulo {
   font-size: 36px;

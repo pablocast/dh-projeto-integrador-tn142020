@@ -1,10 +1,10 @@
 import './style.css'
-import Image from '../../../assets/img/banner.png'
+import Image from '../../../assets/banner.png'
 
 const Component2 = () => {
 
     return (
-        <div className="comp-2">
+        <main className="comp-2">
             <div className="container">
                 <div className="direita">
                     <p className="titulo-banner">Evolua rápido em busca dos seus objetivos</p>
@@ -17,7 +17,7 @@ const Component2 = () => {
                     <img src={Image} alt=""/>
                 </div>
             </div> 
-        </div>
+        </main>
     )
 
 }

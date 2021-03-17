@@ -1,4 +1,4 @@
-/* componente 2 */
+/* componente 1 */
 
 .titulo-banner {
     font-size: 62px;
@@ -19,34 +19,35 @@
 }
 
 
-.comp-2 {
+.comp-1 {
     background-color: #0052FB;
     display: flex;
     height: 83vh;
     width: 100%;
 }
 
-.comp2-button {
+.comp1-button {
     display: flex;
 }
 
 .esquerda {
-    width: 40%;
+    width: 50%;
     display: flex;
     align-items: flex-end;
-    justify-content: flex-end;
+    margin-left: 120px;
 }
 
 
 img {
-    width: 100%;
+    width: 125%;
 }
 
 .direita {
-    padding: 60px;
-    max-width: 60%;
+    align-items: left;
+    padding: 60px 0 0 0;
+    max-width: 50%;
     align-items: flex-start;
-    flex-direction: column;
+    justify-content:inherit;
     color: #fff;
 }
 
@@ -54,8 +55,7 @@ img {
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 200px;
     margin-right: auto;
     margin-left: auto;
 }
