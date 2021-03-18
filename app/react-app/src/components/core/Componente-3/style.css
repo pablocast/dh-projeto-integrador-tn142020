@@ -2,11 +2,17 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-bottom: 50px;
   }
 
 .Componente-3 h2 {
     font-size: 2rem;
     font-weight: 500;
+    font-size: 36px;
+    line-height: 44px;
+    color: #020113;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 30px;
 }
 
 .Carousel-holder {
