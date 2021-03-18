@@ -7,15 +7,6 @@
     width: 100%;
 }
 
-.skill-container-img {
-    width: 50%;
-}
-
-.skill-container-img img {
-    max-width: 100%;
-}
-
-
 
 .skill-container-text {
     width: 50%;
@@ -36,13 +27,12 @@
 }
 
 .skill-container-img img {
-    max-width: 100%;
+    max-width: 75%;
+    float: right;
 }
 
-
-
 .skill-container-text {
-    width: 50%;
+    width: 30%;
     display: flex;
     justify-content: center;
     align-items: center;

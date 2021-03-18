@@ -22,7 +22,7 @@ const depoimentos = [
 const Component3 = () => {
     return (
     <MDBContainer className='Componente-3'>
-        <h2 className="h1-responsive font-weight-bold my-5">
+        <h2 className="h2-responsive font-weight-bold my-5">
             Veja o depoimento de alguns dos nossos alunos
         </h2>
         <Carousel breakPoints={breakPoints} pagination={false} className='Carousel-holder'>
