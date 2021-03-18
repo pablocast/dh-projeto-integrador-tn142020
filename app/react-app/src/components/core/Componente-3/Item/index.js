@@ -4,7 +4,7 @@ import {MDBCol, MDBCard, MDBCardBody } from "mdbreact"
 
 const Item = (props) => {
     const { cargo, testimonio, nome, avatar } = props
-    console.log('../../../../assets/img/'+ `${avatar}`)
+  
     return (
             <MDBCol className="Card">
                 <MDBCard testimonial className="Testimonial">

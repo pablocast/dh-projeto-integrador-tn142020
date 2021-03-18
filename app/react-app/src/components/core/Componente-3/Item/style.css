@@ -12,14 +12,18 @@
     width: 90%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     background-color: #fff;
-    display: flex;
     flex-wrap: wrap;
-    height: 150px;
+    height: 170px;
 }
 
 .Testimonial {
     padding: 20px;
 }
+
+.Testimonial__top {
+    display: flex;
+}
+
 
 .Testimonial__top p {
     font-size: 0.6rem;
@@ -31,6 +35,8 @@
     align-items: center;
     justify-content:space-between ;
     align-self: flex-end;
+    position:absolute;
+    bottom: 0;
 }
 
 .Testimonial__bottom__title h5 {
@@ -51,5 +57,5 @@
     max-height: 60px;
     border-radius: 50%;
     overflow: hidden;
-    margin-right: 0px;
+    margin-left: 30px;
 }
