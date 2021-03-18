@@ -130,6 +130,14 @@ img {
         position: relative;
 
     }
+    .nav-toggle:focus{
+        outline:none;
+    }
+    .nav-toggle{
+        border: none !important;
+        outline: none;
+    }
+  
 
     .nav-toggle {
         padding: .5em;
@@ -137,8 +145,8 @@ img {
         border: 0;
         cursor: pointer;
         position: absolute;
-        right: 1em;
-        top: 1em;
+        right: 2em;
+        top: 2.5em;
         z-index: 1000;
 
     }
@@ -294,7 +302,6 @@ section {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-    border: red solid 1px;
 }
 
 
@@ -305,6 +312,7 @@ section {
 
 .expert {
     height: fit-content;
+    padding: 10px;
 }
 
 @media(max-width:1200px) {
@@ -400,7 +408,58 @@ section {
 }
 
 
+@media(max-width:980px){
+    .titulo-skills{
+        font-size:24px ;
+    }
+    .skill-container-text{
+        align-items: flex-start;
+    }
+}
+@media(max-width:750px){
+    .skill-container{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .skill-container-img{
+        width: 100%;
 
+    }
+    .skill-container-img img{
+        width: 100%;
+        height: 500px;
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
+}
+    .skill-container-text{
+        width: 100%;
+        height: max-content;
+        display: block;
+        position: relative;
+        bottom: 400px;
+        background-color: rgba(200, 200, 200, 0.4);
+        margin: 0;
+    }
+    .titulo-skills{
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    .skill-ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .skill-ul li {
+        color: black;
+    }
+    .skill-button{
+       display: flex;
+       justify-content: center;
+       margin-top: 20px;
+    }
+}
 
 
 /* comp4 */
@@ -428,6 +487,15 @@ section {
     padding: 20px;
     display: flex;
     align-items: center;
+}
+@media(max-width:860px){
+    .information-text{
+    max-width: 100%;
+    text-align: center;
+    }
+    .information-img img{
+        display: none
+    }
 }
 
 
@@ -484,7 +552,6 @@ section {
 
 .container__title__left {
     display: inline-block;
-    float: left;
 }
 
 .container__title__right {
