@@ -4,16 +4,34 @@ import logo from '../../../assets/img/logo.jpg'
 
 const Header = () => {
   return (
-    <header className="Header">
-      <img src={logo} className ='logo' alt='logo' />
-      <nav className='Nav'>
-        <a href='/plataforma'>A Plataforma</a>
-        <a href='/cursos'>Cursos</a>
-        <a href='/empresas'>Empresas</a>
-        <a href='/contato'>Contato</a>
-        <a href='/cadastro' id="Cadastro">Cadastre-se</a>
+    <header>
+    <div class="menu">
+      <a href="index.html" class="menu-logo">
+        <img src={logo} alt="BrainXpert logo"/>
+      </a>
+      <button class="nav-toggle" aria-label="toggle navegation">
+        <span class="hamburguer"></span>
+      </button>
+      <nav class="nav">
+
+
+        <ul class="menu-navbar">
+          <li class="menu-navbar-item"><a href="javascript: void(0)">A Plataforma</a>
+          </li>
+          <li class="menu-navbar-item"><a href="#">Cursos</a>
+          </li>
+          <li class="menu-navbar-item"><a href="#">Empresas</a>
+          </li>
+          <li class="menu-navbar-item"><a href="javascript: void(0)">Contato</a>
+          </li>
+          <li class="menu-navbar-item-active" id="cadastro"><a href="javascript: void(0)">Cadastre-se</a>
+          </li>
+        </ul>
       </nav>
-    </header>
+
+
+     </div>
+  </header>
   );
 }
 
