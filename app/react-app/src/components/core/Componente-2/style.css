@@ -7,35 +7,22 @@
     width: 100%;
 }
 
-
-.skill-container-text {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    margin-left: 40px;
-}.skill-container {
-    background-color: #fff;
-    display: flex;
-    height: 83vh;
-    width: 100%;
-}
-
 .skill-container-img {
     width: 50%;
 }
 
 .skill-container-img img {
-    max-width: 75%;
-    float: right;
+    max-width: 100%;
 }
 
+
+
 .skill-container-text {
-    width: 30%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
     margin-left: 40px;
 }
+

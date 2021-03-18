@@ -1,4 +1,3 @@
-/* reset */
 * {
   text-decoration: none;
   list-style: none;
@@ -9,8 +8,14 @@
 
 body {
   margin: 0 auto;
-  width: 100%;
+  max-width: 100%;
   height: auto;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 .titulo-banner {
@@ -47,4 +52,17 @@ body {
 
 .button:hover {
   background-color: #B58E02;
+}
+
+
+.paragrafo {
+  font-weight: initial;
+  font-size: 16px;
+  line-height: 24px;
+  color: #020113;
+  font-family: 'Roboto', sans-serif;
+}
+
+.font-blue {
+  color: #0052FB;
 }

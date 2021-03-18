@@ -3,17 +3,37 @@ import React from 'react'
 import logo from '../../../assets/img/logo.jpg'
 
 const Header = () => {
+  
   return (
-    <header className="Header">
-      <img src={logo} className ='logo' alt='logo' />
-      <nav className='Nav'>
-        <a href='/plataforma'>A Plataforma</a>
-        <a href='/cursos'>Cursos</a>
-        <a href='/empresas'>Empresas</a>
-        <a href='/contato'>Contato</a>
-        <a href='/cadastro' id="Cadastro">Cadastre-se</a>
+    <header>
+    <div className="menu">
+      <a href="index.html" className="menu-logo">
+        <img src={logo} alt="BrainXpert logo"/>
+      </a>
+      <button className="nav-toggle" aria-label="toggle navegation">
+        <span className="hamburguer"></span>
+      </button>
+      <nav className="nav">
+
+
+        <ul className="menu-navbar">
+          <li className="menu-navbar-item"><a href="javascript: void(0)">A Plataforma</a>
+          </li>
+          <li className="menu-navbar-item"><a href="#">Cursos</a>
+          </li>
+          <li className="menu-navbar-item"><a href="#">Empresas</a>
+          </li>
+          <li className="menu-navbar-item"><a href="javascript: void(0)">Contato</a>
+          </li>
+          <li className="menu-navbar-item-active" id="cadastro"><a href="javascript: void(0)">Cadastre-se</a>
+          </li>
+        </ul>
       </nav>
-    </header>
+
+
+    </div>
+  </header>
+
   );
 }
 

@@ -1,23 +1,28 @@
 import './style.css'
-import Image from '../../../assets/img/banner.png'
+import ImageBanner from '../../../assets/img/banner.png'
 
 const Component1 = () => {
 
     return (
-        <div className="comp-1">
-            <div className="container">
-                <div className="direita">
-                    <p className="titulo-banner">Evolua rápido em busca dos seus objetivos</p>
-                    <div className="comp1-button">
-                        <button className="button">Torne-se um Expert</button>
-                        <p className="titulo_menor">Guiamos seus estudos no rumo de uma grande oportunidade</p>
-                    </div>
-                </div>
-                <div className="esquerda">
-                    <img src={Image} alt=""/>
-                </div>
-            </div> 
+        <section>
+
+      <div class="container-description">
+        <div class="container-description-text">
+          <p class="titulo-banner">Evolua rápido em busca dos seus objetivos</p>
+          <div class="button-container">
+            <button class="button expert">Torne-se um Expert</button>
+            <div class="container-description-secundary-text">
+
+              <p >Guiamos seus estudos no rumo de uma grande oportunidade</p>
+            </div>
+          </div>
         </div>
+
+        <div class="container-description-img">
+          <img src={ImageBanner}/>
+        </div>
+      </div>
+    </section>
     )
 
 }
