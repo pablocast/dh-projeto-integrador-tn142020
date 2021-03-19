@@ -56,10 +56,9 @@ img {
     cursor: pointer;
 }
 
-.button:hover {
+.buttonYellow:hover {
     background-color: #B58E02;
 }
-
 
 .paragrafo {
     font-weight: initial;
