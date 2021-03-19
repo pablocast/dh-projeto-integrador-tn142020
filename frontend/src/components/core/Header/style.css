@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap');
+
+* {
+    text-decoration: none;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.Header {
+    display: grid;
+    grid-template-areas: 'logo nav';
+    background-color: #0052FB;
+    padding: 0.5rem 1rem;
+    border-bottom-style: solid;
+    border-bottom-color: #f5f7fa;
+    border-bottom-width: thin;
+}
+
+.Nav {
+    display: flex;
+    align-items: center;
+    margin-left: 200px;
+}
+
+.Nav>a {
+    color: #fff !important;
+    text-decoration: none !important;
+    margin: 0;
+    padding: 1.4rem 1rem 1.6rem;
+    color: #555;
+    letter-spacing: 0.1em;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    font-weight: normal;
+    text-decoration: none;
+    border-top: .3rem solid transparent;
+}
+
+.Header>img {
+    margin-left: 100px;
+    object-fit: cover;
+    width: 200px;
+    height: 80px;
+}
+
+.Header #Cadastro {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 15px;
+}
