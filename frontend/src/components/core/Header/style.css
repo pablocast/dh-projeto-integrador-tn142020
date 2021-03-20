@@ -76,8 +76,7 @@
     list-style: none;
     font-size: 14px;
     background-color: #fff;
-    border: 1px solid #ccc;
-    border: 1px solid rgba(0, 0, 0, 0.15);
+    border: 1px solid #ccc !important;
     border-radius: 4px;
     -webkit-box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
     box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
@@ -86,15 +85,25 @@
     top: 84px;
     line-height: 24px;
     position: absolute;
-
+    display: flex;
+    flex-direction: column;
 }
 
 .Cadastro__menu>a {
+    width: 90%;
     color: #000;
     font-size: 12px;
     line-height: 36px;
     text-transform: none;
     letter-spacing: 1px;
-    padding: 12px 36px;
+    text-align: center;
+    margin-left: 8px;
+}
 
+.Cadastro__menu>a:hover {
+    color: #000 !important;
+    background-color:#F0F0FF;
+    border-radius: 10px;
+    box-shadow: none;
+    box-sizing: content-box;
 }
