@@ -28,7 +28,7 @@ const Header = () => {
             null
           )
       }
-    </header >
+    </header>
   );
 }
 
