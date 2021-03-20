@@ -2,15 +2,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap');
 
+/* reset e padrões */
+
 * {
     padding: 0px;
     margin: 0px;
     font-family: 'Roboto', sans-serif;
+    list-style: none;
+}
+
+a {
+    color: #000;
 }
 
 .buttonYellow {
     background-color: #FFCF26;
-    width: 200px;
+    width: 100%;
     height: 40px;
     border: none;
     color: #000;
@@ -28,10 +35,10 @@
 
 .buttonGrey {
     background-color: #4a4a4a;
-    width: 200px;
+    width: 100%;
     height: 40px;
     border: none;
-    color: #000;
+    color: #fff;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -43,6 +50,12 @@
 .buttonGrey:hover {
     background-color: #EAEFF5;
 }
+
+.material-icons {
+    font-size: 3rem;
+}
+
+/* menu */
 
 .menu {
 
@@ -78,13 +91,6 @@
     font-weight: normal;
     text-decoration: none;
     padding: 15px;
-
-
-
-}
-
-.material-icons {
-    font-size: 3rem;
 }
 
 .subMenu {
@@ -95,11 +101,7 @@
     color: #fff;
 }
 
-.container {
-    display: block;
-    justify-content: center;
-    max-width: 100%;
-}
+/* container cursos em andamento */
 
 .section {
     width: 100%;
@@ -110,6 +112,7 @@
 .containerCursos {
     background: #DFDEDE;
     justify-content: center;
+    height: 100vh;
 }
 
 .cursosAndamento {
@@ -124,37 +127,40 @@
 }
 
 .containerDestaque {
-    width: 40%;
+    width: 100%;
     justify-content: space-evenly;
     background: #fff;
 }
 
 .containerSecundario {
-    width: 40%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
 
 .cardCursos {
-    width: 40%;
+    width: 44%;
     display: flex;
     background: #fff;
     margin: 5px;
+    padding: 10px;
 }
 
 .cardCursos img {
-    width: 50px;
+    width: 80px;
 }
 
 .containerSuperior {
     display: flex;
     justify-content: center;
+    padding-top: 15px;
 }
 
 .containerInferior {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 10px;
 }
 
 .containerText {
@@ -167,18 +173,21 @@
 }
 
 .containerSuperior img {
-    width: 100px;
+    width: 200px;
 }
 
 .containerCursos h4 {
-    margin-left: 1.5rem;
+    margin-left: 2rem;
     padding: 1.5rem 0px;
 }
 
+/* container cursos recomendados */
 
 .cursosRecomendados {
     margin: 1rem 2rem;
 }
+
+/* footer */
 
 .footer {
     display: flex;
@@ -210,7 +219,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
-/* --------- fim do footer */
+/*
 .font-light {
     font-weight: lighter;
 }
@@ -220,7 +229,7 @@
 }
 
 
-/* @media(max-width:800px) {
+@media(max-width:800px) {
 
     .hamburguer {
 

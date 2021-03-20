@@ -1,0 +1,84 @@
+/* container cursos em andamento */
+.section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.containerCursos {
+    background: #DFDEDE;
+    justify-content: center;
+    height: 100vh;
+}
+
+.cursosAndamento {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem 2rem;
+}
+
+.containerCursos h2 {
+    margin-left: 2rem;
+    padding: 1.5rem 0px;
+}
+
+.containerDestaque {
+    width: 100%;
+    justify-content: space-evenly;
+    background: #fff;
+}
+
+.containerSecundario {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cardCursos {
+    width: 44%;
+    display: flex;
+    background: #fff;
+    margin: 5px;
+    padding: 10px;
+}
+
+.cardCursos img {
+    width: 80px;
+}
+
+.containerSuperior {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+.containerInferior {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.containerText {
+    display: flex;
+    margin-left: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    text-align: left;
+}
+
+.containerSuperior img {
+    width: 200px;
+}
+
+.containerCursos h4 {
+    margin-left: 2rem;
+    padding: 1.5rem 0px;
+}
+
+/* container cursos recomendados */
+
+.cursosRecomendados {
+    margin: 1rem 2rem;
+}

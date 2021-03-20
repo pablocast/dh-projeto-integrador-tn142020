@@ -1,51 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+import './style.css'
+import imageJavascript from '../../../assets/img/javaScript-logo.png'
+import imageHtml from '../../../assets/img/html-logo.png'
+import imageCss from '../../../assets/img/css-logo.png'
+import imageGit from '../../../assets/img/git-logo.png'
+import imageXd from '../../../assets/img/xd-logo.png'
+import imageReact from '../../../assets/img/react-logo.png'
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="./css/pageCursos.css">
-    <title>Pagina de cursos</title>
-</head>
-
-<body>
-    
-        <header>
-            <div class="menu">
-                <a href="index.html" class="menu-logo">
-                    <img src="./img/logo.png" alt="BrainXpert logo">
-                </a>
-                <!-- <button class="nav-toggle" aria-label="toggle navegation">
-              <span class="hamburguer"></span>
-            </button> -->
-                <nav class="nav">
-                    <ul class="menu-navbar">
-                        <li class="menu-navbar-item"><a href="#">Aprenda</a>
-                        </li>
-                        <li class="menu-navbar-item"><a href="#">Comunidade</a>
-                        </li>
-                        <li>
-                            <i class="large material-icons">circle_notifications</i>
-                        </li>
-                        <li class="menu-navbar-item">
-                            <a href="#">Bruno</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="subMenu">
-                <h1>Dashboard</h1>
-            </div>
-        </header>
+const ContainerCursos = () => {
+    return (
         <section>
             <div class="containerCursos">
                 <h2>Cursos em andamento</h2>
                 <div class="cursosAndamento">
                     <div class="containerDestaque">
                         <div class="containerSuperior">
-                            <img src="./img/JavaScript-logo.png">
+                            <img src={imageJavascript} alt="curso javascript"/>
                             <div class="containerText">
                                 <p>Javascript conhecendo o browser</p>
                             </div>
@@ -57,25 +26,25 @@
                     </div>
                     <div class="containerSecundario">
                         <div class="cardCursos">
-                            <img src="./img/html-logo.png">
+                        <img src={imageHtml} alt="curso html"/>
                             <div class="containerText">
                                 HTML 5 - COMPLETO semantica e SEO
                             </div>
                         </div>
                         <div class="cardCursos">
-                            <img src="./img/css-logo.png">
+                            <img src={imageCss} alt="curso css"/>
                             <div class="containerText">
                                 CSS 3 - grid e flexbox
                             </div>
                         </div>
                         <div class="cardCursos">
-                            <img src="./img/git-logo.jpg">
+                            <img src={imageGit} alt="curso git e github"/>
                             <div class="containerText">
                                 GIT & GITHUB - repositório remoto
                             </div>
                         </div>
                         <div class="cardCursos">
-                            <img src="./img/xd-logo.png">
+                            <img src={imageXd} alt="curso xd"/>
                             <div class="containerText">
                                 XD - design grafico, protótipos
                             </div>
@@ -89,25 +58,25 @@
                 <div class="cursosRecomendados">
                     <div class="containerInferior">
                         <div class="cardCursos">
-                            <img src="./img/reactjs-logo.jpg">
+                            <img src={imageReact} alt="curso react"/>
                             <div class="containerText">
                                 REACTJS - desenvolvimento FRONT-END
                             </div>
                         </div>
                         <div class="cardCursos">
-                            <img src="./img/xd-logo.png">
+                            <img src={imageHtml} alt="curso nodejs"/>
                             <div class="containerText">
                                 NODEJS - desenvolvimento BACK-END
                             </div>
                         </div>
                         <div class="cardCursos">
-                            <img src="./img/git-logo.jpg">
+                            <img src={imageGit} alt="curso express"/>
                             <div class="containerText">
                                 EXPRESS - banco de dados
                             </div>
                         </div>
                         <div class="cardCursos">
-                            <img src="./img/css-logo.png">
+                            <img src={imageCss} alt="curso angularjs"/>
                             <div class="containerText">
                                 ANGULARJS - desenvolvimento FRONT-END
                             </div>
@@ -116,32 +85,7 @@
                 </div>
             </div>
         </section>
-        <footer class="footer">
+    )
+}
 
-            <div class="footer-copy">
-                <p>Todos os direitos reservados BrainXpert &copy;</p>
-            </div>
-            <div class="footer-container-links">
-                <ul>
-                    <li class="titulo_rodape">Cursos</li>
-                    <li class="font-light">Front-end</li>
-                    <li class="font-light">Back-End</li>
-                    <li class="font-light">Mobile-Futter</li>
-                    <li class="font-light">Full-Stack</li>
-                </ul>
-            </div>
-            <div class="footer-container-links">
-                <ul>
-                    <li class="titulo_rodape">Empresas</li>
-                    <li class="font-light">Banco Itai</li>
-                    <li class="font-light">Magazine Luci</li>
-                    <li class="font-light">Nicolas e Cia</li>
-                    <li class="font-light">Summer-down</li>
-                </ul>
-            </div>
-
-        </footer>
-    
-</body>
-
-</html>
+export default ContainerCursos
