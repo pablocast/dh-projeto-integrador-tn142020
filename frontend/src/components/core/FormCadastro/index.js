@@ -1,7 +1,9 @@
 import './style.css'
 import { Container, Row, Col, Form, Card, FormCheck } from 'react-bootstrap'
 
-const FormCadastro = () => {
+const FormCadastro = ({ ...props }) => {
+    const { isStudent } = props
+    
     return (
         <div className="candidates sign-in">
             <section className="main-section-content">
@@ -49,7 +51,7 @@ const FormCadastro = () => {
                                     </Form>
                                 </div>
                             </Card>
-                            <p class="text-inverse"><small>Ainda não tem uma conta? <a href="/criar-perfil">Cadastrar grátis</a></small></p>
+                            <p class="text-inverse"><small>Ainda não tem uma conta? <a href={'/criar-perfil-'.concat(isStudent ? ('estudante') : 'empresa')} >Cadastrar grátis</a></small></p>
                         </Col>
                     </Row>
                 </Container>

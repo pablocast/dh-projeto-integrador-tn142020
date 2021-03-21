@@ -3,11 +3,12 @@ import FormCadastro from '../../components/core/FormCadastro'
 import Footer from '../../components/core/Footer'
 import Header from '../../components/core/Header'
 
-const Cadastro = () => {
+const Cadastro = ({ ...props }) => {
+    const { isStudent } = props
     return (
         <>
             <Header isLogin={true} />
-            <FormCadastro />
+            <FormCadastro isStudent={isStudent} />
             <Footer />
         </>
     )

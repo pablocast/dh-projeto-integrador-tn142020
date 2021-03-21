@@ -8,24 +8,26 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.Card {
+.Cards {
     width: 90%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     background-color: #fff;
     flex-wrap: wrap;
-    height: 170px;
+    height: 190px;
 }
 
 .Testimonial {
     padding: 20px;
+    height: 100%;
+    box-shadow: 0 9px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
 }
 
 .Testimonial__top {
     display: flex;
 }
 
-
 .Testimonial__top p {
+    margin-top: -20px;
     font-size: 0.6rem;
     color: #020113;
 }
@@ -35,8 +37,8 @@
     align-items: center;
     justify-content: space-between;
     align-self: flex-end;
-    position: absolute;
-    bottom: 0;
+    position: relative;
+    bottom: -20px;
 }
 
 .Testimonial__bottom__title h5 {
