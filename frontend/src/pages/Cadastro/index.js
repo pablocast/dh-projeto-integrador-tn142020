@@ -1,8 +1,15 @@
 import './style.css'
+import FormCadastro from '../../components/core/FormCadastro'
+import Footer from '../../components/core/Footer'
+import Header from '../../components/core/Header'
 
 const Cadastro = () => {
     return (
-        <div>This is cadstro</div>
+        <>
+            <Header isLogin={true} />
+            <FormCadastro />
+            <Footer />
+        </>
     )
 }
 

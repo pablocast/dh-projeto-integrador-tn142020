@@ -1,6 +1,5 @@
 import React from 'react'
 import {Route, Switch} from 'react-router-dom'
-import Header from './components/core/Header'
 import Home from './pages/Home'
 import Cadastro from './pages/Cadastro'
 
