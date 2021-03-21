@@ -6,7 +6,7 @@ const Item = (props) => {
     const { cargo, testimonio, nome, avatar } = props
 
     return (
-        <MDBCol className="Card">
+        <MDBCol className="Cards">
             <MDBCard testimonial className="Testimonial">
                 <MDBCardBody className='Testimonial__top'>
                     <p className="Testimonial__top__testimonio">
