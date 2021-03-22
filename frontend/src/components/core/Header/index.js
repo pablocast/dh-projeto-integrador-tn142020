@@ -2,8 +2,9 @@ import './style.css'
 import React, { useState } from 'react'
 import logo from '../../../assets/img/logo.jpg'
 
-const Header = () => {
+const Header = ({ ...props }) => {
   const [Cadastro, setCadastro] = useState(false)
+  const { isLogin } = props
 
   return (
     <header className="Header">
@@ -13,9 +14,16 @@ const Header = () => {
         <a href='/cursos'>Cursos</a>
         <a href='/empresas'>Empresas</a>
         <a href='/contato'>Contato</a>
-        <div className='Cadastro' onMouseOver={() => setCadastro(true)} >
-          <a href='' className='Cadastro_button' >Cadastre-se</a>
-        </div>
+        {
+          !isLogin
+            ? (
+              <div className='Cadastro' onMouseOver={() => setCadastro(true)} >
+                <a href='' className='Cadastro_button' >Cadastre-se</a>
+              </div>
+            ) : (
+              null
+            )
+        }
       </nav>
       {
         Cadastro

@@ -10,7 +10,7 @@ const Home = () => {
 
   return (
     <>
-      <Header />
+      <Header isLogin={false} />
       <BannerQuemSomos />
       <BannerCursos />
       <BannerDepoimentos />

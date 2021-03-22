@@ -1,0 +1,131 @@
+* {
+    text-decoration: none;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+div {
+    display: block;
+}
+
+.Container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 55px;
+    display: table;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.Container__title {
+    margin-left: -15px;
+    margin-right: -15px;
+    display: table;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.Container_tittle__text__inverse {
+    text-align: center;
+}
+
+.Container__title__text {
+    float: left;
+    margin-left: 16.6666666667%;
+    width: 66.6666666667%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.Container__title__text>h1 {
+    font-size: 40px;
+    line-height: 52px;
+    font-weight: 300;
+    margin-top: 0;
+    padding-bottom: 36px;
+}
+
+.Panel {
+    margin-bottom: 32px;
+}
+
+.Panel__heading {
+    background-color: #0052FB;
+    border: none;
+    text-align: center;
+    padding: 24px;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+
+}
+
+.Panel__heading__text {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: white;
+    line-height: 24px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.Panel__body {
+    color: #939DA5;
+    padding: 40px;
+}
+
+.Form-group {
+    margin-bottom: 24px;
+}
+
+.Checkbox {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.Checkbox label {
+    position: relative;
+    cursor: pointer;
+    line-height: 24px;
+    font-weight: 300;
+    margin-left: -18px;
+    font-size: 14px;
+
+}
+
+.Checkbox input[type="checkbox"] {
+    position: relative;
+    top:0;
+    z-index: 0;
+    margin-top: 0;
+    margin-right: 8px;
+    height: 14;
+    width: 14;
+}
+
+.Login-problems a {
+    font-size: 12px;
+    float: right;
+}
+
+.Container input[type="submit"] {
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    padding: 12px 16px;
+    text-transform: uppercase;
+    background-color: #B58E02;
+    border-color: #B58E02 !important;
+}
+
+.sign-in .main-section-content {
+    background-color: #EAEFF5;
+    background: #EAEFF5;
+}
