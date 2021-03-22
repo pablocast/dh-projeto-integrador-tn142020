@@ -1,0 +1,10 @@
+/* apoiadores */
+
+.apoiadores {
+    display: flex;
+    padding: 1.5rem;
+}
+
+.apoiadores img {
+    width: 50%;
+}

@@ -1,0 +1,42 @@
+/* header */
+
+header {
+    border-bottom: 1px solid #fff;
+}
+
+.menu {
+
+    background-color: #0052FB;
+    padding: 0.5rem 1rem;
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.menu-logo img {
+    width: 200px;
+    height: 200px;
+}
+
+.menu-navbar {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+
+}
+
+.menu-navbar-item a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0;
+    padding: 1.4rem 1rem 1.6rem;
+    letter-spacing: 0.1em;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    font-weight: normal;
+    text-decoration: none;
+    padding: 15px;
+}
+
