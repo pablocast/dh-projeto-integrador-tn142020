@@ -69,7 +69,8 @@
 }
 
 .Form .button > img {
-    margin-left: 6px;
+    margin-left: 6px !important;
+    width: auto !important;
 }
 
 .sign-in .main-section-content {

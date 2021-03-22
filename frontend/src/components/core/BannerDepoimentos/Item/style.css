@@ -24,6 +24,9 @@
 
 .Testimonial__top {
     display: flex;
+    margin-bottom: 16px;
+    height: 50%;
+    padding: 16px;
 }
 
 .Testimonial__top p {
@@ -38,7 +41,11 @@
     justify-content: space-between;
     align-self: flex-end;
     position: relative;
-    bottom: -20px;
+
+}
+
+.Testimonial__bottom__title {
+    padding-left: 0 !important;
 }
 
 .Testimonial__bottom__title h5 {
@@ -52,6 +59,10 @@
     color: #020113;
 }
 
+.Testimonial__bottom__avatar {
+    padding-left: 0 !important;
+}
+
 .Testimonial__bottom__avatar img {
     min-width: 60px;
     max-width: 60px;
@@ -59,5 +70,4 @@
     max-height: 60px;
     border-radius: 50%;
     overflow: hidden;
-    margin-left: 15px;
 }

@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Cadastro from './pages/Cadastro'
 import Empresas from './pages/Empresas'
 import CadastroNuevoEstudante from './pages/CadastroNuevoEstudante'
+import EstudantesDestaques from './pages/EstudantesDestaques'
 
 const MainRouter = () => {
   return (<div>
@@ -14,6 +15,7 @@ const MainRouter = () => {
       <Route path="/empresa/sign_in" render={() => <Cadastro isStudent={false} />} />
       <Route path="/criar-perfil-empresa" component={Empresas} />
       <Route path="/criar-perfil-estudante" component={CadastroNuevoEstudante} />
+      <Route path="/estudantes-destaques" component={EstudantesDestaques} />
     </Switch>
   </div>)
 }
