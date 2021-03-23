@@ -1,5 +1,5 @@
 import './style.css'
-import ImagePlataforma from '../../../assets/img/plataforma.jpg'
+import ImagePlataforma from '../../../assets/img/empresa.png'
 
 const ContainerQuemSomos = () => {
     return (

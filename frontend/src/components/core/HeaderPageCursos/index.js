@@ -1,7 +1,8 @@
 import './style.css'
-import imageLogo from '../../assets/logo.png'
+import imageLogo from '../../../assets/img/logo_transp.png'
 
 const HeaderPagesCursos = () => {
+    return (
     <header>
             <div class="menu">
                 <a href="index.html" class="menu-logo">
@@ -29,6 +30,7 @@ const HeaderPagesCursos = () => {
                 <h1>Dashboard</h1>
             </div>
         </header>
+    )
 }
 
 export default HeaderPagesCursos

@@ -10,7 +10,7 @@ const Header = ({ ...props }) => {
     <header className="Header">
       <img src={logo} className='logo' alt='logo' />
       <nav className='Nav' >
-        <a href='/plataforma'>A Plataforma</a>
+        <a href='/plataforma'>A plataforma</a>
         <a href='/cursos'>Cursos</a>
         <a href='/empresas'>Empresas</a>
         <a href='/contato'>Contato</a>

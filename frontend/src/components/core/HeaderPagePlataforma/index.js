@@ -1,11 +1,11 @@
 import './style.css'
-import imageLogo from '../../../assets/img/logo.jpg'
+import imageLogo from '../../../assets/img/logo_transp.png'
 
 const HeaderPagePlataforma = () => {
     return (
         <header>
         <div className="menu">
-            <a href="index.html" className="menu-logo">
+            <a href="/home" className="menu-logo">
                 <img src={imageLogo} alt="BrainXpert logo"/>
             </a>
             {/* <button className="nav-toggle" aria-label="toggle navegation">
