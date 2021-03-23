@@ -57,3 +57,16 @@ img {
 .font-blue {
   color: #0052FB;
 }
+
+/* responsividade */
+
+@media (max-width: 768px){
+  .titulo {
+    font-size: 26px;
+  }
+
+  .titulo-banner {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}

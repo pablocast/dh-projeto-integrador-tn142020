@@ -67,3 +67,17 @@
     align-items: center;
 
 }
+
+/* responsividade */
+
+@media (max-width: 768px){
+    .Information-container {
+        display: block;
+    }
+    .Information {
+        display: block;
+    }
+    .Information-img{
+        width: 100%;
+    }
+}

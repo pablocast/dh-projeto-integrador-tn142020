@@ -24,7 +24,6 @@ const Component4 = () => {
                 <div className="Information-img">
                     <img src={img} alt="empresa"></img>
                 </div>
-
             </div>
         </section>
     )

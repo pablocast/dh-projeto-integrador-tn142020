@@ -39,3 +39,39 @@ li {
     margin-right: 25px;
     fill: #fff;
 }
+
+/* responsividade */
+
+@media (max-width: 768px){
+
+.skill-container-img {
+    width: 50%;
+    margin: auto;
+}
+
+.skill-container-img img{
+    width: 50%;
+    margin: auto;
+    float: none;
+}
+
+.skill-container-text {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.skill-container {
+    height: 100vh;
+    width: 100%;
+    display: block;
+}
+
+.titulo {
+    font-size: 26px;
+}
+
+.material-icons {
+    font-size: 1.5rem;
+}
+
+}

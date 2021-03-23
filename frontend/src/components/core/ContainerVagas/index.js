@@ -11,7 +11,7 @@ const ContainerVagas = () => {
                 <div className="card-empresas">
                     <img src={ImageMagalu} alt="vagas html"/>
                     <div className="card-text">
-                        <h4>Empresa html</h4>
+                        <h4>Empresa Magazine Luiza</h4>
                         <p>x vagas disponiveis</p>
                         <a href="#">ver mais</a>
                     </div>
@@ -19,7 +19,7 @@ const ContainerVagas = () => {
                 <div className="card-empresas">
                     <img src={ImageMercadolivre} alt="vagas css"/>
                     <div className="card-text">
-                        <h4>Empresa css</h4>
+                        <h4>Empresa Mercado Livre</h4>
                         <p>x vagas disponiveis</p>
                         <a href="#">ver mais</a>
                     </div>
@@ -27,7 +27,7 @@ const ContainerVagas = () => {
                 <div className="card-empresas">
                     <img src={ImageOlx} alt="vagas xd"/>
                     <div className="card-text">
-                        <h4>Empresa XD</h4>
+                        <h4>Empresa OLX</h4>
                         <p>x vagas disponiveis</p>
                         <a href="#">ver mais</a>
                     </div>
@@ -35,7 +35,7 @@ const ContainerVagas = () => {
                 <div className="card-empresas">
                     <img src={ImageOlx} alt="vagas git"/>
                     <div className="card-text">
-                        <h4>Empresa git</h4>
+                        <h4>Empresa OLX</h4>
                         <p>x vagas disponiveis</p>
                         <a href="#">ver mais</a>
                     </div>
@@ -43,7 +43,7 @@ const ContainerVagas = () => {
                 <div className="card-empresas">
                     <img src={ImageMagalu} alt="vagas html"/>
                     <div className="card-text">
-                        <h4>Empresa html</h4>
+                        <h4>Empresa Magazine Luiza</h4>
                         <p>x vagas disponiveis</p>
                         <a href="#">ver mais</a>
                     </div>
@@ -51,7 +51,7 @@ const ContainerVagas = () => {
                 <div className="card-empresas">
                     <img src={ImageMercadolivre} alt="vagas css"/>
                     <div className="card-text">
-                        <h4>Empresa CSS</h4>
+                        <h4>Empresa Mercado Livre</h4>
                         <p>x vagas disponiveis</p>
                         <a href="#">ver mais</a>
                     </div>
