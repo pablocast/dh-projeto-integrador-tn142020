@@ -1,7 +1,7 @@
 import './style.css'
-import { Row, Col, Form, Card } from 'react-bootstrap'
+import { Form, Card } from 'react-bootstrap'
 
-const FormFinal = ({...props}) => {
+const FormFinal = ({ ...props }) => {
     const { handleVoltar } = props
 
     return (
