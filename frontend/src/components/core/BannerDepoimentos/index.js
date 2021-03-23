@@ -1,6 +1,6 @@
 import './style.css'
 import Carousel from 'react-elastic-carousel'
-import { MDBContainer } from "mdbreact"
+import { Container } from "react-bootstrap"
 import Item from './Item'
 
 const breakPoints = [
@@ -21,7 +21,7 @@ const depoimentos = [
 
 const Component3 = () => {
     return (
-        <MDBContainer className='Componente-3'>
+        <Container className='Componente-3'>
             <h2 className="h2-responsive font-weight-bold my-5">
                 Veja o depoimento de alguns dos nossos alunos
         </h2>
@@ -35,7 +35,7 @@ const Component3 = () => {
                     />
                 })}
             </Carousel>
-        </MDBContainer>
+        </Container>
     );
 }
 
