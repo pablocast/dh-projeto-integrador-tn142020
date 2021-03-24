@@ -3,21 +3,28 @@
             rgba(17, 39, 58, 0.8)),
         url("../../../assets/img/plataforma.jpg") no-repeat center center;
     height: 864px;
-    position: relative;
     width: 100%;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+    margin-top: -100px;
+    z-index: -1;
+
 }
 
 .This__main-section .This__Container__text {
     padding-top: 80px;
 }
 
-.This__main-section .This__Container__text p,
-h1 {
-    color: #ffffff;
+.This__Container__text p {
+    color: white;
+    font-weight: 300;
+    text-align: center;
+}
+
+.This__Container__text h1 {
+    color: white;
     font-weight: 300;
     text-align: center;
 }
