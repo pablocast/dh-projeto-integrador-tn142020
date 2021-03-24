@@ -8,10 +8,9 @@
     flex-direction: column;
     justify-content: center;
     position: relative;
-    margin-top: -100px;
-    z-index: -1;
-
+    overflow: hidden;
 }
+
 
 .This__main-section .This__Container__text {
     padding-top: 80px;

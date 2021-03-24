@@ -5,14 +5,15 @@ import { Link } from 'react-router-dom'
 
 const HeaderCadastro = ({ ...props }) => {
   const [Cadastro, setCadastro] = useState(false)
-  const { myLogo } = props
+  const { myLogo, zIndex } = props
 
+  const styleBemvindo = { backgroundColor: 'transparent', zIndex: '1030', borderColor: 'transparent' , position:'fixed' , right:'0',left:'0' }
   const useLogo = myLogo ? myLogo : logo
-  const useBackground = myLogo ? 'transparent' : '#EAEFF5'
   const useColor = myLogo ? 'white' : '#000'
+  const useStyle = myLogo ? styleBemvindo : null
 
   return (
-    <header className="HeaderCadastro" style={{ backgroundColor: `${useBackground}` }}>
+    <header className="HeaderCadastro" style = {useStyle} >
       <Link to='/'>
         <img src={useLogo} className='logo' alt='logo' />
       </Link>

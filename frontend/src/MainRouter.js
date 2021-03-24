@@ -9,6 +9,7 @@ import Cursos from './pages/Cursos'
 import ProfileEstudante from './pages/ProfileEstudante'
 import PagePlataforma from './pages/PagePlataforma'
 import BemVindo from './pages/BemVindo'
+import Contato from './pages/Contato'
 
 const MainRouter = () => {
   return (<div>
@@ -24,6 +25,7 @@ const MainRouter = () => {
       <Route path="/estudantes-destaques" component={EstudantesDestaques} />
       <Route path='/profile-estudante' component={ProfileEstudante} />
       <Route path="/bemvindo" component={BemVindo} />
+      <Route path="/contato" component={Contato} />
     </Switch>
   </div>)
 }
