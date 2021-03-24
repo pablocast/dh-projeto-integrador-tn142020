@@ -40,7 +40,7 @@
     border-top: .3rem solid transparent;
 }
 
-.Header>img {
+.Header img {
     margin-left: 100px;
     object-fit: cover;
     width: 200px;

@@ -1,16 +1,24 @@
 import './style.css'
 import React, { useState } from 'react'
 import logo from '../../../assets/img/logo_transp.png'
+import { Link } from 'react-router-dom'
 
-const HeaderCadastro = () => {
+const HeaderCadastro = ({ ...props }) => {
   const [Cadastro, setCadastro] = useState(false)
+  const { myLogo } = props
+
+  const newLogo = myLogo ? myLogo : logo
+  const newBackground = myLogo ? '' : '#EAEFF5'
+  const newColor = myLogo ? '#000' : '#000'
 
   return (
-    <header className="HeaderCadastro">
-      <img src={logo} className='logo' alt='logo' />
-      <nav className='NavCadastro' >
-        <a href='/estudantes-destaques'>Estudantes</a>
-        <a href='/criar-perfil-estudante'>Cadastrar como estudante</a>
+    <header className="HeaderCadastro" style={{ backgroundColor: 'red' }}>
+      <Link to='/'>
+        <img src={newLogo} className='logo' alt='logo' />
+      </Link>
+      <nav className='NavCadastro' style={{ color: `${newColor}` }} >
+        <a href='/estudantes-destaques'  >Estudantes</a>
+        <a href='/criar-perfil-estudante' >Cadastrar como estudante</a>
         <div className='Cadastro' onMouseOver={() => setCadastro(true)} >
           <a href='' className='Cadastro_button' >Já tenho conta, entrar</a>
         </div>
