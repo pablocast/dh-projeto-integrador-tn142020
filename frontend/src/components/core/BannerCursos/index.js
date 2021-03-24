@@ -1,6 +1,6 @@
 import './style.css'
 import skillsImage from '../../../assets/img/skills.png'
-
+import { Link } from 'react-router-dom'
 
 const Component2 = () => {
 
@@ -29,7 +29,9 @@ const Component2 = () => {
                             <i className="material-icons font-blue">check_circle_outline</i>Desenvolvedor Mobile-Flutter
                 </li>
                     </ul>
-                    <button className="button">Cadastra-se</button>
+                    <Link to='/bemvindo'>
+                        <button className="button">Cadastra-se</button>
+                    </Link>
                 </div>
             </div>
         </section>

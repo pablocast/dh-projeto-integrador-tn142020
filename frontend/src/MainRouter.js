@@ -8,6 +8,7 @@ import EstudantesDestaques from './pages/EstudantesDestaques'
 import Cursos from './pages/Cursos'
 import ProfileEstudante from './pages/ProfileEstudante'
 import PagePlataforma from './pages/PagePlataforma'
+import BemVindo from './pages/BemVindo'
 
 const MainRouter = () => {
   return (<div>
@@ -22,6 +23,7 @@ const MainRouter = () => {
       <Route path="/criar-perfil-estudante" component={CadastroNuevoEstudante} />
       <Route path="/estudantes-destaques" component={EstudantesDestaques} />
       <Route path='/profile-estudante' component={ProfileEstudante} />
+      <Route path="/bemvindo" component={BemVindo} />
     </Switch>
   </div>)
 }

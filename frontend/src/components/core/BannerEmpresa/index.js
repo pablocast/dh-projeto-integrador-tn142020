@@ -1,5 +1,6 @@
 import './style.css'
 import img from '../../../assets/img/empresa.png'
+import { Link } from 'react-router-dom'
 
 const Component4 = () => {
 
@@ -17,9 +18,11 @@ const Component4 = () => {
                     <p>
                         Iremos te preparar com todo conhecimento técnico e comportamental, visuando não só as empresas parceiras, que fornecem conteudo para prepara-los para uma grande oportunidade,mas tambem para as mais diversas vagas desse mercado que cresce cada vez mais.
                     </p>
-                    <button className="Button">
-                        Cadastra-se
+                    <Link to='/bemvindo'>
+                        <button className="Button">
+                            Cadastra-se
                     </button>
+                    </Link>
                 </div>
                 <div className="Information-img">
                     <img src={img} alt="empresa"></img>
