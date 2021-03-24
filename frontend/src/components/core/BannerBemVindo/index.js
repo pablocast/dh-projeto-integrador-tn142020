@@ -2,16 +2,13 @@
 import './style.css'
 import { Row, Col, Container } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import HeaderCadastro from '../HeaderCadastro'
-import logo from '../../../assets/img/logo_white.png'
 
 const BannerBemVindo = () => {
 
     return (
         <>
-            <HeaderCadastro className='Header' myLogo={logo} />
             <section className='This__main-section'>
-                <Container className="Container">
+                <Container className="Container" style={{position: 'relative' }}>
                     <Row>
                         <Col lg={{ span: 12 }} className='This__Container__text'>
                             <h1>
@@ -22,9 +19,9 @@ const BannerBemVindo = () => {
                         </p>
                         </Col>
                     </Row>
-                    <Row style={{ paddingTop: '16px' }} className='Row__botoes'>
+                    <Row style={{ paddingTop: '16px',zIndex:'999 !important'}} className='Row__botoes'>
                         <Col lg={{ span: 2, offset: 4 }} style={{ textAlign: 'center', left: '-36px' }}>
-                            <Link to="/estudantes/sign_in">
+                            <Link to="/estudantes/sign_in" >
                                 <button className="button">Sou estudante</button>
                             </Link>
                         </Col>
