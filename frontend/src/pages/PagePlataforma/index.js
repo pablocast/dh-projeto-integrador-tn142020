@@ -1,5 +1,5 @@
 import './style.css'
-import Header from '../../components/core/HeaderPagePlataforma'
+import Header from '../../components/core/Header'
 import QuemSomos from '../../components/core/ContainerQuemSomos'
 import Apoiadores from '../../components/core/ContainerApoiadores'
 import ContainerVagas from '../../components/core/ContainerVagas'
