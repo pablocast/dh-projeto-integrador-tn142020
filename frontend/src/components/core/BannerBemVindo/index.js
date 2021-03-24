@@ -9,11 +9,11 @@ const BannerBemVindo = () => {
 
     return (
         <>
-        <HeaderCadastro className='Header' myLogo={logo} />
-        <section className='main-section'>
-            <Container className="This__Container">
+        <HeaderCadastro className='Header' />
+        <section className='This__main-section'>
+            <Container className="Container">
                 <Row>
-                    <Col lg={{ span: 12 }} className='Container__text'>
+                    <Col lg={{ span: 12 }} className='This__Container__text'>
                         <h1>
                             Bem-vindo!
                         </h1>
