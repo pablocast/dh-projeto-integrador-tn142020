@@ -4,11 +4,12 @@ import QuemSomos from '../../components/core/ContainerQuemSomos'
 import Apoiadores from '../../components/core/ContainerApoiadores'
 import ContainerVagas from '../../components/core/ContainerVagas'
 import Footer from '../../components/core/Footer'
+import { checkPropTypes } from 'prop-types';
 
 const PagePlataforma = () => {
     return (
         <>
-        <Header />
+        <Header/>
         <QuemSomos />
         <Apoiadores />
         <ContainerVagas />
