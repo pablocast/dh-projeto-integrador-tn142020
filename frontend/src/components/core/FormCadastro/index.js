@@ -1,9 +1,10 @@
 import './style.css'
 import { Container, Row, Col, Form, Card, FormCheck } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 const FormCadastro = ({ ...props }) => {
     const { isStudent } = props
-    
+
     return (
         <div className="candidates sign-in">
             <section className="main-section-content">
@@ -47,7 +48,9 @@ const FormCadastro = ({ ...props }) => {
                                                 <p class="Text-right"><a href="/password/new">Problemas com o Log in?</a></p>
                                             </Col>
                                         </Row>
-                                        <input type="submit" name="commit" value="Entrar" className="btn btn btn-primary btn-lg btn-block" />
+                                        <Link to={'/profile-'.concat(isStudent ? ('estudante') : 'empresa')}>
+                                            <input type="submit" name="commit" value="Entrar" className="btn btn btn-primary btn-lg btn-block" />
+                                        </Link>
                                     </Form>
                                 </div>
                             </Card>

@@ -5,7 +5,8 @@ import Cadastro from './pages/Cadastro'
 import Empresas from './pages/Empresas'
 import CadastroNuevoEstudante from './pages/CadastroNuevoEstudante'
 import EstudantesDestaques from './pages/EstudantesDestaques'
-import PageCursos from './pages/PageCursos'
+import Cursos from './pages/Cursos'
+import ProfileEstudante from './pages/ProfileEstudante'
 import PagePlataforma from './pages/PagePlataforma'
 
 const MainRouter = () => {
@@ -13,13 +14,14 @@ const MainRouter = () => {
     <Switch>
       <Route exact path="/" component={Home} />
       <Route exact path="/plataforma" component={PagePlataforma} />
-      <Route exact path="/cursos" component={PageCursos} />
+      <Route exact path="/cursos" component={Cursos} />
       <Route exact path="/empresas" component={Empresas} />
       <Route path="/estudantes/sign_in" render={() => <Cadastro isStudent={true} />} />
       <Route path="/empresa/sign_in" render={() => <Cadastro isStudent={false} />} />
       <Route path="/criar-perfil-empresa" component={Empresas} />
       <Route path="/criar-perfil-estudante" component={CadastroNuevoEstudante} />
       <Route path="/estudantes-destaques" component={EstudantesDestaques} />
+      <Route path='/profile-estudante' component={ProfileEstudante} />
     </Switch>
   </div>)
 }

@@ -1,5 +1,6 @@
 import './style.css'
 import { Row, Col, Form, Card } from 'react-bootstrap'
+import { AiOutlineArrowRight } from 'react-icons/ai'
 
 const FormInicial = ({ ...props }) => {
     const { handleSubmit } = props
@@ -36,7 +37,7 @@ const FormInicial = ({ ...props }) => {
                     </Row>
                     <button className='button' onClick={() => handleSubmit(true)}>
                         Quero contratar programadores
-                                        <img src="https://d4zjpv0aa4kr2.cloudfront.net/assets/icons/arrow_w-1e6a15b4c1ae7762567d102827fda5b754a84a2f5eced763f359cb92f6524676.svg" alt="Arrow w" />
+                                        <AiOutlineArrowRight color='white' style={{ marginLeft: '5px', height: '20px', width: '20px'}} />
                     </button>
                 </Form>
             </div>
