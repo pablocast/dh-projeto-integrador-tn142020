@@ -5,7 +5,7 @@ import BannerTestimonioEstudante from '../../components/core/BannerTestimonioEst
 import BannerRegistrarEstudante from '../../components/core/BannerRegistrarEstudante'
 import Footer from '../../components/core/Footer'
 
-const NuevoEstudante = () => {
+const NovoEstudante = () => {
 
     return (
         <>
@@ -21,4 +21,4 @@ const NuevoEstudante = () => {
     )
 }
 
-export default NuevoEstudante
+export default NovoEstudante
