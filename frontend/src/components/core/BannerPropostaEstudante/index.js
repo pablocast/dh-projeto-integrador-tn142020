@@ -56,7 +56,7 @@ const BannerPropostaEstudante = () => {
 
     return (
         <section className='proposta'>
-            <Container>
+            <Container style={{marginLeft:96.58}}>
                 <Row>
                     <Col lg={{ span: 1 }} >
                     </Col>
