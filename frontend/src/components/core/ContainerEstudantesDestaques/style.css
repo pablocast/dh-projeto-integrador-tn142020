@@ -5,6 +5,12 @@
   max-width: 960px;
   
 }
+img {
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  pointer-events: auto;
+}
 
 .table {
   width: 642px;
@@ -37,4 +43,14 @@
 .table table td {
   border-bottom: 1px solid #9e9e9e;
   padding: 10px 0;
+}
+
+
+.table table tr td div {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.table table tr td div h4 {
+  margin-left: 15px;
 }
