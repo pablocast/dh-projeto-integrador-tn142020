@@ -1,9 +1,13 @@
 import './style.css'
-
+import Header from '../../components/core/Header'
+import Footer from '../../components/core/Footer'
+import EstudantesDestaque from '../../components/core/ContainerEstudantesDestaques'
 const EstudantesDestaques = () => {
     return (
         <>
-        <p>This is estudantes destacados</p>
+        <Header />
+        <EstudantesDestaque/>
+        <Footer />
         </>
     )
 
