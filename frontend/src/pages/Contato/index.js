@@ -1,11 +1,7 @@
-import BannerBemVindo from "../../components/core/BannerBemVindo"
+import BannerBemVindo from "../../components/core/BannerBemVindo";
 
 const Contato = () => {
+  return <p>This is contato</p>;
+};
 
-    return (
-        <p>This is contato</p>
-    )
-
-}
-
-export default Contato
+export default Contato;

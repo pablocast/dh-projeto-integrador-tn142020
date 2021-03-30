@@ -1,10 +1,8 @@
-import './style.css'
+import "./style.css";
 
 const Footer = () => {
-
   return (
     <footer class="footer">
-
       <div class="footer-copy">
         <p>Todos os direitos reservados BrainXpert &copy;</p>
       </div>
@@ -26,10 +24,8 @@ const Footer = () => {
           <li class="font-light">Summer-down</li>
         </ul>
       </div>
-
     </footer>
-  )
+  );
+};
 
-}
-
-export default Footer
+export default Footer;

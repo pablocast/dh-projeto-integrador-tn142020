@@ -1,9 +1,5 @@
 const Cursos = () => {
+  return <p>This is cursos</p>;
+};
 
-    return (
-        <p>This is cursos</p>
-    )
-
-}
-
-export default Cursos 
+export default Cursos;
