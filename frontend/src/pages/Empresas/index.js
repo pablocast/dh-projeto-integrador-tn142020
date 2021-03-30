@@ -305,7 +305,7 @@ const Empresas = () => {
               </Col>
               <Col lg={{ span: 1 }}></Col>
             </Row>
-            <Row className='BannerPrecos'>
+            <Row className="BannerPrecos">
               <Col lg={{ span: 1 }}></Col>
               <Col lg={{ span: 10 }}>
                 <h1> Nossos Planos e Preços</h1>
