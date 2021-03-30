@@ -184,3 +184,8 @@ p {
     margin-left: 6px !important;
     width: auto !important;
 }
+
+.BannerPrecos {
+    padding-top: 60px;
+    background-color: white;
+}

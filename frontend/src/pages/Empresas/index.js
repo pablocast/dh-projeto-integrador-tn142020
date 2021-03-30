@@ -19,6 +19,7 @@ import { RiSendPlaneLine } from "react-icons/ri";
 import { BiTime } from "react-icons/bi";
 import ItemEmpresa from "../../components/core/BannerDepoimentos/ItemEmpresa";
 import Footer from "../../components/core/Footer";
+import BannerPrecosEmpresa from "../../components/core/BannerPrecosEmpresa";
 
 const depoimentos = [
   {
@@ -301,6 +302,14 @@ const Empresas = () => {
                     </p>
                   </Col>
                 </Row>
+              </Col>
+              <Col lg={{ span: 1 }}></Col>
+            </Row>
+            <Row className='BannerPrecos'>
+              <Col lg={{ span: 1 }}></Col>
+              <Col lg={{ span: 10 }}>
+                <h1> Nossos Planos e Preços</h1>
+                <BannerPrecosEmpresa />
               </Col>
               <Col lg={{ span: 1 }}></Col>
             </Row>
