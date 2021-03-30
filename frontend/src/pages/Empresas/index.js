@@ -25,7 +25,7 @@ const depoimentos = [
 ]
 
 const Empresas = () => {
-    /*TO DO: Change Style Depoimento Empresa */
+    
     const value = depoimentos[0]
 
     return (
