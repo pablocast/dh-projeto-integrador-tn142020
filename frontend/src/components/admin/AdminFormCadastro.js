@@ -21,23 +21,27 @@ const AdminFormCadastro = (props) => {
     };
 
   const clickSubmit = (event) => {
-    event.preventDefault()
+    event.preventDefault();
     const user = {
       user: values.user || undefined,
       password: values.password || undefined,
     };
     signin(user)
       ? setValues({ ...values, directToAccess: true })
-      : setValues({ ...values, error: "Usuario ou Senha errados", directToAccess: false });
+      : setValues({
+          ...values,
+          error: "Usuario ou Senha errados",
+          directToAccess: false,
+        });
   };
 
-  const {directToAccess} = values
-    if (directToAccess) {
-      return (<Redirect to={'/admin/painel'}/>)
+  const { directToAccess } = values;
+  if (directToAccess) {
+    return <Redirect to={"/admin/painel"} />;
   } else {
-    (<Redirect to={'/admin/'}/>)
+    <Redirect to={"/admin/"} />;
   }
-  
+
   return (
     <div className="admin-main-section-content">
       <Container className="Container">
@@ -111,7 +115,7 @@ const AdminFormCadastro = (props) => {
                   </Row>
                   <br />
                   {values.error && (
-                    <p style={{ color: "red",textAlign:'center' }}>
+                    <p style={{ color: "red", textAlign: "center" }}>
                       <RiErrorWarningFill color="red" />
                       {values.error}
                     </p>

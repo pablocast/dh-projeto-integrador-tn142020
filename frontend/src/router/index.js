@@ -11,6 +11,7 @@ import PagePlataforma from "../pages/PagePlataforma";
 import BemVindo from "../pages/BemVindo";
 import Contato from "../pages/Contato";
 import AdminLogin from "../pages/AdminLogin";
+import AdminDash from "../pages/AdminDash";
 import PrivateRoute from "../components/auth/PrivateRoute";
 
 const MainRouter = () => {
@@ -35,7 +36,7 @@ const MainRouter = () => {
       <Route path="/bemvindo" component={BemVindo} />
       <Route path="/contato" component={Contato} />
       <Route path="/admin" component={AdminLogin} />
-      <PrivateRoute path="/admin/:painel" component={Contato} />
+      <PrivateRoute path="/admin/painel" component={AdminDash} />
     </Switch>
   );
 };
