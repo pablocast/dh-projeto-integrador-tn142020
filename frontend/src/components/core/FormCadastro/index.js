@@ -35,7 +35,6 @@ const FormCadastro = ({ ...props }) => {
                         autofocus="autofocus"
                         placeholder="Digite o seu email"
                         type="email"
-                        value=""
                         name="candidate[email]"
                         id="candidate_email"
                       />
