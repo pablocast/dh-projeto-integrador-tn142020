@@ -1,15 +1,18 @@
+import './style.css'
 import Header from '../../components/core/Header'
 import Footer from '../../components/core/Footer'
+import Contato from '../../components/core/Contato'
 
-const Contato = () => {
+const contato = () => {
 
     return (
-        <> 
+        <main className="main"> 
         <Header />
+        <Contato className="contato"/>
         <Footer />
-        </>
+        </main>
     )
 
 }
 
-export default Contato
+export default contato
