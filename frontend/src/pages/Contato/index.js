@@ -1,9 +1,13 @@
-import BannerBemVindo from "../../components/core/BannerBemVindo"
+import Header from '../../components/core/Header'
+import Footer from '../../components/core/Footer'
 
 const Contato = () => {
 
     return (
-        <p>This is contato</p>
+        <> 
+        <Header />
+        <Footer />
+        </>
     )
 
 }
