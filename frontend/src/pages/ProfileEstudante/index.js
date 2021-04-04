@@ -1,16 +1,16 @@
-import './style.css'
-import Header from '../../components/core/HeaderPageCursos'
-import ContainerCursos from '../../components/core/ContainerCursos'
-import Footer from '../../components/core/Footer'
+import "./style.css";
+import Header from "../../components/core/HeaderPageCursos";
+import ContainerCursos from "../../components/core/ContainerCursos";
+import Footer from "../../components/core/Footer";
 
 const ProfileCursos = () => {
-    return (
+  return (
     <>
-        <Header />
-        <ContainerCursos />
-        <Footer />
+      <Header />
+      <ContainerCursos />
+      <Footer />
     </>
-    )
-}
+  );
+};
 
-export default ProfileCursos
+export default ProfileCursos;

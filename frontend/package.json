@@ -7,11 +7,14 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "bootstrap": "^4.6.0",
+    "instal": "^0.0.1-security",
     "mdbreact": "^5.0.1",
+    "prettier": "^2.2.1",
     "react": "^17.0.1",
+    "react-admin": "^3.14.1",
     "react-bootstrap": "^1.5.2",
     "react-dom": "^17.0.1",
-    "react-elastic-carousel": "^0.11.2",
+    "react-elastic-carousel": "^0.11.4",
     "react-icons": "^4.2.0",
     "react-scripts": "^4.0.3",
     "requirejs": "^2.3.6",
@@ -22,7 +25,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "pretty": "prettier --write \"./**/*.{js,jsx,json}\""
   },
   "eslintConfig": {
     "extends": [

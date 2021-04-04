@@ -3,7 +3,6 @@
 .registrations {
     display: block;
     box-sizing: border-box;
-
 }
 
 .col-5 h1 strong {
@@ -184,4 +183,9 @@ p {
 .companies-depoimento .button > img {
     margin-left: 6px !important;
     width: auto !important;
+}
+
+.BannerPrecos {
+    padding-top: 60px;
+    background-color: white;
 }
