@@ -35,8 +35,17 @@ const MainRouter = () => {
       <Route path="/profile-estudante" component={ProfileEstudante} />
       <Route path="/bemvindo" component={BemVindo} />
       <Route path="/contato" component={Contato} />
-      <Route path="/admin" component={AdminLogin} />
-      <PrivateRoute path="/admin/painel" component={AdminDash} />
+      <Route
+        path="/admin/painel"
+        render={() =>
+          sessionStorage.getItem("isAuthenticated") ? (
+            <AdminDash />
+          ) : (
+            <AdminLogin />
+          )
+        }
+      />
+      <Route exact path="/admin" component={AdminLogin} />
     </Switch>
   );
 };

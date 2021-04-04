@@ -1,13 +1,13 @@
 import "./style.css";
 import { Container, Row, Col, Form, Card } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Redirect, useHistory } from "react-router-dom";
 import { AiFillLock } from "react-icons/ai";
 import { RiErrorWarningFill } from "react-icons/ri";
 import React, { useState } from "react";
 import { signin } from "../auth/ApiAuth";
-import { Redirect } from "react-router-dom";
 
 const AdminFormCadastro = (props) => {
+  const history = useHistory();
   const [values, setValues] = useState({
     user: "",
     password: "",
@@ -33,13 +33,12 @@ const AdminFormCadastro = (props) => {
           error: "Usuario ou Senha errados",
           directToAccess: false,
         });
+    sessionStorage.setItem("isAuthenticated", signin(user) ? true : false);
   };
 
   const { directToAccess } = values;
   if (directToAccess) {
-    return <Redirect to={"/admin/painel"} />;
-  } else {
-    <Redirect to={"/admin/"} />;
+    return <Redirect to={{ pathname: "/admin/painel" }} />;
   }
 
   return (
