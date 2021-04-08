@@ -1,3 +1,4 @@
+import React from 'react'
 import "./style.css";
 import ImageMagalu from "../../../assets/img/magazineluiza.png";
 import ImageMercadolivre from "../../../assets/img/mercadolivre.jpg";

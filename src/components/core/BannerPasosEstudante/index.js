@@ -1,3 +1,4 @@
+import React from 'react'
 import "./style.css";
 import { Row, Col, Container } from "react-bootstrap";
 import { AiFillLinkedin } from "react-icons/ai";

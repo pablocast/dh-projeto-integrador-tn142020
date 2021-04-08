@@ -1,3 +1,4 @@
+import React from 'react'
 import "./style.css";
 import FormCadastro from "../../components/core/FormCadastro";
 import Footer from "../../components/core/Footer";

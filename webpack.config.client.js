@@ -17,13 +17,13 @@ const config = {
     },
     module: {
         rules: [{
-            test: /\.m?js$/,
+            test: /\.js$|jsx/,
             exclude: /node_modules/,
-            use: 'babel-loader'
+            use: 'babel-loader',
         },
         {   
             test: /\.css$/i,
-            use: ['style-loader', 'css-loader']
+            loader: ['css-loader', 'sass-loader']
         },
         {
             test: /\.(ttf|eot|svg|gif|jpg|png)(\?[\s\S]+)?$/,
@@ -33,13 +33,15 @@ const config = {
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoEmitOnErrorsPlugin()
+        new webpack.NoEmitOnErrorsPlugin(),
     ],
     resolve: {
         alias: {
-            'react-dom': '@hot-loader/react-dom'
+            'react-dom': '@hot-loader/react-dom',
+            'react-router-dom': path.resolve('./node_modules/react-router-dom')
         }
     }
 }
 
 module.exports = config
+  

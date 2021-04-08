@@ -1,3 +1,4 @@
+import React from 'react'
 import "./style.css";
 import imageLogo from "../../../assets/img/logo_transp.png";
 

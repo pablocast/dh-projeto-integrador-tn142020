@@ -1,3 +1,4 @@
+import React from 'react'
 import { Admin, Resource, ListGuesser } from "react-admin";
 import "./style.css";
 import users from "../../helpers/users.json";

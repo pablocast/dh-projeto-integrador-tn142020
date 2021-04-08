@@ -1,3 +1,4 @@
+import React from 'react'
 import "./style.css";
 import Image from "../../../assets/img/banner.png";
 import { Link } from "react-router-dom";

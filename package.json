@@ -30,14 +30,15 @@
     "requirejs": "^2.3.6",
     "styled-components": "^5.2.1",
     "web-vitals": "^1.0.1",
-    "webpack": "^5.30.0",
+    "webpack": "^4.44.2",
     "webpack-cli": "^4.6.0",
     "webpack-dev-middleware": "^4.1.0",
     "webpack-hot-middleware": "^2.25.0",
     "webpack-node-externals": "^2.5.2"
   },
   "scripts": {
-    "start": "nodemon",
+    "start": "react-scripts start",
+    "development": "nodemon",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -63,9 +64,15 @@
     ]
   },
   "devDependencies": {
-    "babel-loader": "^8.2.2",
-    "css-loader": "^5.2.0",
+    "@babel/plugin-transform-runtime": "^7.13.10",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-loader": "8.1.0",
+    "css-loader": "^2.1.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-webpack-plugin": "^5.3.1",
     "react-hot-loader": "^4.13.0",
+    "sass": "^1.32.8",
+    "sass-loader": "^10.1.1",
     "style-loader": "^2.0.0"
   }
 }

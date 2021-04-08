@@ -1,3 +1,4 @@
+import React from 'react'
 import "./style.css";
 import BannerBemVindo from "../../components/core/BannerBemVindo";
 import Footer from "../../components/core/Footer";

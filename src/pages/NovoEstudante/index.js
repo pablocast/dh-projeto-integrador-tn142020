@@ -1,3 +1,4 @@
+import React from 'react'
 import "./style.css";
 import BannerPropostaEstudante from "../../components/core/BannerPropostaEstudante";
 import BannerPasosEstudante from "../../components/core/BannerPasosEstudante";

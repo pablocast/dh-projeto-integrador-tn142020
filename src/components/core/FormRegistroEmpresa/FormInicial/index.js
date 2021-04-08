@@ -1,3 +1,4 @@
+import React from 'react'
 import "./style.css";
 import { Row, Col, Form, Card } from "react-bootstrap";
 import { AiOutlineArrowRight } from "react-icons/ai";

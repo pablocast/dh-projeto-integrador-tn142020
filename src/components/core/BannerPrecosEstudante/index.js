@@ -1,3 +1,4 @@
+import React from 'react'
 import "./style.css";
 import img from "../../../assets/img/young-woman-zerocost.png";
 import { Row, Col } from "react-bootstrap";

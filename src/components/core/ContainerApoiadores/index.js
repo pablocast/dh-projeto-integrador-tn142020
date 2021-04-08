@@ -1,3 +1,4 @@
+import React from 'react'
 import "./style.css";
 import ImageEmpresa from "../../../assets/img/empresa.png";
 

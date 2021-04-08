@@ -1,3 +1,4 @@
+import React from 'react'
 import "./style.css";
 import { Container, Row, Col, Form, Card, FormCheck } from "react-bootstrap";
 import { Link } from "react-router-dom";

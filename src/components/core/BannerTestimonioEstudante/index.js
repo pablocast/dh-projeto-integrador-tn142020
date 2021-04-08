@@ -1,3 +1,4 @@
+import React from 'react'
 import "./style.css";
 import { Row, Col, Container, Card } from "react-bootstrap";
 import Carousel from "react-elastic-carousel";

@@ -1,3 +1,4 @@
+import React from 'react'
 import "./style.css";
 import ImagePlataforma from "../../../assets/img/plataforma.jpg";
 

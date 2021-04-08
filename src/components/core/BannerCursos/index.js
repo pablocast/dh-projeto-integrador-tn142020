@@ -1,3 +1,4 @@
+import React from 'react'
 import "./style.css";
 import skillsImage from "../../../assets/img/skills.png";
 import { Link } from "react-router-dom";

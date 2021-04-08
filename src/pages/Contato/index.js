@@ -1,3 +1,4 @@
+import React from 'react'
 import BannerBemVindo from "../../components/core/BannerBemVindo";
 
 const Contato = () => {

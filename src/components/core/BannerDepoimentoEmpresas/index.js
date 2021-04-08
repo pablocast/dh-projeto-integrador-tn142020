@@ -1,3 +1,4 @@
+import React from 'react'
 import FormFinal from "../FormRegistroEmpresa/FormFinal";
 import "./style.css";
 
