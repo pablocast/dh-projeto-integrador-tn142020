@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import Header from "../../components/core/Header";
 import Footer from "../../components/core/Footer";
 import BannerQuemSomos from "../../components/core/BannerQuemSomos";

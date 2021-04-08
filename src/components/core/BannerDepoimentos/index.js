@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import "./style.css";
 import Carousel from "react-elastic-carousel";
 import { Container } from "react-bootstrap";

@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import "./style.css";
 import Image from "../../../assets/img/banner.png";
 
@@ -11,7 +11,7 @@ const BannerOfertaCursos = () => {
             Sempre em busca dos seus objetivos
           </p>
           <p className="banner_titulo_menor lead">
-              Guiamos seus estudos no rumo de uma grande oportunidade
+            Guiamos seus estudos no rumo de uma grande oportunidade
           </p>
         </div>
         <div className="banner_esquerda">

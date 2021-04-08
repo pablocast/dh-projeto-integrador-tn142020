@@ -29,10 +29,10 @@ const AdminFormCadastro = (props) => {
     signin(user)
       ? setValues({ ...values, directToAccess: true })
       : setValues({
-        ...values,
-        error: "Usuario ou Senha errados",
-        directToAccess: false,
-      });
+          ...values,
+          error: "Usuario ou Senha errados",
+          directToAccess: false,
+        });
     sessionStorage.setItem("isAuthenticated", signin(user) ? true : false);
   };
 
@@ -138,4 +138,3 @@ const AdminFormCadastro = (props) => {
 };
 
 export default AdminFormCadastro;
-

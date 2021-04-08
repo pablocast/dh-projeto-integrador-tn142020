@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import "./style.css";
 import imageJavascript from "../../../assets/img/JavaScript-logo.png";
 import imageHtml from "../../../assets/img/html-logo.png";

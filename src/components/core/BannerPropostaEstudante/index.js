@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import "./style.css";
 import { Row, Col, Container } from "react-bootstrap";
 import { GiSkills } from "react-icons/gi";

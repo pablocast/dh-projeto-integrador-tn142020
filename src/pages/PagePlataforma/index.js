@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import "./style.css";
 import Header from "../../components/core/Header";
 import QuemSomos from "../../components/core/ContainerQuemSomos";

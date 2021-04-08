@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import "./style.css";
 import AdminFormCadastro from "../../components/admin/AdminFormCadastro.js";
 
