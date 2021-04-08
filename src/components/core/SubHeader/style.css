@@ -1,0 +1,31 @@
+.SubHeader {
+    justify-content: center;
+    background-color: #0052FB;
+    opacity: 0.5;
+    margin-left:0 !important;
+    margin-right:0 !important;
+}
+
+.SubNav ul {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.SubNav ul li a{
+    color: #fff !important;
+    font-size: 0.9rem;
+    text-decoration: none !important;
+}
+
+.SubNav ul li {
+    display: flex;
+    margin: 0;
+    color: #555;
+    letter-spacing: 0.1em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    text-decoration: none;
+    border-top: .3rem solid transparent;
+}

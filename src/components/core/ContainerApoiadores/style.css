@@ -1,0 +1,22 @@
+/* apoiadores */
+
+.apoiadores {
+    display: flex;
+    padding: 1.5rem;
+}
+
+.apoiadores img {
+    width: 50%;
+}
+
+/* responsividade */
+
+@media (max-width: 768px){
+    .apoiadores {
+        display: block;
+    }
+
+    .apoiadores img {
+        width: 100%;
+    }
+}

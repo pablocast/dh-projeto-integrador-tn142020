@@ -1,0 +1,29 @@
+/* quem somos */
+
+.quem-somos {
+    padding: 2rem 2rem;
+    background: #0052FB;
+    color: #fff;
+    display: flex;
+}
+
+.quem-somos img {
+    width: 50%;
+}
+
+.container-text {
+    padding: 1.5rem;
+    text-align: left;
+}
+
+/* responsividade */
+
+@media (max-width: 768px){
+    .quem-somos {
+        display: block;
+    }
+
+    .quem-somos img {
+        width: 100%
+    }
+}

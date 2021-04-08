@@ -1,0 +1,83 @@
+.PricingCardContainer {
+    display: flex;
+    margin: 20px auto;
+}
+
+.PricingCard {
+    border: 1px solid #8D9096;
+    border-radius: 3px;
+    flex: 1;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 25px;
+    text-align: center;
+    background-color: white;
+}
+
+.PricingCard p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+
+.PricingCard h2 {
+    margin-bottom: 0;
+}
+
+.PricingCard .title {
+	background: #EAEFF5;
+	padding: 20px ;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	font-size: 1.7em;
+}
+
+.PricingCard.featured {
+    border-color: rgb(0, 82, 251);
+    background-color: white;
+}
+    
+.PricingCard.featured .title { 
+    background: rgb(0, 82, 251);
+    color: white;
+}
+
+.PricingCard.featured .price-bttn {
+	background: rgb(0, 82, 251);
+	color: white;
+}
+
+.PricingCard .price-overview {
+	margin-top: 20px;
+	font-weight: bold;
+}
+
+.price .price__currency { font-size: 1.7em; padding-right: 3px; }
+.price .price__dollar { font-size: 1.7em; }
+.price .price__cent { font-size: 1em; }
+
+.Card {
+	padding: 30px;
+}
+
+.price-desc { 
+	font-size: 0.7em;
+	margin-top: 0;
+}
+
+.price-bttn { 
+    display: block;
+    text-align: center;
+    position: relative;
+    margin: 0 25px;
+    margin-top: auto;
+    background: none;
+    border: 1px solid rgb(0, 82, 251);
+    color: rgb(0, 82, 251);
+}
