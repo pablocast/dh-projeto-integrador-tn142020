@@ -1,8 +1,19 @@
 import React from 'react'
-import BannerBemVindo from "../../components/core/BannerBemVindo";
+import './style.css'
+import Header from '../../components/core/Header'
+import Footer from '../../components/core/Footer'
+import Contato from '../../components/core/Contato'
 
-const Contato = () => {
-  return <p>This is contato</p>;
-};
+const contato = () => {
 
-export default Contato;
+    return (
+        <main className="main"> 
+        <Header />
+        <Contato className="contato"/>
+        <Footer />
+        </main>
+    )
+
+}
+
+export default contato

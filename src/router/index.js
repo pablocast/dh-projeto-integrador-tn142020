@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch, BrowserRouter } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Home from "../pages/Home";
 import Cadastro from "../pages/Cadastro";
 import Empresas from "../pages/Empresas";
@@ -10,16 +10,11 @@ import ProfileEstudante from "../pages/ProfileEstudante";
 import PagePlataforma from "../pages/PagePlataforma";
 import BemVindo from "../pages/BemVindo";
 import Contato from "../pages/Contato";
-import AdminLogin from "../pages/AdminLogin";
-import AdminDash from "../pages/AdminDash";
-import { createMemoryHistory } from 'history';
-
-
-const history = createMemoryHistory();
+import AdminDash from '../pages/AdminDash';
+import AdminLogin from '../pages/AdminLogin';
 
 const MainRouter = () => {
   return (
-    <BrowserRouter history={history}>
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/plataforma" component={PagePlataforma} />
@@ -39,6 +34,7 @@ const MainRouter = () => {
         <Route path="/profile-estudante" component={ProfileEstudante} />
         <Route path="/bemvindo" component={BemVindo} />
         <Route path="/contato" component={Contato} />
+        <Route exact path="/admin" component={AdminLogin} />
         <Route
           path="/admin/painel"
           render={() =>
@@ -49,9 +45,7 @@ const MainRouter = () => {
             )
           }
         />
-        <Route exact path="/admin" component={AdminLogin} />
       </Switch>
-    </BrowserRouter>
   );
 };
 

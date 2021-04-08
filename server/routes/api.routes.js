@@ -12,3 +12,5 @@ router.route("/api/companies").get(companyCtrl.list);
 router.route("/api/courses").get(courseCtrl.list);
 
 export default router;
+
+
