@@ -5,11 +5,11 @@ const CURRENT_WORKING_DIR = process.cwd();
 const config = {
   name: "browser",
   mode: "development",
-  devtool: "eval-source-map",
-  entry: [
-    "webpack-hot-middleware/client?reload=true",
-    path.join(CURRENT_WORKING_DIR, "src/index.js"),
-  ],
+  devServer: {
+    contentBase: path.join(__dirname, "dist"),
+    compress: true,
+    port: 3000,
+  },
   output: {
     path: path.join(CURRENT_WORKING_DIR, "/dist"),
     filename: "bundle.js",

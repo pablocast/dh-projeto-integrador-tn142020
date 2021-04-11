@@ -1,16 +1,15 @@
+import { React, useEffect } from "react";
 import MainRouter from "./router";
-import { BrowserRouter } from "react-router-dom";
-
 import "./App.css";
 
 function App() {
-  return (
-    <BrowserRouter>
-      <div className="App">
-        <MainRouter />
-      </div>
-    </BrowserRouter>
-  );
+  useEffect(() => {
+    const jssStyles = document.querySelector('#jss-server-side')
+    if (jssStyles) {
+      jssStyles.parentNode.removeChild(jssStyles)
+    }
+  }, [])
+  return <MainRouter className="App" />;
 }
 
 export default App;

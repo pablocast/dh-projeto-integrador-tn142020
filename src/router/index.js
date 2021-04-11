@@ -12,6 +12,7 @@ import BemVindo from "../pages/BemVindo";
 import Contato from "../pages/Contato";
 import AdminDash from "../pages/AdminDash";
 import AdminLogin from "../pages/AdminLogin";
+import { BrowserRouter } from "react-router-dom";
 
 const MainRouter = () => {
   return (

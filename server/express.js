@@ -9,7 +9,9 @@ import devBundle from "./devBundle";
 import path from "path";
 import template from "../template";
 import { renderToString } from "react-dom/server";
-import MainRouter from "./../src/router";
+import MainRouter from "./../src/router/";
+import { StaticRouter } from "react-router";
+import { ServerStyleSheet, StyleSheetManager } from 'styled-components'
 
 // modules for server side rendering
 import React from "react";
@@ -29,10 +31,28 @@ devBundle.compile(app);
 
 // mount routes
 app.use("/", apiRoutes);
-app.use("/dist", express.static(path.join(CURRENT_WORKING_DIR, "dist")));
+
+app.use('/dist', express.static(path.join(CURRENT_WORKING_DIR, 'dist')));
 
 app.get("*", (req, res) => {
-  res.status(200).send(template());
+  const context = {};
+  const sheet = new ServerStyleSheet();
+
+  const html = renderToString(
+    sheet.collectStyles(
+      <StaticRouter location={req.url} context={context}>
+        <StyleSheetManager sheet={sheet.instance}>
+          <MainRouter />
+        </StyleSheetManager>
+      </StaticRouter>
+    )
+  );
+
+  const css = sheet.sheet.getStyleTags()
+
+  console.log('Static stylesheet:\n', styleTags)
+
+  res.status(200).send(template({ html: html, css: css }));
 });
 
 export default app;
