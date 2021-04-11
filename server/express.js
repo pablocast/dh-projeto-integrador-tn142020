@@ -11,7 +11,7 @@ import template from "../template";
 import { renderToString } from "react-dom/server";
 import MainRouter from "./../src/router/";
 import { StaticRouter } from "react-router";
-import { ServerStyleSheet, StyleSheetManager } from 'styled-components'
+import { ServerStyleSheet, StyleSheetManager } from "styled-components";
 
 // modules for server side rendering
 import React from "react";
@@ -32,7 +32,7 @@ devBundle.compile(app);
 // mount routes
 app.use("/", apiRoutes);
 
-app.use('/dist', express.static(path.join(CURRENT_WORKING_DIR, 'dist')));
+app.use("/dist", express.static(path.join(CURRENT_WORKING_DIR, "dist")));
 
 app.get("*", (req, res) => {
   const context = {};
@@ -48,9 +48,9 @@ app.get("*", (req, res) => {
     )
   );
 
-  const css = sheet.sheet.getStyleTags()
+  const css = sheet.sheet.getStyleTags();
 
-  console.log('Static stylesheet:\n', styleTags)
+  console.log("Static stylesheet:\n", styleTags);
 
   res.status(200).send(template({ html: html, css: css }));
 });

@@ -1,13 +1,7 @@
 import React from "react";
-import {
-  Create,
-  Edit,
-  UrlField,
-  SimpleForm,
-  TextInput,
-} from "react-admin";
+import { Create, Edit, UrlField, SimpleForm, TextInput } from "react-admin";
 
-import { GiFactory } from 'react-icons/gi'
+import { GiFactory } from "react-icons/gi";
 
 const CompanyIcon = GiFactory;
 

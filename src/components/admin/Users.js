@@ -11,7 +11,7 @@ import {
   TextInput,
 } from "react-admin";
 
-import { AiOutlineUser } from 'react-icons/ai'
+import { AiOutlineUser } from "react-icons/ai";
 
 const UserIcon = AiOutlineUser;
 
@@ -36,7 +36,7 @@ const UserCreate = (props) => {
   return (
     <Create {...props}>
       <SimpleForm>
-        <TextInput disabled  source="id" />
+        <TextInput disabled source="id" />
         <TextInput source="name" />
         <TextInput source="username" />
         <TextInput source="email" />

@@ -1,12 +1,7 @@
 import React from "react";
-import {
-  Create,
-  Edit,
-  SimpleForm,
-  TextInput,
-} from "react-admin";
+import { Create, Edit, SimpleForm, TextInput } from "react-admin";
 
-import { BiBookReader } from 'react-icons/bi'
+import { BiBookReader } from "react-icons/bi";
 
 const CourseIcon = BiBookReader;
 
