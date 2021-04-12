@@ -8,6 +8,8 @@ import Carousel from "react-elastic-carousel";
 import Card from "../Card";
 
 const CursosRecomendados = (props) => {
+  const {id} = props
+
   const breakPoints = [
     { width: 500, itemsToShow: 1 },
     { width: 768, itemsToShow: 5 },
@@ -15,7 +17,7 @@ const CursosRecomendados = (props) => {
     { width: 1500, itemsToShow: 7 },
   ];
   return (
-    <div className="container-fluid">
+    <div className="container-fluid" id={id}>
       <h2 className="h2 text-dark pt-3" id="cursosRecomendados">
         Cursos Recomendados
       </h2>

@@ -8,6 +8,8 @@ import Card from "../Card";
 import React from "react";
 
 const CursosEmAlta = (props) => {
+  const {id} = props
+
   const breakPoints = [
     { width: 500, itemsToShow: 1 },
     { width: 768, itemsToShow: 5 },
@@ -15,7 +17,7 @@ const CursosEmAlta = (props) => {
     { width: 1500, itemsToShow: 7 },
   ];
   return (
-    <div className="container-fluid bg-dark">
+    <div className="container-fluid bg-dark" id={id}>
       <h2 className="h2 text-white pt-3" id="cursosEmAlta">
         Cursos em alta
       </h2>

@@ -12,3 +12,28 @@
 .CursosContainer-Courses{
     padding:0 !important;
 }
+
+.fact-wrapper {
+    margin-top: 10px;
+    position: relative;
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid #b8b8b8;
+    padding: 5px 0;
+    transition: max-height 1s;
+}
+
+.fact-wrapper h3 {
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    height: 30px;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+    padding-bottom: 5px;
+    color: #727272;
+}
