@@ -49,16 +49,10 @@ const ContainerCursos = () => {
         <h2>Cursos recomendados</h2>
         <div class="cursosRecomendados">
           <div class="containerInferior">
-            <Curso
-              img={imageReact}
-              titulo="REACTJS - desenvolvimento FRONT-END"
-            />
+            <Curso  img={imageReact} titulo="REACTJS - desenvolvimento FRONT-END"/>
             <Curso img={imageHtml} titulo="NODEJS - desenvolvimento BACK-END" />
             <Curso img={imageGit} titulo="EXPRESS - banco de dados" />
-            <Curso
-              img={imageCss}
-              titulo="ANGULARJS - desenvolvimento FRONT-END"
-            />
+            <Curso img={imageCss} titulo="ANGULARJS - desenvolvimento FRONT-END"/>
           </div>
         </div>
       </div>
