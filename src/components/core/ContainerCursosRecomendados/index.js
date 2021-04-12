@@ -8,7 +8,7 @@ import Carousel from "react-elastic-carousel";
 import Card from "../Card";
 
 const CursosRecomendados = (props) => {
-  const {id} = props
+  const { id } = props;
 
   const breakPoints = [
     { width: 500, itemsToShow: 1 },

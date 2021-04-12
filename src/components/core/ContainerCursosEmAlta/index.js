@@ -8,7 +8,7 @@ import Card from "../Card";
 import React from "react";
 
 const CursosEmAlta = (props) => {
-  const {id} = props
+  const { id } = props;
 
   const breakPoints = [
     { width: 500, itemsToShow: 1 },

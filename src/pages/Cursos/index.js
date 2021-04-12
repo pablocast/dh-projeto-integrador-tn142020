@@ -9,22 +9,43 @@ import CursosEmAlta from "../../components/core/ContainerCursosEmAlta";
 import { Col, Row, Container } from "react-bootstrap";
 
 const FiltroCursos = (props) => {
-  const { id1, id2, id3 } = props
+  const { id1, id2, id3 } = props;
 
   const goToContainer = (id) => {
     document.getElementById(id).scrollIntoView();
-  }
+  };
 
   return (
     <>
       <div className="fact-wrapper">
-        <h3 className="header-facet" onClick={() => { goToContainer(id1) }} >Cursos Recomendados</h3>
+        <h3
+          className="header-facet"
+          onClick={() => {
+            goToContainer(id1);
+          }}
+        >
+          Cursos Recomendados
+        </h3>
       </div>
       <div className="fact-wrapper">
-        <h3 className="header-facet" onClick={() => { goToContainer(id2) }} >Cursos em Alta</h3>
+        <h3
+          className="header-facet"
+          onClick={() => {
+            goToContainer(id2);
+          }}
+        >
+          Cursos em Alta
+        </h3>
       </div>
       <div className="fact-wrapper">
-        <h3 className="header-facet" onClick={() => { goToContainer(id3) }}>Cursos Relacionados</h3>
+        <h3
+          className="header-facet"
+          onClick={() => {
+            goToContainer(id3);
+          }}
+        >
+          Cursos Relacionados
+        </h3>
       </div>
     </>
   );
@@ -37,13 +58,13 @@ const Cursos = () => {
       <Container className="CursosContainer">
         <Row className="CursosContainer-Row">
           <Col lg={{ span: 2 }} className="CursosContainer-Form">
-            <FiltroCursos id1={'ref1'} id2={'ref2'} id3={'ref3'} />
+            <FiltroCursos id1={"ref1"} id2={"ref2"} id3={"ref3"} />
           </Col>
-          <Col lg={{ span: 10 }} className="CursosContainer-Courses" >
+          <Col lg={{ span: 10 }} className="CursosContainer-Courses">
             <Banner />
-            <CursosRecomendados id={'ref1'} />
-            <CursosEmAlta id={'ref2'} />
-            <CursosRelacionados id={'ref3'} />
+            <CursosRecomendados id={"ref1"} />
+            <CursosEmAlta id={"ref2"} />
+            <CursosRelacionados id={"ref3"} />
           </Col>
         </Row>
       </Container>
