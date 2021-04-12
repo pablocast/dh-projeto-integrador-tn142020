@@ -20,7 +20,7 @@ const Header = ({ ...props }) => {
         {!isLogin ? (
           <div className="Cadastro" onMouseOver={() => setCadastro(true)}>
             <a href="" className="Cadastro_button">
-              Cadastre-se
+            Sign in
             </a>
           </div>
         ) : null}
