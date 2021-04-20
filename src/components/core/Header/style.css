@@ -107,3 +107,114 @@
     box-shadow: none;
     box-sizing: content-box;
 }
+
+@media(max-width: 768px){
+
+    .Header {
+        border: none;
+    }
+
+    .Nav, header img {
+        display: none;
+    }
+
+    .one,
+    .two,
+    .three {
+        background-color: #fff;
+        height: 5px;
+        width: 100%;
+        margin: 6px auto;
+
+        transition-duration: 0.3s;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        width: 40px;
+        height: 30px;
+        margin-right: 20px;
+        right: 25px;
+        top: 15px;
+    }
+
+    .menu-toggle-mobile {
+        display: none;
+        position: absolute;
+        width: 40px;
+        height: 30px;
+        margin-right: 20px;
+        right: 25px;
+        top: 15px;
+    }
+
+    .mobile-no {
+        display:none;
+    }
+
+    .mobile-yes{
+        display: block;
+    }
+
+    /* fullscreen */
+    .menu-section.on {
+        position: absolute;
+        top:0;
+        left:0;
+        
+        width: 100vw;
+        height: 100vh;
+
+        background-color: #0052FB;
+        
+        z-index: 10;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-section.on .Nav {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    
+    .menu-section.on .menu-toggle {
+        position: absolute;
+        right: 25px;
+        top: 15px;
+    }
+
+    .menu-section.on .menu-toggle .one {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+
+    .menu-section.on .menu-toggle .two {
+        opacity: 0;
+    }
+
+    .menu-section.on .menu-toggle .three {
+        transform: rotate(-45deg) translate(8px, -9px);
+    }
+
+    .menu-section.on .menu-toggle-mobile {
+        position: absolute;
+        right: 25px;
+        top: 15px;
+    }
+
+    .menu-section.on .menu-toggle-mobile .one {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+
+    .menu-section.on .menu-toggle-mobile .two {
+        opacity: 0;
+    }
+
+    .menu-section.on .menu-toggle-mobile .three {
+        transform: rotate(-45deg) translate(8px, -9px);
+    }
+}
