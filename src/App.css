@@ -45,7 +45,7 @@ img {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 1em;
+  font-size: 1.5rem;
   margin: 4px 2px;
   cursor: pointer;
 }
@@ -62,7 +62,8 @@ img {
 
 @media (max-width: 768px){
   .titulo {
-    font-size: 26px;
+    font-size: x-large;
+    padding-bottom: 0px; 
   }
 
   .titulo-banner {

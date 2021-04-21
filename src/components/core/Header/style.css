@@ -34,7 +34,7 @@
     color: #555;
     letter-spacing: 0.1em;
     font-family: 'Roboto', sans-serif;
-    font-size: 0.9rem;
+    font-size: 1.5rem;
     font-weight: normal;
     text-decoration: none;
     border-top: .3rem solid transparent;
@@ -57,7 +57,7 @@
     color: #555;
     letter-spacing: 0.1em;
     font-family: 'Roboto', sans-serif;
-    font-size: 0.9rem;
+    font-size: 1.5rem;
     font-weight: normal;
     text-decoration: none;
     display: table-cell;
@@ -74,7 +74,7 @@
     width: 160px;
     padding: 16px 0;
     list-style: none;
-    font-size: 14px;
+    font-size: 1.4rem;
     background-color: #fff;
     border: 1px solid #ccc !important;
     border-radius: 4px;
@@ -83,7 +83,7 @@
     background-clip: padding-box;
     right: 202px;
     top: 84px;
-    line-height: 24px;
+    line-height: 2.4rem;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -92,8 +92,8 @@
 .Cadastro__menu>a {
     width: 90%;
     color: #000;
-    font-size: 12px;
-    line-height: 36px;
+    font-size: 1.2rem;
+    line-height: 3.6rem;
     text-transform: none;
     letter-spacing: 1px;
     text-align: center;

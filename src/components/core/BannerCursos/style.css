@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
+html {
+    font-size: 62.5%;
+}
+
 .skill-container {
     background-color: #fff;
     display: flex;
@@ -28,8 +32,9 @@
     margin-left: 40px;
 }
 
-li {
+.skill-container-text li {
     margin-bottom: 5px;
+    font-size: 1.5rem;
 }
 
 [class^="material-icons"] {
@@ -45,12 +50,12 @@ li {
 @media (max-width: 768px){
 
 .skill-container-img {
-    width: 50%;
+    max-width: 40% !important;
     margin: auto;
 }
 
 .skill-container-img img{
-    width: 50%;
+    max-width: 50% !important;
     margin: auto;
     float: none;
 }
@@ -58,20 +63,32 @@ li {
 .skill-container-text {
     width: 100%;
     margin-top: 10px;
+    justify-content: flex-start;
+    margin-left: 0px;
+    padding-left: 20px;
 }
 
 .skill-container {
-    height: 100vh;
-    width: 100%;
     display: block;
 }
 
 .titulo {
-    font-size: 26px;
+    font-size: xx-large;
+    line-height: normal !important;
 }
 
 .material-icons {
-    font-size: 1.5rem;
+    font-size: xx-large;
 }
 
+.skill-container-text li {
+    font-size: large;
+}
+
+}
+
+@media (max-width: 425px){
+    .titulo {
+        font-size: large !important;
+    }
 }

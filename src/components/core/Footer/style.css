@@ -3,7 +3,6 @@
     justify-content: center;
     flex-wrap: nowrap;
     width: 100%;
-    height: 200px;
     font-size: 12px;
     line-height: 18px;
     background-color: #4a4a4a;
@@ -20,14 +19,32 @@
 
 .footer-container-links {
     padding: 50px 10px 20px 20px;
-    width: 10%;
+    width: 20%;
     display: flex;
 
 }
 
 .titulo_rodape {
-    font-size: 12px;
-    line-height: 18px;
+    font-size: x-large;
     color: #fff;
+    padding-bottom: 5px;
     font-family: 'Roboto', sans-serif;
+}
+
+@media(max-width: 425px){
+    .footer-container-links {
+        width: 50%;
+    }
+
+    .titulo_rodape {
+        font-size: large !important;
+    }
+
+    li {
+        font-size: small !important;
+    }
+
+    p {
+        font-size: medium !important;
+    }
 }

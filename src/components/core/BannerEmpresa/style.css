@@ -26,7 +26,7 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 1em;
+    font-size: 1.5rem;
     margin: 32px 2px;
     cursor: pointer;
 
@@ -73,11 +73,23 @@
 @media (max-width: 768px){
     .Information-container {
         display: block;
+        margin: auto;
     }
     .Information {
         display: block;
     }
     .Information-img{
         width: 100%;
+    }
+
+    .Information-text {
+        max-width: none;
+        margin: auto;
+        text-align: center;
+        padding: 0px;
+    }
+
+    .Information .titulo {
+        font-size: xx-large !important;
     }
 }

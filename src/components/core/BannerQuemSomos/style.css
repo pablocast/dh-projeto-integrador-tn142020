@@ -1,8 +1,12 @@
 /* componente 1 */
 
+html {
+    font-size: 62.5%;
+}
+
 .titulo-banner {
-    font-size: 62px;
-    line-height: 83px;
+    font-size: 6.2rem;
+    line-height: 83rem;
     color: #fff;
     font-family: 'Roboto', sans-serif;
     text-align: left;
@@ -11,8 +15,8 @@
 }
 
 .titulo_menor {
-    font-size: 14px;
-    line-height: 21px;
+    font-size: 1.4rem;
+    line-height: 2.1rem;
     color: #fff;
     font-family: 'Roboto', sans-serif;
     margin-left: 15px;
@@ -80,12 +84,15 @@ p {
     }
 
     .titulo-banner {
-        font-size: 30px;
-        padding-bottom: 20px;
+        font-size: xx-large;
+    }
+
+    .titulo_menor {
+        font-size: medium;
     }
 
     .button {
-        font-size: 0.8em;
+        font-size: large;
     }
 
     .esquerda {
