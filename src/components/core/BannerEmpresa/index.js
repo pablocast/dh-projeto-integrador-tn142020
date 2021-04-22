@@ -6,6 +6,9 @@ import { Link } from "react-router-dom";
 const Component4 = () => {
   return (
     <section className="Information">
+      <div className="Information-img">
+        <img src={img} alt="empresa"></img>
+      </div>
       <div className="Information-container">
         <div className="Information-text">
           <p className="Titulo">
@@ -26,9 +29,6 @@ const Component4 = () => {
           <Link to="/bemvindo">
             <button className="Button">Cadastra-se</button>
           </Link>
-        </div>
-        <div className="Information-img">
-          <img src={img} alt="empresa"></img>
         </div>
       </div>
     </section>

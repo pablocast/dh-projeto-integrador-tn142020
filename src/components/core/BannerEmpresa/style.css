@@ -50,18 +50,18 @@
 .Information-container {
     max-width: 80%;
     display: flex;
-
+    justify-content: center;
 }
 
 .Information-text {
-    max-width: 50%;
+    text-align: center;
     padding: 40px;
     line-height: 24px;
 
 }
 
 .Information-img {
-    width: 30%;
+    width: 100%;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -91,5 +91,12 @@
 
     .Information .titulo {
         font-size: xx-large !important;
+    }
+}
+
+@media (max-width: 425px){
+    .Information-text .Titulo {
+        font-size: x-large !important;
+        height: normal !important;
     }
 }

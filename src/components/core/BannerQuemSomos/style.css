@@ -108,3 +108,10 @@ p {
         text-align: center;
     }
 }
+
+
+@media (max-width: 425px){
+    .titulo-banner {
+        font-size: x-large !important;
+    }
+}

@@ -108,6 +108,10 @@
     box-sizing: content-box;
 }
 
+.menu-section {
+    display: flex;
+}
+
 @media(max-width: 768px){
 
     .Header {
