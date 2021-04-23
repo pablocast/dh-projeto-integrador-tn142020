@@ -116,6 +116,7 @@
 
     .Header {
         border: none;
+        padding: 30px;
     }
 
     .Nav, header img {

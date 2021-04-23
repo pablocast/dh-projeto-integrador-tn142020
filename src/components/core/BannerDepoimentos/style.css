@@ -40,5 +40,6 @@ button:focus {
 @media (max-width: 768px){
     .Componente-3 h2 {
         font-size: x-large;
+        line-height: normal;
     }
 }

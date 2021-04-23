@@ -7,7 +7,7 @@ const Card = (props) => {
       <div className="card text-dark border-light mb-3 bg-light">
         <img
           className="card-img-top rounded pt-2"
-          style={{ width: "50%", margin: "auto" }}
+          style={{ width: "200px", margin: "auto" }}
           src={props.img}
           alt={props.alt}
         />

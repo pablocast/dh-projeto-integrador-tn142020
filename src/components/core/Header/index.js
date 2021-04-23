@@ -9,7 +9,7 @@ const Header = ({ ...props }) => {
   const { isLogin } = props;
   
   return (
-    <header className="Header container-fluid">
+    <header className="Header">
       <Link to="/">
         <img src={logo} className="logo" alt="logo" />
       </Link>

@@ -63,3 +63,67 @@
     margin-bottom: 30px;
 
 }
+
+@media (max-width: 768px){
+    .banner_titulo {
+        font-size: xx-large;
+        line-height: normal;
+        margin-bottom: 10px !important;
+    }
+
+    .banner {
+        height: 80vh;
+    }
+
+    .lead {
+        font-size: medium !important;
+    }
+
+    .card {
+        height: 60vh;
+    }
+
+    img {
+        width: 200px;
+    }
+
+    h2 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 425px){
+    .banner_container {
+        display: block;
+        width: 100%;
+        padding-right: 0px;
+        margin: auto;
+    }
+
+    .banner_direita {
+        margin-left: auto !important;
+    }
+
+    .banner_esquerda {
+        display: none;
+    }
+
+    .banner_titulo {
+        font-size: x-large !important;
+    }
+}
+
+@media (max-width: 375px){
+    .banner_titulo {
+        font-size: large !important;
+    }
+
+    .banner_titulo_menor {
+        font-size: medium !important;
+        line-height: normal !important;
+    }
+
+    img {
+        width: 100px !important;
+    }
+}

@@ -9,12 +9,10 @@
 
 .Information .Titulo {
     font-size: 36px;
-    line-height: 44px;
+    line-height: normal;
     color: #020113;
     font-family: 'Roboto', sans-serif;
     margin-bottom: 30px;
-
-
 }
 
 .Information .Button {
@@ -78,8 +76,8 @@
     .Information {
         display: block;
     }
-    .Information-img{
-        width: 100%;
+    .Information-img img{
+        width: 100% !important;
     }
 
     .Information-text {

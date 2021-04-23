@@ -48,3 +48,13 @@
         font-size: medium !important;
     }
 }
+
+@media(max-width: 320px){
+    .titulo_rodape {
+        font-size: medium !important;
+    }
+
+    p {
+        font-size: medium !important;
+    }
+}
