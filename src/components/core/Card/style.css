@@ -1,0 +1,20 @@
+.card {
+    background-color: #f8f9fa !important;
+    border-width: thin;
+    display: flex !important;
+    align-items: stretch !important;
+    height: 343.66px !important;
+}
+
+.card-img {
+    margin-left: 0px !important;
+}
+
+.card-body {
+    display: flex !important;
+}
+
+.card-bottom {
+    margin-left: 45.775px !important; 
+    margin-bottom: 2px !important;
+}

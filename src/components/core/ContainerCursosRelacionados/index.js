@@ -25,6 +25,7 @@ const CursosRelacionados = (props) => {
         className="card-group"
         breakPoints={breakPoints}
         pagination={false}
+        itemPadding={[10]}
       >
         <Card
           img={ImgHtml}

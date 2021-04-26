@@ -23,6 +23,7 @@ const CursosRecomendados = (props) => {
       </h2>
       <Carousel
         className="card-group"
+        itemPadding={[10]}
         breakPoints={breakPoints}
         pagination={false}
       >
