@@ -108,6 +108,10 @@
     box-sizing: content-box;
 }
 
+.mobile-no {
+    display:none !important;
+}
+
 .menu-section {
     display: flex;
 }
@@ -152,10 +156,6 @@
         margin-right: 20px;
         right: 25px;
         top: 15px;
-    }
-
-    .mobile-no {
-        display:none;
     }
 
     .mobile-yes{

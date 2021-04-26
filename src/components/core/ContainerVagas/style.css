@@ -25,7 +25,7 @@
 }
 
 .card-empresas {
-    width: 32%;
+    width: 30%;
     display: flex;
     text-align: left;
     background: #fff;
@@ -33,8 +33,20 @@
     margin: 5px;
 }
 
+.container-text h2 {
+    font-size: 3rem;
+}
+
+.card-text a {
+    font-size: medium;
+}
+
 .vagas h2 {
     text-align: center;
+}
+
+.container-text h1, h2 {
+    text-decoration: underline;
 }
 
 p {
@@ -45,17 +57,43 @@ p {
 /* responsividade */
 
 @media (max-width: 768px){
+
+    .container-cards {
+        justify-content: center;
+    }
+
     .card-empresas {
         display: block;
     }
 
     .card-empresas img {
-        width: 150px;
+        width: 100px;
         margin: auto;
     }
 
     .vagas h4, p {
         font-size: medium;
         margin: 1rem;
+    }
+
+    .vagas a {
+        font-size: medium;
+    }
+
+    h1, h2 {
+        font-size: xx-large !important;
+        text-align: center;
+    }
+}
+
+@media (max-width: 425px){
+    .container-text {
+        text-align: center;
+    }
+}
+
+@media (max-width: 375px){
+    .card-empresas {
+        width: 46%;
     }
 }

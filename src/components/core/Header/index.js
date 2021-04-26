@@ -25,6 +25,7 @@ const Header = ({ ...props }) => {
         <div class="three"></div>
       </div>
       <nav className="Nav">
+        <a href="/" className={click ? 'mobile-yes' : 'mobile-no'}>Inicio</a>
         <a href="/plataforma">A plataforma</a>
         <a href="/cursos">Cursos</a>
         <a href="/empresas">Empresas</a>
