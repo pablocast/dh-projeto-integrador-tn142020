@@ -4,7 +4,7 @@ import "./style.css";
 
 const Card = (props) => {
   return (
-    <Container className="card">
+    <Container className="Mycard">
       <Row className="card-img">
         <img
           className="card-img-top rounded pt-2"

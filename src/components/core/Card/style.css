@@ -1,7 +1,8 @@
-.card {
+.Mycard {
     background-color: #f8f9fa !important;
     border-width: thin;
     display: flex !important;
+    flex-direction: column !important;
     align-items: stretch !important;
     height: 343.66px !important;
 }
@@ -11,10 +12,28 @@
 }
 
 .card-body {
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    
+}
+
+.card-body h5 {
+    width: 100% !important;
+    height: 20% !important;
+    text-align: center !important;
+    padding-top: 10px !important;
+}
+
+.card-body p {
+    height: 80% !important;
     display: flex !important;
+    vertical-align: top !important;
+    padding-top: 20px;
+    justify-content: flex-start !important;
 }
 
 .card-bottom {
     margin-left: 45.775px !important; 
-    margin-bottom: 2px !important;
+    margin-bottom: 5px !important;
 }
