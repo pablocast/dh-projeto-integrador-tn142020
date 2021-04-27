@@ -88,15 +88,15 @@ const Empresas = () => {
                 </p>
                 <ul>
                   <li>
-                    <BiTime color="#0052FB" /> Leve em média{" "}
+                    <BiTime color="#0052FB" style={{marginRight:'1em'}}/> Leve em média{" "}
                     <strong>7 dias para contratar</strong>
                   </li>
                   <li>
-                    <AiOutlineStar color="#0052FB" /> Acesse candidatos{" "}
+                    <AiOutlineStar color="#0052FB" style={{marginRight:'1em'}} /> Acesse candidatos{" "}
                     <strong>pré-validados e engajados</strong>
                   </li>
                   <li>
-                    <RiSendPlaneLine color="#0052FB" /> Receba{" "}
+                    <RiSendPlaneLine color="#0052FB" style={{marginRight:'1em'}} /> Receba{" "}
                     <strong>recomendações</strong> para as suas vagas
                   </li>
                 </ul>
@@ -155,10 +155,10 @@ const Empresas = () => {
                 </p>
                 <ul>
                   <li>
-                    <BsBell color="#0052FB" /> Candidatos muito mais engajados
+                    <BsBell color="#0052FB" style={{marginRight:'1em'}}/> Candidatos muito mais engajados
                   </li>
                   <li>
-                    <BsStar color="#0052FB" /> Os melhores candidatos
+                    <BsStar color="#0052FB" style={{marginRight:'1em'}}/> Os melhores candidatos
                     pré-validados
                   </li>
                 </ul>
@@ -184,15 +184,15 @@ const Empresas = () => {
                 </p>
                 <ul>
                   <li>
-                    <BsStar color="#0052FB" /> Conte com o suporte do nosso time
+                    <BsStar color="#0052FB" style={{marginRight:'1em'}} /> Conte com o suporte do nosso time
                     de Customer Success
                   </li>
                   <li>
-                    <BsChatSquareDots color="#0052FB" /> Receba recomendações
+                    <BsChatSquareDots color="#0052FB" style={{marginRight:'1em'}} /> Receba recomendações
                     automáticas da plataforma
                   </li>
                   <li>
-                    <AiOutlineAreaChart color="#0052FB" /> Encontre
+                    <AiOutlineAreaChart color="#0052FB" style={{marginRight:'1em'}} /> Encontre
                     profissionais com match para as suas vagas
                   </li>
                 </ul>
