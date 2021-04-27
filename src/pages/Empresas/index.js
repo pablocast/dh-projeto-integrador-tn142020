@@ -2,7 +2,6 @@ import React from "react";
 import "./style.css";
 import { Container, Row, Col } from "react-bootstrap";
 import FormRegistroEmpresa from "../../components/core/FormRegistroEmpresa";
-import BannerDepoimentoEmpresas from "../../components/core/BannerDepoimentoEmpresas";
 import HeaderCadastro from "../../components/core/HeaderCadastro";
 import olx from "../../assets/img/olx.png";
 import magazineluiza from "../../assets/img/magazineluiza.png";

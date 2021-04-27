@@ -24,7 +24,7 @@ const Component4 = () => {
             diversas vagas desse mercado que cresce cada vez mais.
           </p>
           <Link to="/bemvindo">
-            <button className="Button">Cadastra-se</button>
+            <button className="button">Cadastra-se</button>
           </Link>
         </div>
         <div className="Information-img">

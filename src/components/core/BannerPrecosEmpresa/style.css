@@ -80,4 +80,6 @@
     background: none;
     border: 1px solid rgb(0, 82, 251);
     color: rgb(0, 82, 251);
+    height: 40px;
+    padding-top:5px;
 }
