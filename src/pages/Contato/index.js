@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 import Header from "../../components/core/Header";
 import Footer from "../../components/core/Footer";
-import Contato from "../../components/core/Contato";
+import Contato from "../../components/core/ContainerContato";
 
 const contato = () => {
   return (
