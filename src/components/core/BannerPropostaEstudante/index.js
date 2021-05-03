@@ -69,22 +69,22 @@ const BannerPropostaEstudante = () => {
             </h1>
             <ul>
               <li>
-                <GiSkills color="#FFCF26" /> Aprenda as skills mais requisitadas
+                <GiSkills color="#FFCF26"  style={{marginRight:'1em'}} /> Aprenda as skills mais requisitadas
                 do mercado
               </li>
               <li>
-                <AiOutlineClockCircle color="#FFCF26" /> 90% dos candidatos(as)
+                <AiOutlineClockCircle color="#FFCF26"  style={{marginRight:'1em'}}/> 90% dos candidatos(as)
                 recebem convites para entrevistas
               </li>
               <li>
-                <AiFillStar color="#FFCF26" /> Sinalize seu valor para as
+                <AiFillStar color="#FFCF26"   style={{marginRight:'1em'}}/> Sinalize seu valor para as
                 empresas parceiras
               </li>
             </ul>
             <Row className="proposta__registrar">
               <Col style={{ display: "flex", flexDirection: "column" }}>
                 <label>E-mail</label>
-                <input placeholder="Digite o seu email" type="email" />
+                <input className="form-control string email required" placeholder="Digite o seu email" type="email" />
               </Col>
               <Col>
                 <button className="button">
