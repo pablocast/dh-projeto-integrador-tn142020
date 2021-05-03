@@ -1,6 +1,6 @@
 .contato_area_texto {
     padding-top: 40px;
-    color: #0052FB!important;
+    color: #0052FB !important;
     text-align: center;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -28,7 +28,51 @@
     font-weight: 400;
     line-height: 1.6;
     color: #171933;
-
-
 }
 
+.contato_area_form {
+    margin-left: 20px;
+    padding: 75px 0;
+}
+
+.contato_card {
+    margin-bottom: 1rem;
+    background-color: white;
+    border-radius: 1px !important;
+    padding: 19px;
+    padding-bottom: 12px;
+    box-shadow: 0px 1px 1px #00000029;
+    border: 1px solid #f9f9f9;
+    max-width: 95%;
+}
+
+.contato_card_form_nome {
+    width: 50%;
+    float: left;
+    padding: 9px!important;
+}
+
+.contato_card_form_sobrenome {
+    width: 50%;
+    float: left;
+    margin: 0;
+    padding: 9px!important;
+}
+
+.contato_card_form_email {
+    width: 100%;
+    float: left;
+    padding: 9px!important;
+}
+
+.contato_card_form_mensagem {
+    width: 100%;
+    float: left;
+    padding: 9px!important;
+}
+
+.button_div{
+    display: flex;
+    justify-content: center;
+    padding: 9px !important;
+}
