@@ -11,6 +11,27 @@ import { create } from '../api-user.js';
 import { Form_1, Form_2, Form_3, Form_4 } from './forms'
 
 const BannerPropostaEstudante = () => {
+  const [form, setForm] = useState('Form_1')
+
+  const triggerNextFormState = param => event => {
+    if (form == 'Form_1') {
+      setForm('Form_2')
+    } else if (form == 'Form_2') {
+      setForm('Form_3')
+    } else {
+      setForm('Form_4')
+    }
+  }
+
+  const triggerBackFormState = param => event => {
+    if (form == 'Form_2') {
+      setForm('Form_1')
+    } else if (form == 'Form_3') {
+      setForm('Form_2')
+    } else {
+      setForm('Form_3')
+    }
+  }
 
   const [values, setValues] = useState({
     name: '',
@@ -76,7 +97,20 @@ const BannerPropostaEstudante = () => {
                 empresas parceiras
               </li>
             </ul>
-            <Form_4 state={values} callBack={handleChange} />
+            <div>
+              {form === 'Form_1' && (
+                <Form_1 state={values} callBack={handleChange} form={form} nextForm={triggerNextFormState} lastForm={triggerBackFormState} />
+              )}
+              {form === 'Form_2' && (
+                <Form_2 state={values} callBack={handleChange} form={form} nextForm={triggerNextFormState} lastForm={triggerBackFormState} />
+              )}
+              {form === 'Form_3' && (
+                <Form_3 state={values} callBack={handleChange} form={form} nextForm={triggerNextFormState} lastForm={triggerBackFormState} />
+              )}
+              {form === 'Form_4' && (
+                <Form_4 state={values} callBack={handleChange} form={form} nextForm={triggerNextFormState} lastForm={triggerBackFormState} />
+              )}
+            </div>
           </Col>
           <Col lg={{ span: 5 }}>
             <img src={img} className="ImgHomen" />

@@ -60,7 +60,7 @@ const MakeCarousel = () => {
 };
 
 const Form_1 = ({ ...props }) => {
-    const { state, callBack } = props;
+    const { state, callBack, form, nextForm, lastForm } = props;
     return (
         <div>
             <Row className="proposta__registrar">
@@ -69,7 +69,7 @@ const Form_1 = ({ ...props }) => {
                     <input className="form-control string email required" placeholder="Digite o seu email" value={state.email} onChange={callBack('email')} />
                 </Col>
                 <Col>
-                    <button className="button">
+                    <button className="button" onClick={nextForm()}>
                         CRIAR MEU PERFIL AGORA
                     <AiOutlineArrowRight
                             color="white"
@@ -93,7 +93,7 @@ const Form_1 = ({ ...props }) => {
 }
 
 const Form_2 = ({ ...props }) => {
-    const { state, callBack } = props;
+    const { state, callBack, form, nextForm, lastForm } = props;
     return (
         <div>
             <div className="input-icon">
@@ -118,9 +118,12 @@ const Form_2 = ({ ...props }) => {
                 </div>
             </div>
             <div className="next-container">
-                <span></span>
-                <span id="next" className="back" ng-click="backStep()">
-                    <a >Seguinte</a>
+                <span id="back" className="back" onClick={lastForm()}>
+                    <i className="material-icons back-icon">arrow_back</i>
+                    <a>Voltar</a>
+                </span>
+                <span id="next" className="next" onClick={nextForm()}>
+                    <a>Seguinte</a>
                     <i className="material-icons next-icon">arrow_forward</i>
                 </span>
             </div>
@@ -130,7 +133,7 @@ const Form_2 = ({ ...props }) => {
 }
 
 const Form_3 = ({ ...props }) => {
-    const { state, callBack } = props;
+    const { state, callBack, form, nextForm, lastForm } = props;
     return (
         <div>
             <div className="input-icon">
@@ -178,12 +181,12 @@ const Form_3 = ({ ...props }) => {
                 </div>
             </div>
             <div className="next-container">
-                <span id="back" className="back" ng-click="backStep()">
+                <span id="back" className="back" onClick={lastForm()}>
                     <i className="material-icons back-icon">arrow_back</i>
-                    Voltar
+                    <a>Voltar</a>
                 </span>
-                <span id="next" className="next" ng-click="backStep()">
-                    <a >Seguinte</a>
+                <span id="next" className="next" onClick={nextForm()}>
+                    <a>Seguinte</a>
                     <i className="material-icons next-icon">arrow_forward</i>
                 </span>
             </div>
@@ -193,7 +196,7 @@ const Form_3 = ({ ...props }) => {
 }
 
 const Form_4 = ({ ...props }) => {
-    const { state, callBack } = props;
+    const { state, callBack, form, nextForm, lastForm } = props;
     return (
         <div>
             <div className="input-icon">
@@ -223,11 +226,11 @@ const Form_4 = ({ ...props }) => {
                     <input className="form-control about" id="icon" placeholder="Nos conte de você" type="text" />
                 </div>
             </div>
-            <input type="submit" name="commit" value="CRIAR MEU PERFIL AGORA" className="mybutton"/>
+            <input type="submit" name="commit" value="CRIAR MEU PERFIL AGORA" className="mybutton" />
             <div className="next-container">
-                <span id="back" className="back" ng-click="backStep()">
+                <span id="back" className="back" onClick={lastForm()}>
                     <i className="material-icons back-icon">arrow_back</i>
-                    Voltar
+                    <a>Voltar</a>
                 </span>
             </div>
 

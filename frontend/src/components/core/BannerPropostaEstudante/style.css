@@ -116,10 +116,15 @@ margin-top: 36px;
     font-size: 16px;
     line-height: 1.428571429;
     color: #939DA5;
+    
 }
 
 .next-container a {
     padding-right: 25px;
+}
+
+.next-container span {
+    cursor: pointer;
 }
 
 .address-container {
