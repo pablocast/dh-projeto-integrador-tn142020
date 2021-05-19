@@ -8,7 +8,7 @@ import {
 } from "react-icons/ai";
 import img from "../../../assets/img/banner.png";
 import { create } from '../api-user.js';
-import { Form_1, Form_2 } from './forms'
+import { Form_1, Form_2, Form_3 } from './forms'
 
 const BannerPropostaEstudante = () => {
 

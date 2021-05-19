@@ -93,32 +93,72 @@ const Form_2 = ({ ...props }) => {
     const { state, callBack } = props;
     return (
         <div>
-            <div class="input-icon">
-                <span class="icon"><BsPerson color='#ffffff' size='1.5em' /></span>
-                <div class="form-group">
-                    <label class="control-label" for="candidate_name_1">Nome completo (mín. 5 caracteres)</label>
-                    <input class="form-control" id="icon" placeholder="Username" placeholder="Digite seu nome completo" type="text" />
+            <div className="input-icon">
+                <span className="icon"><BsPerson color='#ffffff' size='1.5em' /></span>
+                <div className="form-group">
+                    <label className="control-label" for="candidate_name_1">Nome completo (mín. 5 caracteres)</label>
+                    <input className="form-control" id="icon" placeholder="Username" placeholder="Digite seu nome completo" type="text" />
                 </div>
             </div>
-            <div class="input-icon">
-                <span class="icon"><BiUserCheck color='#ffffff' size='1.5em' /></span>
-                <div class="form-group">
-                    <label class="control-label">Usuario (mín. 8 caracteres)</label>
-                    <input class="form-control" id="icon" placeholder="Username" placeholder="Digite seu usuario" type="text" />
+            <div className="input-icon">
+                <span className="icon"><BiUserCheck color='#ffffff' size='1.5em' /></span>
+                <div className="form-group">
+                    <label className="control-label">Usuario (mín. 8 caracteres)</label>
+                    <input className="form-control" id="icon" placeholder="Username" placeholder="Digite seu usuario" type="text" />
                 </div>
             </div>
-            <div class="input-icon">
-                <span class="icon"><AiOutlineMail color='#ffffff' size='1.5em' /></span>
-                <div class="form-group">
-                    <label class="control-label">Email</label>
-                    <input class="form-control" id="icon" placeholder="Username" placeholder="Digite seu email" type="text" />
+            <div className="input-icon">
+                <span className="icon"><AiOutlineMail color='#ffffff' size='1.5em' /></span>
+                <div className="form-group">
+                    <label className="control-label">Email</label>
+                    <input className="form-control" id="icon" placeholder="Username" placeholder="Digite seu email" type="text" />
                 </div>
             </div>
-            <div class="next-container">
+            <div className="next-container">
                 <span></span>
-                <span id="next" class="back" ng-click="backStep()">
-                    Seguinte
-                    <i class="material-icons next-icon">arrow_forward</i>
+                <span id="next" className="back" ng-click="backStep()">
+                    <a >Seguinte</a>
+                    <i className="material-icons next-icon">arrow_forward</i>
+                </span>
+            </div>
+
+        </div>
+    )
+}
+
+const Form_3 = ({ ...props }) => {
+    const { state, callBack } = props;
+    return (
+        <div>
+            <div className="input-icon">
+                <span className="icon"><BsPerson color='#ffffff' size='1.5em' /></span>
+                <div className="form-group">
+                    <label className="control-label" for="candidate_name_1">Nome completo (mín. 5 caracteres)</label>
+                    <input className="form-control" id="icon" placeholder="Username" placeholder="Digite seu nome completo" type="text" />
+                </div>
+            </div>
+            <div className="input-icon">
+                <span className="icon"><BiUserCheck color='#ffffff' size='1.5em' /></span>
+                <div className="form-group">
+                    <label className="control-label">Usuario (mín. 8 caracteres)</label>
+                    <input className="form-control" id="icon" placeholder="Username" placeholder="Digite seu usuario" type="text" />
+                </div>
+            </div>
+            <div className="input-icon">
+                <span className="icon"><AiOutlineMail color='#ffffff' size='1.5em' /></span>
+                <div className="form-group">
+                    <label className="control-label">Email</label>
+                    <input className="form-control" id="icon" placeholder="Username" placeholder="Digite seu email" type="text" />
+                </div>
+            </div>
+            <div className="next-container">
+                <span id="back" className="back" ng-click="backStep()">
+                    <i className="material-icons back-icon">arrow_back</i>
+                    Voltar
+                </span>
+                <span id="next" className="next" ng-click="backStep()">
+                    <a >Seguinte</a>
+                    <i className="material-icons next-icon">arrow_forward</i>
                 </span>
             </div>
 
@@ -127,4 +167,7 @@ const Form_2 = ({ ...props }) => {
 }
 
 
-export { Form_1, Form_2 };
+
+/* TO DO THE REST OF FORMS */
+
+export { Form_1, Form_2, Form_3 };
