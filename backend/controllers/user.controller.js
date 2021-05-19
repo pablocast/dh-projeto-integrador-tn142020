@@ -1,7 +1,7 @@
 
 const Sequelize = require('sequelize'),
-  { Usuario } = require('../models'),
-  { Op } = Sequelize
+    { Usuario } = require('../models'),
+    { Op } = Sequelize
 
 
 const create = async (req, res) => {
@@ -18,25 +18,27 @@ const create = async (req, res) => {
         photo
     } = req.body
 
-    try {
-        await Usuario.create({
-            name: name,
-            username: username,
-            email: email,
-            password: password,
-            address: address,
-            website: website,
-            phone: phone,
-            company: company,
-            about: about,
-            photo: photo
-        })
-        return res.status(200).json({
+
+    const user = await Usuario.create({
+        name,
+        username,
+        email,
+        password,
+        address,
+        website,
+        phone,
+        company,
+        about,
+        photo
+    })
+
+    if (user) {
+        res.status(200).json({
             message: "Successfully signed up!"
         })
-    } catch (err) {
-        return res.status(400).json({
-            error: 'algum error'
+    } else {
+        res.status(400).json({
+            message: "algum error"
         })
     }
 }
