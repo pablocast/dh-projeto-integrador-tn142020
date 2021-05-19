@@ -102,9 +102,19 @@ margin-top: 36px;
     padding: 38px 13px 0;
 }
 
+.proposta__registrar .icon {
+    position: absolute;
+    padding: 45px 5px 0;
+}
+
 .input-icon input {
     padding-left: 45px;
 }
+
+.proposta__registrar input {
+    padding-left: 30px;
+}
+
 
 .next-container {
     width: 95%;
@@ -136,7 +146,7 @@ margin-top: 36px;
 
 .address-container a {
     color: #ffffff !important;
-    font-size:12px;
+    font-size:11px;
 }
 
 .address-container input {
@@ -153,7 +163,7 @@ margin-top: 36px;
 
 .region-container a {
     color: #ffffff !important;
-    font-size:12px;
+    font-size:11px;
 }
 
 .region-container input {

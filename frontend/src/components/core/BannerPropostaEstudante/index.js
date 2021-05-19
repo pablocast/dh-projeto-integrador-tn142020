@@ -38,7 +38,11 @@ const BannerPropostaEstudante = () => {
     username: '',
     email: '',
     password: '',
-    address: '',
+    address_street: '',
+    address_number: '',
+    address_zip: '',
+    address_city: '',
+    address_country: '',
     website: '',
     phone: '',
     company: '',
@@ -73,7 +77,7 @@ const BannerPropostaEstudante = () => {
       }
     })
   }
-
+  console.log(values)
   return (
     <section className="proposta">
       <Container style={{ marginLeft: 96.58 }}>
@@ -99,16 +103,16 @@ const BannerPropostaEstudante = () => {
             </ul>
             <div>
               {form === 'Form_1' && (
-                <Form_1 state={values} callBack={handleChange} form={form} nextForm={triggerNextFormState} lastForm={triggerBackFormState} />
+                <Form_1 callBack={handleChange} nextForm={triggerNextFormState} lastForm={triggerBackFormState} />
               )}
               {form === 'Form_2' && (
-                <Form_2 state={values} callBack={handleChange} form={form} nextForm={triggerNextFormState} lastForm={triggerBackFormState} />
+                <Form_2 callBack={handleChange} nextForm={triggerNextFormState} lastForm={triggerBackFormState} />
               )}
               {form === 'Form_3' && (
-                <Form_3 state={values} callBack={handleChange} form={form} nextForm={triggerNextFormState} lastForm={triggerBackFormState} />
+                <Form_3 callBack={handleChange} nextForm={triggerNextFormState} lastForm={triggerBackFormState} />
               )}
               {form === 'Form_4' && (
-                <Form_4 state={values} callBack={handleChange} form={form} nextForm={triggerNextFormState} lastForm={triggerBackFormState} />
+                <Form_4 callBack={handleChange} nextForm={triggerNextFormState} lastForm={triggerBackFormState} />
               )}
             </div>
           </Col>

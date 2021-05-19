@@ -60,13 +60,14 @@ const MakeCarousel = () => {
 };
 
 const Form_1 = ({ ...props }) => {
-    const { state, callBack, form, nextForm, lastForm } = props;
+    const { callBack, nextForm, lastForm } = props;
     return (
         <div>
             <Row className="proposta__registrar">
                 <Col style={{ display: "flex", flexDirection: "column" }}>
+                    <span className="icon"><AiOutlineMail color='#ffffff' size='1.25em' /></span>
                     <label>E-mail</label>
-                    <input className="form-control string email required" placeholder="Digite o seu email" value={state.email} onChange={callBack('email')} />
+                    <input className="form-control string email required" placeholder="Digite o seu email" onChange={callBack('email')} />
                 </Col>
                 <Col>
                     <button className="button" onClick={nextForm()}>
@@ -93,28 +94,35 @@ const Form_1 = ({ ...props }) => {
 }
 
 const Form_2 = ({ ...props }) => {
-    const { state, callBack, form, nextForm, lastForm } = props;
+    const { callBack, nextForm, lastForm } = props;
     return (
         <div>
             <div className="input-icon">
                 <span className="icon"><BsPerson color='#ffffff' size='1.5em' /></span>
                 <div className="form-group">
                     <label className="control-label" for="candidate_name_1">Nome completo (mín. 5 caracteres)</label>
-                    <input className="form-control" id="icon" placeholder="Username" placeholder="Digite seu nome completo" type="text" />
+                    <input className="form-control" id="icon" placeholder="Digite seu nome completo" type="text" onChange={callBack('name')} />
                 </div>
             </div>
             <div className="input-icon">
                 <span className="icon"><BiUserCheck color='#ffffff' size='1.5em' /></span>
                 <div className="form-group">
                     <label className="control-label">Usuario (mín. 8 caracteres)</label>
-                    <input className="form-control" id="icon" placeholder="Username" placeholder="Digite seu usuario" type="text" />
+                    <input className="form-control" id="icon" placeholder="Digite seu usuario" type="text" onChange={callBack('username')} />
                 </div>
             </div>
             <div className="input-icon">
-                <span className="icon"><AiOutlineMail color='#ffffff' size='1.5em' /></span>
+                <span className="icon"><BsLock color='#ffffff' size='1.5em' /></span>
                 <div className="form-group">
-                    <label className="control-label">Email</label>
-                    <input className="form-control" id="icon" placeholder="Username" placeholder="Digite seu email" type="text" />
+                    <label className="control-label" for="candidate_name_1">Senha (mín. 8 caracteres)</label>
+                    <input className="form-control" id="icon" placeholder="Digite sua senha" type="password" onChange={callBack('password')} />
+                </div>
+            </div>
+            <div className="input-icon">
+                <span className="icon"><BsLock color='#ffffff' size='1.5em' /></span>
+                <div className="form-group">
+                    <label className="control-label">Confirmar senha</label>
+                    <input className="form-control" id="icon" placeholder="Digite novamente a senha" type="password" />
                 </div>
             </div>
             <div className="next-container">
@@ -133,51 +141,43 @@ const Form_2 = ({ ...props }) => {
 }
 
 const Form_3 = ({ ...props }) => {
-    const { state, callBack, form, nextForm, lastForm } = props;
+    const {  callBack, nextForm, lastForm } = props;
     return (
         <div>
-            <div className="input-icon">
-                <span className="icon"><BsLock color='#ffffff' size='1.5em' /></span>
-                <div className="form-group">
-                    <label className="control-label" for="candidate_name_1">Senha (mín. 8 caracteres)</label>
-                    <input className="form-control" id="icon" placeholder="Username" placeholder="Digite sua senha" type="text" />
-                </div>
-            </div>
-            <div className="input-icon">
-                <span className="icon"><BsLock color='#ffffff' size='1.5em' /></span>
-                <div className="form-group">
-                    <label className="control-label">Confirmar senha</label>
-                    <input className="form-control" id="icon" placeholder="Username" placeholder="Digite novamente a senha" type="text" />
-                </div>
-            </div>
             <div className="input-icon">
                 <div className="form-group">
                     <label className="control-label">Endereço</label>
                     <div className="address-container">
                         <span>
                             <a>Rua</a>
-                            <input className="form-control" id="icon" placeholder="Rua" type="text" />
+                            <input className="form-control" id="icon" placeholder="Rua" type="text" onChange={callBack('address_street')} />
                         </span>
                         <span>
                             <a>Número</a>
-                            <input className="form-control" id="icon" placeholder="Numero" type="text" />
+                            <input className="form-control" id="icon" placeholder="Numero" type="text" onChange={callBack('address_number')} />
                         </span>
                         <span>
                             <a>CEP</a>
-                            <input className="form-control" id="icon" placeholder="CEP" type="text" />
+                            <input className="form-control" id="icon" placeholder="CEP" type="text" onChange={callBack('address_zip')}/>
                         </span>
                     </div>
                     <div className="region-container">
                         <span>
                             <a>Cidade</a>
-                            <input className="form-control" id="icon" placeholder="Cidade" type="text" />
+                            <input className="form-control" id="icon" placeholder="Cidade" type="text" onChange={callBack('address_city')} />
                         </span>
                         <span>
                             <a>Pais</a>
-                            <input className="form-control" id="icon" placeholder="Pais" type="text" />
+                            <input className="form-control" id="icon" placeholder="Pais" type="text" onChange={callBack('address_country')} />
                         </span>
                     </div>
-
+                    <div className="input-icon" style={{paddingTop:'15px'}}>
+                        <span className="icon"><RiCellphoneFill color='#ffffff' size='1.5em' /></span>
+                        <div className="form-group">
+                            <label className="control-label">Celular</label>
+                            <input className="form-control" id="icon" placeholder="Digite seu celular" type="text" onChange={callBack('phone')} />
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className="next-container">
@@ -196,34 +196,27 @@ const Form_3 = ({ ...props }) => {
 }
 
 const Form_4 = ({ ...props }) => {
-    const { state, callBack, form, nextForm, lastForm } = props;
+    const { callBack, nextForm, lastForm } = props;
     return (
         <div>
             <div className="input-icon">
                 <span className="icon"><AiFillGithub color='#ffffff' size='1.5em' /></span>
                 <div className="form-group">
                     <label className="control-label" for="candidate_name_1">GitHub</label>
-                    <input className="form-control" id="icon" placeholder="Digite seu GitHub Url" type="text" />
-                </div>
-            </div>
-            <div className="input-icon">
-                <span className="icon"><RiCellphoneFill color='#ffffff' size='1.5em' /></span>
-                <div className="form-group">
-                    <label className="control-label">Celular</label>
-                    <input className="form-control" id="icon" placeholder="Digite seu celular" type="text" />
+                    <input className="form-control" id="icon" placeholder="Digite seu GitHub Url" type="text" onChange={callBack('website')}/>
                 </div>
             </div>
             <div className="input-icon">
                 <span className="icon"><FaIndustry color='#ffffff' size='1.5em' /></span>
                 <div className="form-group">
                     <label className="control-label">Empresa</label>
-                    <input className="form-control" id="icon" placeholder="Digite o nome da empresa" type="text" />
+                    <input className="form-control" id="icon" placeholder="Digite o nome da empresa" type="text" onChange={callBack('company')} />
                 </div>
             </div>
             <div className="input-icon">
                 <div className="form-group">
                     <label className="control-label">Acerca</label>
-                    <input className="form-control about" id="icon" placeholder="Nos conte de você" type="text" />
+                    <input className="form-control about" id="icon" placeholder="Nos conte de você" type="text" onChange={callBack('about')} />
                 </div>
             </div>
             <input type="submit" name="commit" value="CRIAR MEU PERFIL AGORA" className="mybutton" />
@@ -238,8 +231,5 @@ const Form_4 = ({ ...props }) => {
     )
 }
 
-
-
-/* TO DO THE REST OF FORMS */
 
 export { Form_1, Form_2, Form_3, Form_4 };
