@@ -8,7 +8,7 @@ import {
 } from "react-icons/ai";
 import img from "../../../assets/img/banner.png";
 import { create } from '../api-user.js';
-import { Form_1, Form_2, Form_3 } from './forms'
+import { Form_1, Form_2, Form_3, Form_4 } from './forms'
 
 const BannerPropostaEstudante = () => {
 
@@ -76,7 +76,7 @@ const BannerPropostaEstudante = () => {
                 empresas parceiras
               </li>
             </ul>
-            <Form_3 state={values} callBack={handleChange} />
+            <Form_4 state={values} callBack={handleChange} />
           </Col>
           <Col lg={{ span: 5 }}>
             <img src={img} className="ImgHomen" />

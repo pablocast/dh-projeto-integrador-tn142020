@@ -3,10 +3,13 @@ import "./style.css";
 import { Row, Col } from "react-bootstrap";
 import {
     AiOutlineArrowRight,
-    AiOutlineMail
+    AiOutlineMail,
+    AiFillGithub
 } from "react-icons/ai";
-import { BsPerson } from "react-icons/bs";
+import { BsLock, BsPerson } from "react-icons/bs";
+import { RiCellphoneFill } from "react-icons/ri";
 import { BiUserCheck } from "react-icons/bi";
+import { FaIndustry } from "react-icons/fa";
 import Carousel from "react-elastic-carousel";
 import olx from "../../../assets/img/olx.png";
 import magazineluiza from "../../../assets/img/magazineluiza.png";
@@ -131,17 +134,17 @@ const Form_3 = ({ ...props }) => {
     return (
         <div>
             <div className="input-icon">
-                <span className="icon"><BsPerson color='#ffffff' size='1.5em' /></span>
+                <span className="icon"><BsLock color='#ffffff' size='1.5em' /></span>
                 <div className="form-group">
                     <label className="control-label" for="candidate_name_1">Senha (mín. 8 caracteres)</label>
-                    <input className="form-control" id="icon" placeholder="Username" placeholder="Digite seu nome completo" type="text" />
+                    <input className="form-control" id="icon" placeholder="Username" placeholder="Digite sua senha" type="text" />
                 </div>
             </div>
             <div className="input-icon">
-                <span className="icon"><BiUserCheck color='#ffffff' size='1.5em' /></span>
+                <span className="icon"><BsLock color='#ffffff' size='1.5em' /></span>
                 <div className="form-group">
                     <label className="control-label">Confirmar senha</label>
-                    <input className="form-control" id="icon" placeholder="Username" placeholder="Digite seu usuario" type="text" />
+                    <input className="form-control" id="icon" placeholder="Username" placeholder="Digite novamente a senha" type="text" />
                 </div>
             </div>
             <div className="input-icon">
@@ -149,26 +152,26 @@ const Form_3 = ({ ...props }) => {
                     <label className="control-label">Endereço</label>
                     <div className="address-container">
                         <span>
-                        <a>Rua</a>
-                        <input className="form-control" id="icon" placeholder="Rua" type="text" />
+                            <a>Rua</a>
+                            <input className="form-control" id="icon" placeholder="Rua" type="text" />
                         </span>
                         <span>
-                        <a>Número</a>
-                        <input className="form-control" id="icon"  placeholder="Numero" type="text" />
+                            <a>Número</a>
+                            <input className="form-control" id="icon" placeholder="Numero" type="text" />
                         </span>
                         <span>
-                        <a>CEP</a>
-                        <input className="form-control" id="icon" placeholder="CEP" type="text" />
+                            <a>CEP</a>
+                            <input className="form-control" id="icon" placeholder="CEP" type="text" />
                         </span>
                     </div>
                     <div className="region-container">
                         <span>
-                        <a>Cidade</a>
-                        <input className="form-control" id="icon" placeholder="Cidade" type="text" />
+                            <a>Cidade</a>
+                            <input className="form-control" id="icon" placeholder="Cidade" type="text" />
                         </span>
                         <span>
-                        <a>Pais</a>
-                        <input className="form-control" id="icon"  placeholder="Pais" type="text" />
+                            <a>Pais</a>
+                            <input className="form-control" id="icon" placeholder="Pais" type="text" />
                         </span>
                     </div>
 
@@ -189,8 +192,51 @@ const Form_3 = ({ ...props }) => {
     )
 }
 
+const Form_4 = ({ ...props }) => {
+    const { state, callBack } = props;
+    return (
+        <div>
+            <div className="input-icon">
+                <span className="icon"><AiFillGithub color='#ffffff' size='1.5em' /></span>
+                <div className="form-group">
+                    <label className="control-label" for="candidate_name_1">GitHub</label>
+                    <input className="form-control" id="icon" placeholder="Digite seu GitHub Url" type="text" />
+                </div>
+            </div>
+            <div className="input-icon">
+                <span className="icon"><RiCellphoneFill color='#ffffff' size='1.5em' /></span>
+                <div className="form-group">
+                    <label className="control-label">Celular</label>
+                    <input className="form-control" id="icon" placeholder="Digite seu celular" type="text" />
+                </div>
+            </div>
+            <div className="input-icon">
+                <span className="icon"><FaIndustry color='#ffffff' size='1.5em' /></span>
+                <div className="form-group">
+                    <label className="control-label">Empresa</label>
+                    <input className="form-control" id="icon" placeholder="Digite o nome da empresa" type="text" />
+                </div>
+            </div>
+            <div className="input-icon">
+                <div className="form-group">
+                    <label className="control-label">Acerca</label>
+                    <input className="form-control about" id="icon" placeholder="Nos conte de você" type="text" />
+                </div>
+            </div>
+            <input type="submit" name="commit" value="CRIAR MEU PERFIL AGORA" className="mybutton"/>
+            <div className="next-container">
+                <span id="back" className="back" ng-click="backStep()">
+                    <i className="material-icons back-icon">arrow_back</i>
+                    Voltar
+                </span>
+            </div>
+
+        </div>
+    )
+}
+
 
 
 /* TO DO THE REST OF FORMS */
 
-export { Form_1, Form_2, Form_3 };
+export { Form_1, Form_2, Form_3, Form_4 };

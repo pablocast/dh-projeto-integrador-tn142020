@@ -154,3 +154,21 @@ margin-top: 36px;
 .region-container input {
     padding-left: 15px;
 }
+
+.input-icon .about {
+    height: 80px;
+}
+
+.mybutton {
+    background-color: #FFCF26;
+    width: 90%;
+    height: 50px;
+    border: none;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 4px 2px;
+}
+
