@@ -1,0 +1,107 @@
+.proposta h1 {
+    font: 600 36px;
+    text-transform: initial;
+    letter-spacing: 2px;
+    text-align: left;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.proposta ul {
+    list-style-type: none;
+    font-size: 16px;
+    color: #FFF;
+    padding: 0;
+    margin: 0px 0 35px;
+}
+
+.proposta ul li {
+    margin: 10px 0;
+    line-height: 1.5em;
+}
+
+.proposta__registrar label {
+        color: #ffffff;
+        font-weight: 400;
+        margin-bottom: 8px;
+}
+
+.proposta__registrar input {
+    width: 100%;
+    height: 50px;
+    background-color: #202024
+}
+
+.proposta__registrar button {
+    width: 110%;
+    margin-left: -10px;
+    margin-top: 33px;
+    height: 50px;
+    color: #ffffff;
+    background-color:  #FFCF26;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    line-height: 24px;
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+}
+
+.proposta .Carousel__title
+{
+width:100%;
+text-align: center;
+font-size: 16px;
+color: white;
+margin-bottom: 12px;
+margin-top: 36px;
+}
+
+.CarouselCompanies button {
+    background-color: transparent;
+    box-shadow: none;
+    color:white;
+}
+
+.CarouselCompanies button:hover {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    color:white;
+}
+
+.CarouselCompanies button:focus {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    color:white;
+}
+
+.ImgHomen {
+    height: 500px;
+    width: 500px;
+}
+
+.form-group label {
+    color: #ffffff;
+}
+
+.form-group input {
+    border-color: transparent;
+    width: 90%;
+    height: 40px;
+    background-color: #202024;
+    color: #C7CBCF;
+}
+
+.input-icon .icon {
+    position: absolute;
+    padding: 38px 13px 0;
+}
+
+
+.input-icon input {
+    padding-left: 45px;
+}
