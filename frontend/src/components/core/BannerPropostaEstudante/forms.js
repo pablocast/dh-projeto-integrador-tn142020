@@ -3,8 +3,10 @@ import "./style.css";
 import { Row, Col } from "react-bootstrap";
 import {
     AiOutlineArrowRight,
+    AiOutlineMail
 } from "react-icons/ai";
 import { BsPerson } from "react-icons/bs";
+import { BiUserCheck } from "react-icons/bi";
 import Carousel from "react-elastic-carousel";
 import olx from "../../../assets/img/olx.png";
 import magazineluiza from "../../../assets/img/magazineluiza.png";
@@ -95,9 +97,31 @@ const Form_2 = ({ ...props }) => {
                 <span class="icon"><BsPerson color='#ffffff' size='1.5em' /></span>
                 <div class="form-group">
                     <label class="control-label" for="candidate_name_1">Nome completo (mín. 5 caracteres)</label>
-                    <input class="form-control" id="icon" placeholder="Username" placeholder="Digite seu nome completo" type="text" name="candidate[name]" />
+                    <input class="form-control" id="icon" placeholder="Username" placeholder="Digite seu nome completo" type="text" />
                 </div>
             </div>
+            <div class="input-icon">
+                <span class="icon"><BiUserCheck color='#ffffff' size='1.5em' /></span>
+                <div class="form-group">
+                    <label class="control-label">Usuario (mín. 8 caracteres)</label>
+                    <input class="form-control" id="icon" placeholder="Username" placeholder="Digite seu usuario" type="text" />
+                </div>
+            </div>
+            <div class="input-icon">
+                <span class="icon"><AiOutlineMail color='#ffffff' size='1.5em' /></span>
+                <div class="form-group">
+                    <label class="control-label">Email</label>
+                    <input class="form-control" id="icon" placeholder="Username" placeholder="Digite seu email" type="text" />
+                </div>
+            </div>
+            <div class="next-container">
+                <span></span>
+                <span id="next" class="back" ng-click="backStep()">
+                    Seguinte
+                    <i class="material-icons next-icon">arrow_forward</i>
+                </span>
+            </div>
+
         </div>
     )
 }
