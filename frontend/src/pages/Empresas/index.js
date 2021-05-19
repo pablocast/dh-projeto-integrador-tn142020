@@ -69,7 +69,7 @@ const Empresas = () => {
 
   return (
     <>
-      <HeaderCadastro />
+      <HeaderCadastro isStudent={false} />
       <div className="registrations">
         <section className="companies-registration">
           <Container className="container">

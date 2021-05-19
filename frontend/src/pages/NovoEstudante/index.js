@@ -12,7 +12,7 @@ import BannerPrecosEstudante from "../../components/core/BannerPrecosEstudante";
 const NovoEstudante = () => {
   return (
     <body>
-      <HeaderCadastro className="Header" myLogo={logo} />
+      <HeaderCadastro className="Header" myLogo={logo} isStudent={true} />
       <div className="Registration">
         <BannerPropostaEstudante />
         <BannerPasosEstudante />
