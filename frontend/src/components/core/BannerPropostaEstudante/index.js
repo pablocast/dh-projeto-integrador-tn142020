@@ -62,7 +62,7 @@ const BannerPropostaEstudante = () => {
       username: values.username || undefined,
       email: values.email || undefined,
       password: values.password || undefined,
-      address: values.address || undefined,
+      address: (values.address_city + ',' + values.address_number + ',' + values.address_zip + ',' + values.address_city + ',' + values.address_country) || undefined,
       website: values.website || undefined,
       phone: values.phone || undefined,
       company: values.company || undefined,
@@ -112,7 +112,7 @@ const BannerPropostaEstudante = () => {
                 <Form_3 callBack={handleChange} nextForm={triggerNextFormState} lastForm={triggerBackFormState} />
               )}
               {form === 'Form_4' && (
-                <Form_4 callBack={handleChange} nextForm={triggerNextFormState} lastForm={triggerBackFormState} />
+                <Form_4 callBack={handleChange} nextForm={triggerNextFormState} lastForm={triggerBackFormState} submit={clickSubmit} />
               )}
             </div>
           </Col>

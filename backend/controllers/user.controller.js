@@ -1,4 +1,8 @@
-const { Usuarios } = require('../models/user.model')
+
+const Sequelize = require('sequelize'),
+  { Usuario } = require('../models'),
+  { Op } = Sequelize
+
 
 const create = async (req, res) => {
     const {
@@ -15,7 +19,7 @@ const create = async (req, res) => {
     } = req.body
 
     try {
-        await Usuarios.create({
+        await Usuario.create({
             name: name,
             username: username,
             email: email,
@@ -36,10 +40,6 @@ const create = async (req, res) => {
         })
     }
 }
-
-
-
-
 
 module.exports = {
     create
