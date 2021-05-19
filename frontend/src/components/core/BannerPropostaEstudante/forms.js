@@ -133,22 +133,45 @@ const Form_3 = ({ ...props }) => {
             <div className="input-icon">
                 <span className="icon"><BsPerson color='#ffffff' size='1.5em' /></span>
                 <div className="form-group">
-                    <label className="control-label" for="candidate_name_1">Nome completo (mín. 5 caracteres)</label>
+                    <label className="control-label" for="candidate_name_1">Senha (mín. 8 caracteres)</label>
                     <input className="form-control" id="icon" placeholder="Username" placeholder="Digite seu nome completo" type="text" />
                 </div>
             </div>
             <div className="input-icon">
                 <span className="icon"><BiUserCheck color='#ffffff' size='1.5em' /></span>
                 <div className="form-group">
-                    <label className="control-label">Usuario (mín. 8 caracteres)</label>
+                    <label className="control-label">Confirmar senha</label>
                     <input className="form-control" id="icon" placeholder="Username" placeholder="Digite seu usuario" type="text" />
                 </div>
             </div>
             <div className="input-icon">
-                <span className="icon"><AiOutlineMail color='#ffffff' size='1.5em' /></span>
                 <div className="form-group">
-                    <label className="control-label">Email</label>
-                    <input className="form-control" id="icon" placeholder="Username" placeholder="Digite seu email" type="text" />
+                    <label className="control-label">Endereço</label>
+                    <div className="address-container">
+                        <span>
+                        <a>Rua</a>
+                        <input className="form-control" id="icon" placeholder="Rua" type="text" />
+                        </span>
+                        <span>
+                        <a>Número</a>
+                        <input className="form-control" id="icon"  placeholder="Numero" type="text" />
+                        </span>
+                        <span>
+                        <a>CEP</a>
+                        <input className="form-control" id="icon" placeholder="CEP" type="text" />
+                        </span>
+                    </div>
+                    <div className="region-container">
+                        <span>
+                        <a>Cidade</a>
+                        <input className="form-control" id="icon" placeholder="Cidade" type="text" />
+                        </span>
+                        <span>
+                        <a>Pais</a>
+                        <input className="form-control" id="icon"  placeholder="Pais" type="text" />
+                        </span>
+                    </div>
+
                 </div>
             </div>
             <div className="next-container">

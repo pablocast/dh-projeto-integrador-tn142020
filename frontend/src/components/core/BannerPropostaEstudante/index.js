@@ -76,7 +76,7 @@ const BannerPropostaEstudante = () => {
                 empresas parceiras
               </li>
             </ul>
-            <Form_2 state={values} callBack={handleChange} />
+            <Form_3 state={values} callBack={handleChange} />
           </Col>
           <Col lg={{ span: 5 }}>
             <img src={img} className="ImgHomen" />

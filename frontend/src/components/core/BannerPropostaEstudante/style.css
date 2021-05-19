@@ -122,3 +122,35 @@ margin-top: 36px;
     padding-right: 25px;
 }
 
+.address-container {
+    width: 93%;
+    display: flex;
+    align-items:flex-end;
+    justify-content: space-between;
+}
+
+.address-container a {
+    color: #ffffff !important;
+    font-size:12px;
+}
+
+.address-container input {
+    padding-left: 15px;
+}
+
+.region-container {
+    margin-top: 12px;
+    width: 93%;
+    display: flex;
+    align-items:flex-end;
+    justify-content: space-between;
+}
+
+.region-container a {
+    color: #ffffff !important;
+    font-size:12px;
+}
+
+.region-container input {
+    padding-left: 15px;
+}
