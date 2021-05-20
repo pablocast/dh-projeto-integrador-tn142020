@@ -1,7 +1,7 @@
 CREATE SCHEMA IF NOT EXISTS `projeto_integrador_t4` DEFAULT CHARACTER SET utf8 ;
 
 CREATE TABLE IF NOT EXISTS `projeto_integrador_t4`.`usuarios` (
-  `user_id` INT NOT NULL,
+  `user_id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   `username` VARCHAR(16) NOT NULL,
   `email` VARCHAR(255) NOT NULL,
