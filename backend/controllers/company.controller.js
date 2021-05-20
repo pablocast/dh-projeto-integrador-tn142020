@@ -11,7 +11,7 @@ const create = async (req, res) => {
     company_city,
     company_country,
     company_num_devs,
-    password
+    password,
   } = req.body;
 
   try {
@@ -23,7 +23,7 @@ const create = async (req, res) => {
       company_city,
       company_country,
       company_num_devs,
-      password
+      password,
     });
     return res.status(200).json({
       message: "Successfully signed up!",

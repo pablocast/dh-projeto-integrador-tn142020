@@ -67,3 +67,8 @@
     background-color: #EAEFF5;
     background: #EAEFF5;
 }
+
+::placeholder {
+    color: #939DA5!important;
+    opacity: .4 !important;
+  }

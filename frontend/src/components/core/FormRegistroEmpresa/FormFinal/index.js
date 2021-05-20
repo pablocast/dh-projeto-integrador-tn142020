@@ -5,7 +5,7 @@ import { BsLock } from "react-icons/bs";
 import { RiCellphoneFill } from "react-icons/ri";
 
 const FormFinal = ({ ...props }) => {
-  const { handleVoltar } = props;
+  const { callBack, handleVoltar, onClick } = props;
 
   return (
     <Card className="Panel">
@@ -41,6 +41,7 @@ const FormFinal = ({ ...props }) => {
               placeholder="Digite sua senha"
               type="password"
               id="candidate_senha"
+              onChange={callBack("password")}
             />
           </div>
           <div className="Form-group telefone required candidate_telefone">
@@ -57,8 +58,9 @@ const FormFinal = ({ ...props }) => {
               className="form-control string telefone required"
               autofocus="autofocus"
               placeholder="Digite número com DD"
-              type="email"
+              type="text"
               id="candidate_telefone"
+              onChange={callBack("company_phone")}
             />
           </div>
           <div className="Form-group numero_devs required candidate_numero">
@@ -70,21 +72,24 @@ const FormFinal = ({ ...props }) => {
             </label>
             <select
               class="form-control select required ng-pristine ng-invalid ng-invalid-required ng-touched"
-              ng-model="company.number_of_programmers"
-              ng-change="resetValidation()"
               required="required"
-              aria-required="true"
-              name="company[number_of_programmers]"
+              placeholder="4_10"
+              type="text"
               id="company_number_of_programmers"
+              onChange={callBack("company_num_devs")}
             >
-              <option value="_1_3">1-3</option>
-              <option value="_4_10">4-10</option>
-              <option value="_11_25">11-25</option>
-              <option value="_26_50">26-50</option>
-              <option value="_50">+50</option>
+              <option value="1_3" selected="selected">
+                1-3
+              </option>
+              <option value="4_10">4-10</option>
+              <option value="11_25">11-25</option>
+              <option value="26_50">26-50</option>
+              <option value="50">+50</option>
             </select>
           </div>
-          <button className="button">Cadastrar</button>
+          <button className="button" onClick={onClick}>
+            Cadastrar
+          </button>
         </Form>
       </div>
     </Card>

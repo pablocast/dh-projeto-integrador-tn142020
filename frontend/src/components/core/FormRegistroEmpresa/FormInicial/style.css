@@ -87,3 +87,25 @@
 .Form input {
     padding-left: 35px;
 }
+
+::placeholder {
+    color: #939DA5!important;
+    opacity: .4 !important;
+  }
+  
+.Form .region {
+    width: 105% ;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.Form .region input {
+    width: 90%;
+}
+
+.Form .region__country span {
+    position: relative;
+    left: -60px;
+    top: 35px;
+}

@@ -43,7 +43,7 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.DATE,
         allowNull: false,
         defaultValue: sequelize.literal("CURRENT_TIMESTAMP"),
-      }
+      },
     },
     {
       tableName: "empresas",
