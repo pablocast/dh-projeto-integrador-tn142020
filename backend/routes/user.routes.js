@@ -1,12 +1,8 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
-const userCtrl = require('../controllers/user.controller');
-
+const userCtrl = require("../controllers/user.controller");
 
 /* GET users listing. */
-router.route('/api/users')
-  .post(userCtrl.create)
+router.route("/api/users").post(userCtrl.create);
 
 module.exports = router;
-
-

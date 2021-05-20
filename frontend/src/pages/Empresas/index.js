@@ -87,16 +87,22 @@ const Empresas = () => {
                 </p>
                 <ul>
                   <li>
-                    <BiTime color="#0052FB" style={{marginRight:'1em'}}/> Leve em média{" "}
-                    <strong>7 dias para contratar</strong>
+                    <BiTime color="#0052FB" style={{ marginRight: "1em" }} />{" "}
+                    Leve em média <strong>7 dias para contratar</strong>
                   </li>
                   <li>
-                    <AiOutlineStar color="#0052FB" style={{marginRight:'1em'}} /> Acesse candidatos{" "}
-                    <strong>pré-validados e engajados</strong>
+                    <AiOutlineStar
+                      color="#0052FB"
+                      style={{ marginRight: "1em" }}
+                    />{" "}
+                    Acesse candidatos <strong>pré-validados e engajados</strong>
                   </li>
                   <li>
-                    <RiSendPlaneLine color="#0052FB" style={{marginRight:'1em'}} /> Receba{" "}
-                    <strong>recomendações</strong> para as suas vagas
+                    <RiSendPlaneLine
+                      color="#0052FB"
+                      style={{ marginRight: "1em" }}
+                    />{" "}
+                    Receba <strong>recomendações</strong> para as suas vagas
                   </li>
                 </ul>
                 <p className="text-small">
@@ -154,11 +160,12 @@ const Empresas = () => {
                 </p>
                 <ul>
                   <li>
-                    <BsBell color="#0052FB" style={{marginRight:'1em'}}/> Candidatos muito mais engajados
+                    <BsBell color="#0052FB" style={{ marginRight: "1em" }} />{" "}
+                    Candidatos muito mais engajados
                   </li>
                   <li>
-                    <BsStar color="#0052FB" style={{marginRight:'1em'}}/> Os melhores candidatos
-                    pré-validados
+                    <BsStar color="#0052FB" style={{ marginRight: "1em" }} /> Os
+                    melhores candidatos pré-validados
                   </li>
                 </ul>
                 <a href="/criar-perfil-estudante">
@@ -183,16 +190,22 @@ const Empresas = () => {
                 </p>
                 <ul>
                   <li>
-                    <BsStar color="#0052FB" style={{marginRight:'1em'}} /> Conte com o suporte do nosso time
-                    de Customer Success
+                    <BsStar color="#0052FB" style={{ marginRight: "1em" }} />{" "}
+                    Conte com o suporte do nosso time de Customer Success
                   </li>
                   <li>
-                    <BsChatSquareDots color="#0052FB" style={{marginRight:'1em'}} /> Receba recomendações
-                    automáticas da plataforma
+                    <BsChatSquareDots
+                      color="#0052FB"
+                      style={{ marginRight: "1em" }}
+                    />{" "}
+                    Receba recomendações automáticas da plataforma
                   </li>
                   <li>
-                    <AiOutlineAreaChart color="#0052FB" style={{marginRight:'1em'}} /> Encontre
-                    profissionais com match para as suas vagas
+                    <AiOutlineAreaChart
+                      color="#0052FB"
+                      style={{ marginRight: "1em" }}
+                    />{" "}
+                    Encontre profissionais com match para as suas vagas
                   </li>
                 </ul>
               </Col>

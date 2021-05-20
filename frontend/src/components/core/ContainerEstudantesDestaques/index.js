@@ -22,29 +22,25 @@ const estudantes = [
   {
     nome: "Fulano",
     number: "01",
-    img:
-      "https://toppng.com/uploads/preview/roger-berry-avatar-placeholder-11562991561rbrfzlng6h.png",
+    img: "https://toppng.com/uploads/preview/roger-berry-avatar-placeholder-11562991561rbrfzlng6h.png",
     skill: "Node React css",
   },
   {
     nome: "Fulano",
     number: "02",
-    img:
-      "https://toppng.com/uploads/preview/roger-berry-avatar-placeholder-11562991561rbrfzlng6h.png",
+    img: "https://toppng.com/uploads/preview/roger-berry-avatar-placeholder-11562991561rbrfzlng6h.png",
     skill: "Node React css",
   },
   {
     nome: "Fulano",
     number: "03",
-    img:
-      "https://toppng.com/uploads/preview/roger-berry-avatar-placeholder-11562991561rbrfzlng6h.png",
+    img: "https://toppng.com/uploads/preview/roger-berry-avatar-placeholder-11562991561rbrfzlng6h.png",
     skill: "Node React css",
   },
   {
     nome: "Fulano",
     number: "04",
-    img:
-      "https://toppng.com/uploads/preview/roger-berry-avatar-placeholder-11562991561rbrfzlng6h.png",
+    img: "https://toppng.com/uploads/preview/roger-berry-avatar-placeholder-11562991561rbrfzlng6h.png",
     skill: "Node React css",
   },
 ];

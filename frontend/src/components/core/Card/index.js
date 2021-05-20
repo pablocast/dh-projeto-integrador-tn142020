@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Column } from "react-bootstrap"
+import { Container, Row, Column } from "react-bootstrap";
 import "./style.css";
 
 const Card = (props) => {
@@ -20,7 +20,7 @@ const Card = (props) => {
       <Row className="card-bottom">
         <a href="#" className="btn btn-primary">
           Ver mais
-          </a>
+        </a>
       </Row>
     </Container>
   );

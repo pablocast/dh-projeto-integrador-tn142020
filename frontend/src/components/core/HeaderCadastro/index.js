@@ -15,10 +15,10 @@ const HeaderCadastro = ({ ...props }) => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -33,7 +33,7 @@ const HeaderCadastro = ({ ...props }) => {
 
   const styleBemvindo2 = {
     backgroundColor: "#4a4a4a",
-    zIndex:"1",
+    zIndex: "1",
     borderColor: "transparent",
     position: "fixed",
     right: "0",
@@ -46,7 +46,10 @@ const HeaderCadastro = ({ ...props }) => {
   const useStyle2 = myLogo ? styleBemvindo2 : null;
 
   return (
-    <header className="HeaderCadastro" style={scrollPosition < 20 ? useStyle : useStyle2}>
+    <header
+      className="HeaderCadastro"
+      style={scrollPosition < 20 ? useStyle : useStyle2}
+    >
       <Link to="/">
         <img src={useLogo} className="logo" alt="logo" />
       </Link>
@@ -62,8 +65,7 @@ const HeaderCadastro = ({ ...props }) => {
           <a href="/criar-perfil-estudante" style={{ color: `${useColor}` }}>
             Cadastrar como estudante
           </a>
-        )
-        }
+        )}
         <div className="Cadastro" onMouseOver={() => setCadastro(true)}>
           <a
             href=""
