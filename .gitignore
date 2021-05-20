@@ -1,5 +1,5 @@
 # config
-/backend/config/**
+backend/config/**
 
 # Logs
 logs
