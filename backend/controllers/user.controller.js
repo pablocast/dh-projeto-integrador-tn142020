@@ -1,8 +1,7 @@
 
 const Sequelize = require('sequelize'),
-    { Usuario } = require('../models'),
-    { Op } = Sequelize
-
+    { Usuario } = require('../models')
+    errorHandler = require('./../helpers/dbErrorHandler')
 
 const create = async (req, res) => {
     const {
@@ -18,27 +17,25 @@ const create = async (req, res) => {
         photo
     } = req.body
 
-
-    const user = await Usuario.create({
-        name,
-        username,
-        email,
-        password,
-        address,
-        website,
-        phone,
-        company,
-        about,
-        photo
-    })
-
-    if (user) {
-        res.status(200).json({
+    try {
+        await Usuario.create({
+            name,
+            username,
+            email,
+            password,
+            address,
+            website,
+            phone,
+            company,
+            about,
+            photo
+        })
+        return res.status(200).json({
             message: "Successfully signed up!"
         })
-    } else {
-        res.status(400).json({
-            message: "algum error"
+    } catch (err) {
+        return res.status(400).json({
+            error: errorHandler.getErrorMessage(err) + '/' + `${req.body}`
         })
     }
 }

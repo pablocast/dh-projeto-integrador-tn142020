@@ -62,13 +62,14 @@ const BannerPropostaEstudante = () => {
       username: values.username || undefined,
       email: values.email || undefined,
       password: values.password || undefined,
-      address: (values.address_city + ',' + values.address_number + ',' + values.address_zip + ',' + values.address_city + ',' + values.address_country) || undefined,
+      address: (values.address_street + ',' + values.address_number + ',' + values.address_zip + ',' + values.address_city + ',' + values.address_country) || undefined,
       website: values.website || undefined,
       phone: values.phone || undefined,
       company: values.company || undefined,
       about: values.about || undefined,
       photo: values.photo || undefined
     }
+    
     create(user).then((data) => {
       if (data.error) {
         setValues({ ...values, error: data.error })
@@ -77,7 +78,7 @@ const BannerPropostaEstudante = () => {
       }
     })
   }
-  console.log(values)
+
   return (
     <section className="proposta">
       <Container style={{ marginLeft: 96.58 }}>
@@ -112,7 +113,7 @@ const BannerPropostaEstudante = () => {
                 <Form_3 callBack={handleChange} nextForm={triggerNextFormState} lastForm={triggerBackFormState} />
               )}
               {form === 'Form_4' && (
-                <Form_4 callBack={handleChange} nextForm={triggerNextFormState} lastForm={triggerBackFormState} submit={clickSubmit} />
+                <Form_4 callBack={handleChange} nextForm={triggerNextFormState} lastForm={triggerBackFormState} onClick={clickSubmit} />
               )}
             </div>
           </Col>

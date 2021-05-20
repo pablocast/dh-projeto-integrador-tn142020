@@ -196,7 +196,7 @@ const Form_3 = ({ ...props }) => {
 }
 
 const Form_4 = ({ ...props }) => {
-    const { callBack, nextForm, lastForm, submit } = props;
+    const { callBack, lastForm, onClick } = props;
     return (
         <div>
             <div className="input-icon">
@@ -219,7 +219,7 @@ const Form_4 = ({ ...props }) => {
                     <input className="form-control about" id="icon" placeholder="Nos conte de você" type="text" onChange={callBack('about')} />
                 </div>
             </div>
-            <input type="submit" name="commit" value="CRIAR MEU PERFIL AGORA" className="mybutton" onClick={submit}/>
+            <input type="submit" name="commit" value="CRIAR MEU PERFIL AGORA" className="mybutton" onClick={onClick}/>
             <div className="next-container">
                 <span id="back" className="back" onClick={lastForm()}>
                     <i className="material-icons back-icon">arrow_back</i>
