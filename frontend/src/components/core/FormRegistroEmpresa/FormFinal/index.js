@@ -1,6 +1,8 @@
 import React from "react";
 import "./style.css";
 import { Form, Card } from "react-bootstrap";
+import { BsLock } from "react-icons/bs";
+import { RiCellphoneFill } from "react-icons/ri";
 
 const FormFinal = ({ ...props }) => {
   const { handleVoltar } = props;
@@ -30,13 +32,14 @@ const FormFinal = ({ ...props }) => {
             >
               Senha (mín. 8 caracteres)
             </label>
+            <span className="icon">
+              <BsLock color="#939DA5" size="1.25em" />
+            </span>
             <input
               className="form-control string senha required"
               autofocus="autofocus"
-              placeholder="Crie uma senha com pelo menos 8 carateres"
-              type="senha"
-              value=""
-              name="candidate[senha]"
+              placeholder="Digite sua senha"
+              type="password"
               id="candidate_senha"
             />
           </div>
@@ -47,13 +50,14 @@ const FormFinal = ({ ...props }) => {
             >
               Telefone para contato
             </label>
+            <span className="icon">
+              <RiCellphoneFill color="#939DA5" size="1.25em" />
+            </span>
             <input
               className="form-control string telefone required"
               autofocus="autofocus"
-              placeholder="Digite número de telefone com DD"
+              placeholder="Digite número com DD"
               type="email"
-              value=""
-              name="candidate[telefone]"
               id="candidate_telefone"
             />
           </div>

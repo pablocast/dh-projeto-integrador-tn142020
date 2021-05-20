@@ -1,7 +1,10 @@
 import React from "react";
 import "./style.css";
 import { Row, Col, Form, Card } from "react-bootstrap";
-import { AiOutlineArrowRight } from "react-icons/ai";
+import { AiOutlineArrowRight, AiOutlineMail } from "react-icons/ai";
+import { BsPerson } from "react-icons/bs";
+import { FaIndustry } from "react-icons/fa";
+import { GiModernCity } from "react-icons/gi";
 
 const FormInicial = ({ ...props }) => {
   const { handleSubmit } = props;
@@ -21,13 +24,14 @@ const FormInicial = ({ ...props }) => {
             <label className="control-label nome required" for="candidate_nome">
               Nome
             </label>
+            <span className="icon">
+              <BsPerson color="#939DA5" size="1.25em" />
+            </span>
             <input
               className="form-control string nome required"
               autofocus="autofocus"
-              placeholder="ex Bruno Castano"
+              placeholder="Bruno Castano"
               type="nome"
-              value=""
-              name="candidate[nome]"
               id="candidate_nome"
             />
           </div>
@@ -38,13 +42,14 @@ const FormInicial = ({ ...props }) => {
             >
               Email corporativo
             </label>
+            <span className="icon">
+              <AiOutlineMail color="#939DA5" size="1.25em" />
+            </span>
             <input
               className="form-control string email required"
               autofocus="autofocus"
-              placeholder="ex bcastano@dh.org.br"
+              placeholder="bcastano@dh.org.br"
               type="email"
-              value=""
-              name="candidate[email]"
               id="candidate_email"
             />
           </div>
@@ -55,13 +60,14 @@ const FormInicial = ({ ...props }) => {
             >
               Nome da empresa
             </label>
+            <span className="icon">
+              <FaIndustry color="#939DA5" size="1.25em" />
+            </span>
             <input
               className="form-control string empresa required"
               autofocus="autofocus"
-              placeholder="ex Digital House"
+              placeholder="Digital House"
               type="nome"
-              value=""
-              name="candidate[empresa]"
               id="candidate_empresa"
             />
           </div>
@@ -72,11 +78,13 @@ const FormInicial = ({ ...props }) => {
             >
               Cidade
             </label>
+            <span className="icon">
+              <GiModernCity color="#939DA5" size="1.25em" />
+            </span>
             <input
               className="form-control password required"
-              placeholder="ex São Paulo, SP"
-              type="password"
-              name="candidate[cidade]"
+              placeholder="São Paulo, SP"
+              type="text"
               id="candidate_cidade"
             />
           </div>

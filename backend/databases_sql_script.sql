@@ -114,4 +114,22 @@ CREATE TABLE IF NOT EXISTS `projeto_integrador_t4`.`inscricoes_aulas` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION); 
 
-  
+CREATE TABLE IF NOT EXISTS `projeto_integrador_t4`.`empresas` (
+  `company_id` INT NOT NULL AUTO_INCREMENT,
+  `company_email` VARCHAR(255) NOT NULL,
+  `company_city` VARCHAR(45) NOT NULL,
+  `company_country` VARCHAR(45) NOT NULL,
+  `employee_name` VARCHAR(32) NOT NULL,
+  `company_name` VARCHAR(255) NOT NULL,
+  `company_phone` VARCHAR(255) NOT NULL,
+  `company_num_devs` VARCHAR(255) NOT NULL,
+  `password` VARCHAR(45) NOT NULL,
+  `create_time` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`company_id`),
+  UNIQUE INDEX `company_email_UNIQUE` (`company_email` ASC) VISIBLE,
+  UNIQUE INDEX `company_id_UNIQUE` (`company_id` ASC) VISIBLE);
+
+drop table `projeto_integrador_t4`.`empresas`
+
+select * from `projeto_integrador_t4`.`usuarios`;
+select * from `projeto_integrador_t4`.`empresas`;
