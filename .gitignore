@@ -104,4 +104,4 @@ dist
 .tern-port
 
 # config
-backend/config
+backend/config/database.js
