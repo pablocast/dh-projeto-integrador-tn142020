@@ -39,6 +39,30 @@ const create = async (req, res) => {
   }
 };
 
+const list = async (req, res) => {
+  try {
+    let users = await Usuario.findAll({
+      attributes: [
+        "name",
+        "username",
+        "email",
+        "address",
+        "website",
+        "phone",
+        "company",
+        "about",
+        "photo",
+      ],
+    });
+    res.json(users);
+  } catch (err) {
+    return res.status(400).json({
+      error: errorHandler.getErrorMessage(err),
+    });
+  }
+};
+
 module.exports = {
   create,
+  list,
 };

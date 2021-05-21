@@ -35,6 +35,28 @@ const create = async (req, res) => {
   }
 };
 
+const list = async (req, res) => {
+  try {
+    let empresas = await Empresa.findAll({
+      attributes: [
+        "employee_name",
+        "company_name",
+        "company_phone",
+        "company_email",
+        "company_city",
+        "company_country",
+        "company_num_devs",
+      ],
+    });
+    res.json(empresas);
+  } catch (err) {
+    return res.status(400).json({
+      error: errorHandler.getErrorMessage(err),
+    });
+  }
+};
+
 module.exports = {
   create,
+  list,
 };
