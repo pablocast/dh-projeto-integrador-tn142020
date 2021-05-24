@@ -19,7 +19,11 @@ import {
   CompanyCreate,
   CompanyIcon,
 } from "../../components/admin/Companies";
-import { userList, companyList } from "../../components/admin/api-admin.js";
+import {
+  userList,
+  companyList,
+  courseList,
+} from "../../components/admin/api-admin.js";
 
 const Dashboard = () => {
   return (
@@ -33,6 +37,7 @@ const Dashboard = () => {
 const AdminDash = () => {
   const [users, setUsers] = useState([]);
   const [companies, setCompanies] = useState([]);
+  const [courses, setCourses] = useState([]);
 
   useEffect(() => {
     const abortController = new AbortController();
@@ -51,6 +56,14 @@ const AdminDash = () => {
         console.log(data.error);
       } else {
         setCompanies(data);
+      }
+    });
+
+    courseList(signal).then((data) => {
+      if (data && data.error) {
+        console.log(data.error);
+      } else {
+        setCourses(data);
       }
     });
 

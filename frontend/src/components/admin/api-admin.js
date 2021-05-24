@@ -22,4 +22,16 @@ const companyList = async (signal) => {
   }
 };
 
-export { userList, companyList };
+const courseList = async (signal) => {
+  try {
+    let response = await fetch("/api/courses/", {
+      method: "GET",
+      signal: signal,
+    });
+    return await response.json();
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+export { userList, companyList, courseList };

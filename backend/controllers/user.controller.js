@@ -34,7 +34,7 @@ const create = async (req, res) => {
     });
   } catch (err) {
     return res.status(400).json({
-      error: errorHandler.getErrorMessage(err) + "/" + `${req.body}`,
+      error: errorHandler.getErrorMessage(err),
     });
   }
 };
