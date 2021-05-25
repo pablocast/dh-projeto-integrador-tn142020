@@ -5,4 +5,6 @@ const companyCtrl = require("../controllers/company.controller");
 /* GET users listing. */
 router.route("/api/companies").get(companyCtrl.list).post(companyCtrl.create);
 
+
+
 module.exports = router;

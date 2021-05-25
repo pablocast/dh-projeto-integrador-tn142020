@@ -34,7 +34,7 @@ const list = async (req, res) => {
   try {
     let cursos = await Curso.findAll({
       attributes: [
-        ["curso_id","id"],
+        ["curso_id", "id"],
         "curso_name",
         "curso_description",
         "curso_image",
@@ -51,7 +51,20 @@ const list = async (req, res) => {
   }
 };
 
+const destroy = async (req, res) => {
+  const id  = req.params.courseId;
+  if (Number.isNaN(id)) return res.status(400).end();
+
+  Curso.destroy({
+    where: { curso_id : id }
+  }).then(() => {
+    res.status(204).end();
+  });
+};
+
+
 module.exports = {
   create,
   list,
+  destroy
 };
