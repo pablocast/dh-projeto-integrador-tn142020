@@ -39,6 +39,7 @@ const list = async (req, res) => {
   try {
     let empresas = await Empresa.findAll({
       attributes: [
+        ["company_id","id"],
         "employee_name",
         "company_name",
         "company_phone",

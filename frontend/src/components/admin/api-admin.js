@@ -1,6 +1,7 @@
-const userList = async (signal) => {
+const list = async (signal, resource, params) => {
+  var url = "/api/"+`${resource}`+'/'
   try {
-    let response = await fetch("/api/users/", {
+    let response = await fetch(url, {
       method: "GET",
       signal: signal,
     });
@@ -10,28 +11,4 @@ const userList = async (signal) => {
   }
 };
 
-const companyList = async (signal) => {
-  try {
-    let response = await fetch("/api/companies/", {
-      method: "GET",
-      signal: signal,
-    });
-    return await response.json();
-  } catch (err) {
-    console.log(err);
-  }
-};
-
-const courseList = async (signal) => {
-  try {
-    let response = await fetch("/api/courses/", {
-      method: "GET",
-      signal: signal,
-    });
-    return await response.json();
-  } catch (err) {
-    console.log(err);
-  }
-};
-
-export { userList, companyList, courseList };
+export { list };

@@ -58,7 +58,7 @@ const CourseCreate = (props) => {
 
   return (
     <Create {...props}>
-      <SimpleForm save={clickSubmit}>
+      <SimpleForm save={clickSubmit} redirect="show" >
         <TextInput source="Course Name" onChange={handleChange("curso_name")} />
         <TextInput
           source="Course Description"

@@ -34,6 +34,7 @@ const list = async (req, res) => {
   try {
     let cursos = await Curso.findAll({
       attributes: [
+        ["curso_id","id"],
         "curso_name",
         "curso_description",
         "curso_image",

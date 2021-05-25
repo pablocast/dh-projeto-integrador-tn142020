@@ -43,6 +43,7 @@ const list = async (req, res) => {
   try {
     let users = await Usuario.findAll({
       attributes: [
+        ["user_id","id"],
         "name",
         "username",
         "email",

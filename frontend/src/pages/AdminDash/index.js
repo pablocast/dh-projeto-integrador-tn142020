@@ -1,10 +1,6 @@
 import "./style.css";
 import React, { useState, useEffect } from "react";
 import { Admin, Resource, ListGuesser } from "react-admin";
-import fakeDataProvider from "ra-data-fakerest";
-import courses from "../../helpers/courses.json";
-import companies from "../../helpers/companies.json";
-import users from "../../helpers/users.json";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import { Title } from "react-admin";
@@ -20,9 +16,7 @@ import {
   CompanyIcon,
 } from "../../components/admin/Companies";
 import {
-  userList,
-  companyList,
-  courseList,
+  list
 } from "../../components/admin/api-admin.js";
 
 const Dashboard = () => {
@@ -34,49 +28,26 @@ const Dashboard = () => {
   );
 };
 
+const abortController = new AbortController()
+const signal = abortController.signal
+
+const dataProvider = {
+  getList: (resource, params) => {
+    return list(signal, resource, params).then((response) => {
+      return { data: response , total: response.length }
+    })
+  },
+  getOne: (resource, params) => Promise,
+  getMany: (resource, params) => Promise,
+  getManyReference: (resource, params) => Promise,
+  create: (resource, params) => Promise,
+  update: (resource, params) => Promise,
+  updateMany: (resource, params) => Promise,
+  delete: (resource, params) => Promise,
+  deleteMany: (resource, params) => Promise,
+}
+
 const AdminDash = () => {
-  const [users, setUsers] = useState([]);
-  const [companies, setCompanies] = useState([]);
-  const [courses, setCourses] = useState([]);
-
-  useEffect(() => {
-    const abortController = new AbortController();
-    const signal = abortController.signal;
-
-    userList(signal).then((data) => {
-      if (data && data.error) {
-        console.log(data.error);
-      } else {
-        setUsers(data);
-      }
-    });
-
-    companyList(signal).then((data) => {
-      if (data && data.error) {
-        console.log(data.error);
-      } else {
-        setCompanies(data);
-      }
-    });
-
-    courseList(signal).then((data) => {
-      if (data && data.error) {
-        console.log(data.error);
-      } else {
-        setCourses(data);
-      }
-    });
-
-    return function cleanup() {
-      abortController.abort();
-    };
-  }, []);
-
-  const dataProvider = fakeDataProvider({
-    courses: courses,
-    companies: companies,
-    users: users,
-  });
 
   return (
     <Admin dashboard={Dashboard} dataProvider={dataProvider}>
