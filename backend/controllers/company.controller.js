@@ -39,7 +39,7 @@ const list = async (req, res) => {
   try {
     let empresas = await Empresa.findAll({
       attributes: [
-        ["company_id","id"],
+        ["company_id", "id"],
         "employee_name",
         "company_name",
         "company_phone",
@@ -49,6 +49,10 @@ const list = async (req, res) => {
         "company_num_devs",
       ],
     });
+    var range = empresas.length;
+    res.set({
+      "Content-Range": range,
+    });
     res.json(empresas);
   } catch (err) {
     return res.status(400).json({
@@ -57,7 +61,19 @@ const list = async (req, res) => {
   }
 };
 
+const destroy = async (req, res) => {
+  const id = req.params.companyId;
+  if (Number.isNaN(id)) return res.status(400).end();
+
+  Empresa.destroy({
+    where: { company_id: id },
+  }).then(() => {
+    res.status(204).end();
+  });
+};
+
 module.exports = {
   create,
   list,
+  destroy,
 };

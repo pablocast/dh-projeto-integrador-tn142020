@@ -43,7 +43,7 @@ const list = async (req, res) => {
   try {
     let users = await Usuario.findAll({
       attributes: [
-        ["user_id","id"],
+        ["user_id", "id"],
         "name",
         "username",
         "email",
@@ -54,6 +54,10 @@ const list = async (req, res) => {
         "about",
         "photo",
       ],
+    });
+    var range = users.length;
+    res.set({
+      "Content-Range": range,
     });
     res.json(users);
   } catch (err) {

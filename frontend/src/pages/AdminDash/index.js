@@ -1,6 +1,6 @@
 import "./style.css";
 import React, { useState, useEffect } from "react";
-import { Admin, Resource, ListGuesser } from "react-admin";
+import { Admin, Resource, ListGuesser, fetchUtils } from "react-admin";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import { Title } from "react-admin";
@@ -15,9 +15,7 @@ import {
   CompanyCreate,
   CompanyIcon,
 } from "../../components/admin/Companies";
-import {
-  list
-} from "../../components/admin/api-admin.js";
+import simpleRestProvider from "ra-data-simple-rest";
 
 const Dashboard = () => {
   return (
@@ -28,29 +26,15 @@ const Dashboard = () => {
   );
 };
 
-const abortController = new AbortController()
-const signal = abortController.signal
-
-const dataProvider = {
-  getList: (resource, params) => {
-    return list(signal, resource, params).then((response) => {
-      return { data: response , total: response.length }
-    })
-  },
-  getOne: (resource, params) => Promise,
-  getMany: (resource, params) => Promise,
-  getManyReference: (resource, params) => Promise,
-  create: (resource, params) => Promise,
-  update: (resource, params) => Promise,
-  updateMany: (resource, params) => Promise,
-  delete: (resource, params) => Promise,
-  deleteMany: (resource, params) => Promise,
-}
+const dataProvider = simpleRestProvider("http://localhost:3000/api");
 
 const AdminDash = () => {
-
   return (
-    <Admin dashboard={Dashboard} dataProvider={dataProvider}>
+    <Admin
+      dashboard={Dashboard}
+      dataProvider={dataProvider}
+      style={{ justifyContent: "left" }}
+    >
       <Resource
         name="users"
         list={ListGuesser}

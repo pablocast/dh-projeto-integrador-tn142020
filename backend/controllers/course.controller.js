@@ -43,6 +43,10 @@ const list = async (req, res) => {
         "curso_skills",
       ],
     });
+    var range = cursos.length;
+    res.set({
+      "Content-Range": range,
+    });
     res.json(cursos);
   } catch (err) {
     return res.status(400).json({
@@ -52,19 +56,18 @@ const list = async (req, res) => {
 };
 
 const destroy = async (req, res) => {
-  const id  = req.params.courseId;
+  const id = req.params.courseId;
   if (Number.isNaN(id)) return res.status(400).end();
 
   Curso.destroy({
-    where: { curso_id : id }
+    where: { curso_id: id },
   }).then(() => {
     res.status(204).end();
   });
 };
 
-
 module.exports = {
   create,
   list,
-  destroy
+  destroy,
 };
