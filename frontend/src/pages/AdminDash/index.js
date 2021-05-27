@@ -20,8 +20,8 @@ import simpleRestProvider from "ra-data-simple-rest";
 const Dashboard = () => {
   return (
     <Card>
-      <Title title="Painel Administrador" />
-      <CardContent>Lorem ipsum sic dolor amet...</CardContent>
+      <Title title="Painel Administrador"  />
+      <CardContent style={{ justifyContent: "left" }}>Lorem ipsum sic dolor amet...</CardContent>
     </Card>
   );
 };
@@ -33,7 +33,6 @@ const AdminDash = () => {
     <Admin
       dashboard={Dashboard}
       dataProvider={dataProvider}
-      style={{ justifyContent: "left" }}
     >
       <Resource
         name="users"
