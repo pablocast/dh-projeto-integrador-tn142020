@@ -6,6 +6,7 @@ var logger = require("morgan");
 var userRoutes = require("./routes/user.routes");
 var companyRoutes = require("./routes/company.routes");
 var courseRoutes = require("./routes/course.routes");
+var authRoutes = require("./routes/auth.routes");
 var app = express();
 
 // view engine setup
@@ -21,6 +22,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", userRoutes);
 app.use("/", companyRoutes);
 app.use("/", courseRoutes);
+app.use("/", authRoutes);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

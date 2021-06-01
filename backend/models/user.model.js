@@ -1,3 +1,8 @@
+const bcrypt = require("bcrypt");
+const { password } = require("../config/database");
+
+const saltRounds = 10;
+
 module.exports = (sequelize, DataTypes) => {
   const Usuario = sequelize.define(
     "Usuario",
@@ -52,10 +57,22 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: true,
       },
+      salt: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
     },
     {
       tableName: "usuarios",
       timestamps: false,
+      hooks: {
+        beforeValidate: async (user, options) => {
+          const salt = await bcrypt.genSalt(10);
+          user.password = await bcrypt.hash(user.password, salt);
+          user.salt = salt;
+        },
+      },
+      sequelize,
     }
   );
 
