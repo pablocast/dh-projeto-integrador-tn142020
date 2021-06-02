@@ -76,9 +76,9 @@ const FormFinal = ({ ...props }) => {
               placeholder="4_10"
               type="text"
               id="company_number_of_programmers"
-              onChange={callBack("company_num_devs")}
+              onClick={callBack("company_num_devs")}
             >
-              <option value="1_3" selected="selected">
+              <option value="1_3" selected="1_3">
                 1-3
               </option>
               <option value="4_10">4-10</option>

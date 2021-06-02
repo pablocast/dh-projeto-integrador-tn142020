@@ -3,6 +3,7 @@ const Sequelize = require("sequelize"),
 errorHandler = require("../helpers/dbErrorHandler");
 
 const create = async (req, res) => {
+  console.log(req.body);
   const {
     employee_name,
     company_name,

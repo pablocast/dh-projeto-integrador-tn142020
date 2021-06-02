@@ -26,8 +26,9 @@ const FormRegistroEmpresa = () => {
     setValues({ ...values, [name]: event.target.value });
   };
 
-  const clickSubmit = () => {
-    console.log(values);
+  const clickSubmit = (event) => {
+    event.preventDefault();
+
     const company = {
       employee_name: values.employee_name || undefined,
       company_name: values.company_name || undefined,
@@ -47,7 +48,7 @@ const FormRegistroEmpresa = () => {
       }
     });
   };
-
+  console.log(values);
   return (
     <div className="candidates sign-in">
       <section className="main-section-content">

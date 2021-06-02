@@ -10,7 +10,7 @@ const signin = async (req, res) => {
     const email = req.body.email;
     const password = req.body.password;
     const typeuser = req.body.typeuser;
-    
+
     let user =
       typeuser === "user"
         ? await Usuario.findOne({ where: { email: email } })
