@@ -6,10 +6,11 @@ const Sequelize = require("sequelize"),
 
 const signin = async (req, res) => {
   try {
-    const username = req.body.username;
+    console.log(req.body);
+    const email = req.body.email;
     const password = req.body.password;
 
-    let user = await Usuario.findOne({ where: { username: username } });
+    let user = await Usuario.findOne({ where: { email: email } });
     const match = await bcrypt.compare(password, user.password);
 
     if (!user)
@@ -49,6 +50,25 @@ const signin = async (req, res) => {
   }
 };
 
+const signout = (req, res) => {
+  res.clearCookie("t");
+  return res.status("200").json({
+    message: "Usuario deslogado",
+  });
+};
+
+const hasAuthorization = (req, res, next) => {
+  const authorized = req.profile && req.auth && req.profile._id == req.auth._id;
+  if (!authorized) {
+    return res.status("403").json({
+      error: "User is not authorized",
+    });
+  }
+  next();
+};
+
 module.exports = {
   signin,
+  signout,
+  hasAuthorization,
 };
