@@ -1,16 +1,21 @@
 const Sequelize = require("sequelize"),
   { Usuario } = require("../models"),
+  { Administrador } = require("../models"),
   bcrypt = require("bcrypt"),
   jwt = require("jsonwebtoken"),
   config = require("../config/database.js");
 
 const signin = async (req, res) => {
   try {
-    console.log(req.body);
     const email = req.body.email;
     const password = req.body.password;
+    const typeuser = req.body.typeuser;
 
-    let user = await Usuario.findOne({ where: { email: email } });
+    let user =
+      typeuser === "user"
+        ? await Usuario.findOne({ where: { email: email } })
+        : await Administrador.findOne({ where: { email: email } });
+
     const match = await bcrypt.compare(password, user.password);
 
     if (!user)
@@ -24,9 +29,11 @@ const signin = async (req, res) => {
       });
     }
 
+    let user_id = typeuser === "user" ? user.user_id : user.admin_id;
+    console.log(user_id);
     const token = jwt.sign(
       {
-        _id: user.user_id,
+        _id: user_id,
       },
       config.jwtSecret
     );
@@ -38,14 +45,14 @@ const signin = async (req, res) => {
     return res.json({
       token,
       user: {
-        _id: user.user_id,
+        _id: user_id,
         name: user.username,
         email: user.email,
       },
     });
   } catch (err) {
     return res.status("401").json({
-      error: "Não conseguiu logar",
+      error: "Não pôde ser logado",
     });
   }
 };
@@ -58,10 +65,10 @@ const signout = (req, res) => {
 };
 
 const hasAuthorization = (req, res, next) => {
-  const authorized = req.profile && req.auth && req.profile._id == req.auth._id;
+  const authorized = req.token == process.env.jwtSecret;
   if (!authorized) {
     return res.status("403").json({
-      error: "User is not authorized",
+      error: "Não permitido",
     });
   }
   next();

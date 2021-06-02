@@ -1,10 +1,10 @@
 const bcrypt = require("bcrypt");
 
 module.exports = (sequelize, DataTypes) => {
-  const Usuario = sequelize.define(
-    "Usuario",
+  const Administrador = sequelize.define(
+    "Administrador",
     {
-      user_id: {
+      admin_id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true,
@@ -30,37 +30,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         defaultValue: sequelize.literal("CURRENT_TIMESTAMP"),
       },
-      address: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      website: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      phone: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      company: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      about: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      photo: {
-        type: DataTypes.STRING,
-        allowNull: true,
-      },
       salt: {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
     },
     {
-      tableName: "usuarios",
+      tableName: "administradores",
       timestamps: false,
       hooks: {
         beforeValidate: async (user, options) => {
@@ -73,5 +49,5 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
 
-  return Usuario;
+  return Administrador;
 };
