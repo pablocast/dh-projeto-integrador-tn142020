@@ -48,3 +48,8 @@
     padding: 0.5rem 2rem;
     color: #fff;
 }
+
+li > a {
+    color: white !important;
+    cursor: pointer;
+}

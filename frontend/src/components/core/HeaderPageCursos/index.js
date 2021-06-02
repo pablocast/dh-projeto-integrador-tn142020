@@ -2,8 +2,13 @@ import React from "react";
 import "./style.css";
 import imageLogo from "../../../assets/img/logo_transp.png";
 import { Link } from "react-router-dom";
+import auth from "../../auth/auth-helper";
+import { useHistory } from "react-router-dom";
 
-const HeaderPagesCursos = () => {
+const HeaderPagesCursos = (props) => {
+  const { username } = props;
+  let history = useHistory();
+
   return (
     <header>
       <div class="menu">
@@ -25,7 +30,16 @@ const HeaderPagesCursos = () => {
               <i class="large material-icons">circle_notifications</i>
             </li>
             <li class="menu-navbar-item">
-              <a href="#">Aluno(a)</a>
+              <a href="#">{username}</a>
+            </li>
+            <li class="menu-navbar-item">
+              <a
+                onClick={() => {
+                  auth.clearJWT(() => history.push("/"));
+                }}
+              >
+                Sair
+              </a>
             </li>
           </ul>
         </nav>

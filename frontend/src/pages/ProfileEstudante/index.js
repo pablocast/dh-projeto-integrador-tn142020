@@ -4,10 +4,12 @@ import Header from "../../components/core/HeaderPageCursos";
 import ContainerCursos from "../../components/core/ContainerCursos";
 import Footer from "../../components/core/Footer";
 
-const ProfileCursos = () => {
+const ProfileCursos = (props) => {
+  const { username } = props.location.state;
+
   return (
     <>
-      <Header />
+      <Header username={username} />
       <ContainerCursos />
       <Footer />
     </>

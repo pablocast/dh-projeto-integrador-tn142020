@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { Create, Edit, SimpleForm, TextInput } from "react-admin";
+import {
+  Create,
+  Edit,
+  SimpleForm,
+  TextInput,
+  useNotify,
+  useRefresh,
+  useRedirect,
+} from "react-admin";
 import { create } from "../core/api-course";
 
 import { BiBookReader } from "react-icons/bi";
@@ -7,8 +15,18 @@ import { BiBookReader } from "react-icons/bi";
 const CourseIcon = BiBookReader;
 
 const CourseEdit = (props) => {
+  const notify = useNotify();
+  const refresh = useRefresh();
+  const redirect = useRedirect();
+
+  const onSuccess = () => {
+    notify(`Cambios armazenados`);
+    redirect(false);
+    refresh();
+  };
+
   return (
-    <Edit {...props}>
+    <Edit onSuccess={onSuccess} {...props}>
       <SimpleForm>
         <TextInput disabled source="id" />
         <TextInput source="course" />
@@ -22,6 +40,8 @@ const CourseEdit = (props) => {
 };
 
 const CourseCreate = (props) => {
+  const notify = useNotify();
+
   const [values, setValues] = useState({
     curso_name: "",
     curso_description: "",
@@ -52,31 +72,41 @@ const CourseCreate = (props) => {
         setValues({ ...values, error: data.error });
       } else {
         setValues({ ...values, error: "", open: true });
+        notify("Curso armazenado");
       }
     });
   };
 
   return (
     <Create {...props}>
-      <SimpleForm save={clickSubmit} redirect="show">
-        <TextInput source="Course Name" onChange={handleChange("curso_name")} />
+      <SimpleForm redirect="show" save={clickSubmit}>
         <TextInput
+          label="curso_name"
+          source="Course Name"
+          onChange={handleChange("curso_name")}
+        />
+        <TextInput
+          label="curso_description"
           source="Course Description"
           onChange={handleChange("curso_description")}
         />
         <TextInput
+          label="curso_image"
           source="Course Image"
           onChange={handleChange("curso_image")}
         />
         <TextInput
+          label="curso_duration"
           source="Course Duration"
           onChange={handleChange("curso_duration")}
         />
         <TextInput
+          label="curso_language"
           source="Course Language"
           onChange={handleChange("curso_language")}
         />
         <TextInput
+          label="curso_skills"
           source="Course Skills"
           onChange={handleChange("curso_skills")}
         />

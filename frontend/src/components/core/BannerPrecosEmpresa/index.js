@@ -35,7 +35,6 @@ const planos = {
 };
 
 const PricingCard = (props) => {
-  console.log(props);
   const {
     title,
     price,

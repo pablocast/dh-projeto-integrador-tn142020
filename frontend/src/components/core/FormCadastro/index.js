@@ -1,10 +1,62 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 import { Container, Row, Col, Form, Card, FormCheck } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { Redirect } from "react-router-dom";
+import { signin } from "../../auth/api-auth";
+import auth from "../../auth/auth-helper";
+import { RiErrorWarningFill } from "react-icons/ri";
 
-const FormCadastro = ({ ...props }) => {
-  const { isStudent } = props;
+const FormCadastro = (props) => {
+  const { isStudent } = props.isStudent;
+
+  const [values, setValues] = useState({
+    username: "",
+    email: "",
+    password: "",
+    error: "",
+    redirectToReferrer: false,
+  });
+
+  const clickSubmit = (event) => {
+    event.preventDefault();
+    const user = {
+      typeuser: "user",
+      email: values.email || undefined,
+      password: values.password || undefined,
+    };
+
+    signin(user).then((data) => {
+      if (data.error) {
+        setValues({ ...values, error: data.error });
+      } else {
+        auth.authenticate(data, () => {
+          setValues({
+            ...values,
+            error: "",
+            redirectToReferrer: true,
+            username: data.user.name,
+          });
+        });
+      }
+    });
+  };
+
+  const handleChange = (name) => (event) => {
+    setValues({ ...values, [name]: event.target.value });
+  };
+
+  const { from } = {
+    from: {
+      pathname: "/profile-estudante",
+      state: { username: values.username },
+    },
+  };
+  const { redirectToReferrer } = values;
+
+  if (redirectToReferrer) {
+    return <Redirect to={from} />;
+  }
 
   return (
     <div className="candidates sign-in">
@@ -35,6 +87,8 @@ const FormCadastro = ({ ...props }) => {
                         className="form-control string email optional"
                         autofocus="autofocus"
                         placeholder="Digite o seu email"
+                        value={values.email}
+                        onChange={handleChange("email")}
                         type="email"
                         name="candidate[email]"
                         id="candidate_email"
@@ -51,6 +105,8 @@ const FormCadastro = ({ ...props }) => {
                         className="form-control password optional"
                         placeholder="Digite a sua senha"
                         type="password"
+                        value={values.password}
+                        onChange={handleChange("password")}
                         name="candidate[password]"
                         id="candidate_password"
                       />
@@ -90,18 +146,21 @@ const FormCadastro = ({ ...props }) => {
                         </p>
                       </Col>
                     </Row>
-                    <Link
-                      to={"/profile-".concat(
-                        isStudent ? "estudante" : "empresa"
-                      )}
-                    >
-                      <input
-                        type="submit"
-                        name="commit"
-                        value="Entrar"
-                        className="btn btn btn-primary btn-lg btn-block"
-                      />
-                    </Link>
+                    <br />
+                    {values.error && (
+                      <p style={{ color: "red", textAlign: "center" }}>
+                        <RiErrorWarningFill color="red" />
+                        {values.error}
+                      </p>
+                    )}
+                    <br />
+                    <input
+                      type="submit"
+                      name="commit"
+                      value="Entrar"
+                      onClick={clickSubmit}
+                      className="btn btn btn-primary btn-lg btn-block"
+                    />
                   </Form>
                 </div>
               </Card>

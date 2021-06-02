@@ -20,8 +20,10 @@ import simpleRestProvider from "ra-data-simple-rest";
 const Dashboard = () => {
   return (
     <Card>
-      <Title title="Painel Administrador"  />
-      <CardContent style={{ justifyContent: "left" }}>Lorem ipsum sic dolor amet...</CardContent>
+      <Title title="Painel Administrador" />
+      <CardContent style={{ justifyContent: "left" }}>
+        Lorem ipsum sic dolor amet...
+      </CardContent>
     </Card>
   );
 };
@@ -30,15 +32,11 @@ const dataProvider = simpleRestProvider("http://localhost:3000/api");
 
 const AdminDash = () => {
   return (
-    <Admin
-      dashboard={Dashboard}
-      dataProvider={dataProvider}
-    >
+    <Admin dashboard={Dashboard} dataProvider={dataProvider}>
       <Resource
         name="users"
         list={ListGuesser}
         edit={UserEdit}
-        create={UserCreate}
         icon={UserIcon}
       />
       <Resource
@@ -52,7 +50,6 @@ const AdminDash = () => {
         name="companies"
         list={ListGuesser}
         edit={CompanyEdit}
-        create={CompanyCreate}
         icon={CompanyIcon}
       />
     </Admin>

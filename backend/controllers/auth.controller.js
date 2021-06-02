@@ -10,7 +10,7 @@ const signin = async (req, res) => {
     const email = req.body.email;
     const password = req.body.password;
     const typeuser = req.body.typeuser;
-
+    
     let user =
       typeuser === "user"
         ? await Usuario.findOne({ where: { email: email } })
@@ -30,7 +30,7 @@ const signin = async (req, res) => {
     }
 
     let user_id = typeuser === "user" ? user.user_id : user.admin_id;
-    console.log(user_id);
+
     const token = jwt.sign(
       {
         _id: user_id,

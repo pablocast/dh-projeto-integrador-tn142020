@@ -1,5 +1,6 @@
 # config
 backend/config/**
+backend/.env
 
 # Logs
 logs

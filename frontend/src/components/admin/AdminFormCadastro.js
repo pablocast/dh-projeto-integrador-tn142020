@@ -4,15 +4,17 @@ import { Redirect, useHistory } from "react-router-dom";
 import { AiFillLock } from "react-icons/ai";
 import { RiErrorWarningFill } from "react-icons/ri";
 import React, { useState } from "react";
-import { signin } from "../auth/ApiAuth";
+import { signin } from "../auth/api-auth";
+import auth from "../auth/auth-helper";
 
 const AdminFormCadastro = (props) => {
   const history = useHistory();
   const [values, setValues] = useState({
-    user: "",
+    username: "",
+    email: "",
     password: "",
     error: "",
-    directToAccess: false,
+    redirectToReferrer: false,
   });
 
   const handleChange = (name) =>
@@ -23,22 +25,35 @@ const AdminFormCadastro = (props) => {
   const clickSubmit = (event) => {
     event.preventDefault();
     const user = {
-      user: values.user || undefined,
+      typeuser: "admin",
+      email: values.email || undefined,
       password: values.password || undefined,
     };
-    signin(user)
-      ? setValues({ ...values, directToAccess: true })
-      : setValues({
-          ...values,
-          error: "Usuario ou Senha errados",
-          directToAccess: false,
+    signin(user).then((data) => {
+      if (data.error) {
+        setValues({ ...values, error: data.error });
+      } else {
+        auth.authenticate(data, () => {
+          setValues({
+            ...values,
+            error: "",
+            redirectToReferrer: true,
+            username: data.user.name,
+          });
         });
-    sessionStorage.setItem("isAuthenticated", signin(user) ? true : false);
+      }
+    });
   };
 
-  const { directToAccess } = values;
-  if (directToAccess) {
-    return <Redirect to={{ pathname: "/admin/painel" }} />;
+  const { from } = {
+    from: {
+      pathname: "/admin/painel",
+      state: { username: values.username },
+    },
+  };
+  const { redirectToReferrer } = values;
+  if (redirectToReferrer) {
+    return <Redirect to={from} />;
   }
 
   return (
@@ -65,15 +80,15 @@ const AdminFormCadastro = (props) => {
                       className="control-label usuario optional"
                       for="candidate_usuario"
                     >
-                      Usuario
+                      Email
                     </label>
                     <input
                       className="form-control string email optional"
                       autoFocus="autofocus"
-                      placeHolder="Digite o seu usuario"
+                      placeHolder="Digite o seu email"
                       type="usuario"
-                      value={values.user}
-                      onChange={handleChange("user")}
+                      value={values.email}
+                      onChange={handleChange("email")}
                       name="candidate[usuario]"
                       id="candidate_usuario"
                     />
