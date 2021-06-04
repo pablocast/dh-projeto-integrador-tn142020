@@ -3,7 +3,7 @@ import "./style.css";
 import imageJavascript from "../../../assets/img/JavaScript-logo.png";
 import imageHtml from "../../../assets/img/html-logo.png";
 import imageCss from "../../../assets/img/css-logo.png";
-import imageGit from "../../../assets/img/git-logo.jpg";
+import imageGit from "../../../assets/img/git-logo.png";
 import imageXd from "../../../assets/img/xd-logo.png";
 import imageReact from "../../../assets/img/reactjs-logo.jpg";
 

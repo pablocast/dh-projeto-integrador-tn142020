@@ -2,7 +2,7 @@ import "./style.css";
 import ImgHtml from "../../../assets/img/html-logo.png";
 import ImgXd from "../../../assets/img/xd-logo.png";
 import ImgCss from "../../../assets/img/css-logo.png";
-import ImgGit from "../../../assets/img/git-logo.jpg";
+import ImgGit from "../../../assets/img/git-logo.png";
 import Carousel from "react-elastic-carousel";
 import Card from "../Card";
 import React from "react";

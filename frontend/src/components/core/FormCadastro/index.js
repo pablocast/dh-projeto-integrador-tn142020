@@ -8,8 +8,8 @@ import auth from "../../auth/auth-helper";
 import { RiErrorWarningFill } from "react-icons/ri";
 
 const FormCadastro = (props) => {
-  const { isStudent } = props.isStudent;
-
+  const { isStudent } = props
+  
   const [values, setValues] = useState({
     username: "",
     email: "",
@@ -57,7 +57,7 @@ const FormCadastro = (props) => {
   if (redirectToReferrer) {
     return <Redirect to={from} />;
   }
-
+  
   return (
     <div className="candidates sign-in">
       <section className="main-section-content">
