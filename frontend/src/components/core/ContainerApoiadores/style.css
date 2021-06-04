@@ -2,11 +2,25 @@
 
 .apoiadores {
     display: flex;
-    padding: 1.5rem;
+    justify-content: space-between;
+}
+
+.container-img {
+    vertical-align: top;
+    float: left;
+}
+
+.container-text {
+    margin-left: 2em;
+    top: 25%;
+    float: right;
+    color: #020113;
 }
 
 .apoiadores img {
-    width: 50%;
+    margin-right: 0;
+    width: 140%;
+    margin-left: 30px;
 }
 
 /* responsividade */

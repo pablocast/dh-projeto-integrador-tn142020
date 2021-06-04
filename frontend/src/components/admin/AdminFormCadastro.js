@@ -40,6 +40,7 @@ const AdminFormCadastro = (props) => {
             redirectToReferrer: true,
             username: data.user.name,
           });
+          sessionStorage.setItem("isAuthenticated", true)
         });
       }
     });
@@ -53,9 +54,10 @@ const AdminFormCadastro = (props) => {
   };
   const { redirectToReferrer } = values;
   if (redirectToReferrer) {
+    console.log(values)
     return <Redirect to={from} />;
   }
-
+  
   return (
     <div className="admin-main-section-content">
       <Container className="Container">

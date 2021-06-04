@@ -1,24 +1,25 @@
 /* quem somos */
 
 .quem-somos {
-    padding: 2rem 2rem;
-    background: #0052FB;
-    color: #fff;
+    background: #EAEFF5;
     display: flex;
+    justify-content: space-between;
 }
 
-.quem-somos img {
-    width: 50%;
+.container-img {
+    vertical-align: top;
+    float: right;
 }
 
 .container-text {
-    padding: 1.5rem;
-    text-align: left;
+    top: 25%;
+    float: right;
+    color: #020113;
 }
 
 /* responsividade */
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
     .quem-somos {
         display: block;
     }
