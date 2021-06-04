@@ -124,7 +124,7 @@ const FormInicial = ({ ...props }) => {
           <button className="button" onClick={() => handleSubmit(true)}>
             Quero contratar programadores
             <AiOutlineArrowRight
-              color="white"
+              color="black"
               style={{ marginLeft: "5px", height: "20px", width: "20px" }}
             />
           </button>
