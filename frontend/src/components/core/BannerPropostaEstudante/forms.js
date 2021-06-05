@@ -79,7 +79,7 @@ const Form_1 = ({ ...props }) => {
           <button className="button" onClick={nextForm()}>
             CRIAR MEU PERFIL AGORA
             <AiOutlineArrowRight
-              color="white"
+              color="black"
               style={{ marginLeft: "5px", height: "20px", width: "20px" }}
             />
           </button>
