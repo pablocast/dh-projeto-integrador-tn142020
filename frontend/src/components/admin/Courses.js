@@ -81,32 +81,32 @@ const CourseCreate = (props) => {
     <Create {...props}>
       <SimpleForm redirect="show" save={clickSubmit}>
         <TextInput
-          label="curso_name"
+          label="curso name"
           source="Course Name"
           onChange={handleChange("curso_name")}
         />
         <TextInput
-          label="curso_description"
+          label="curso description"
           source="Course Description"
           onChange={handleChange("curso_description")}
         />
         <TextInput
-          label="curso_image"
+          label="curso image"
           source="Course Image"
           onChange={handleChange("curso_image")}
         />
         <TextInput
-          label="curso_duration"
+          label="curso duration"
           source="Course Duration"
           onChange={handleChange("curso_duration")}
         />
         <TextInput
-          label="curso_language"
+          label="curso language"
           source="Course Language"
           onChange={handleChange("curso_language")}
         />
         <TextInput
-          label="curso_skills"
+          label="curso skills"
           source="Course Skills"
           onChange={handleChange("curso_skills")}
         />
