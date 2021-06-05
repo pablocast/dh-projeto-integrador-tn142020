@@ -22,7 +22,7 @@ const BannerBemVindo = () => {
               lg={{ span: 2, offset: 4 }}
               style={{ textAlign: "center", left: "-36px" }}
             >
-              <Link to="/estudantes/sign_in">
+              <Link to="/estudantes/sign-in">
                 <button className="button">Sou estudante</button>
               </Link>
             </Col>
@@ -30,7 +30,7 @@ const BannerBemVindo = () => {
               lg={{ span: 2 }}
               style={{ textAlign: "center", paddingLeft: "12px" }}
             >
-              <Link to="/empresa/sign_in">
+              <Link to="/empresa/sign-in">
                 <button className="button">Sou empresa</button>
               </Link>
             </Col>

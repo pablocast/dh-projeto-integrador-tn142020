@@ -27,8 +27,8 @@ const Header = ({ ...props }) => {
       </nav>
       {Cadastro ? (
         <div className="Cadastro__menu" onMouseLeave={() => setCadastro(false)}>
-          <a href="/estudantes/sign_in"> Sou estudante </a>
-          <a href="/empresa/sign_in"> Sou empresa </a>
+          <a href="/estudantes/sign-in"> Sou estudante </a>
+          <a href="/empresa/sign-in"> Sou empresa </a>
         </div>
       ) : null}
     </header>

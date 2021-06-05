@@ -22,11 +22,11 @@ const MainRouter = () => {
       <Route exact path="/cursos" component={Cursos} />
       <Route exact path="/empresas" component={Empresas} />
       <Route
-        path="/estudantes/sign_in"
+        path="/estudantes/sign-in"
         render={() => <Cadastro isStudent={true} />}
       />
       <Route
-        path="/empresa/sign_in"
+        path="/empresa/sign-in"
         render={() => <Cadastro isStudent={false} />}
       />
       <Route path="/criar-perfil-empresa" component={Empresas} />
