@@ -4,6 +4,7 @@ const Sequelize = require("sequelize"),
   bcrypt = require("bcrypt"),
   jwt = require("jsonwebtoken"),
   config = require("../config/database.js");
+expressJwt = require("express-jwt");
 
 const signin = async (req, res) => {
   try {
@@ -74,8 +75,15 @@ const hasAuthorization = (req, res, next) => {
   next();
 };
 
+const requireSignin = expressJwt({
+  secret: config.jwtSecret,
+  userProperty: "auth",
+  algorithms: ["HS256"],
+});
+
 module.exports = {
   signin,
   signout,
   hasAuthorization,
+  requireSignin,
 };

@@ -7,6 +7,7 @@ var userRoutes = require("./routes/user.routes");
 var companyRoutes = require("./routes/company.routes");
 var courseRoutes = require("./routes/course.routes");
 var authRoutes = require("./routes/auth.routes");
+var enrollRoutes = require("./routes/enrollment.routes");
 var app = express();
 
 // view engine setup
@@ -23,6 +24,7 @@ app.use("/", userRoutes);
 app.use("/", companyRoutes);
 app.use("/", courseRoutes);
 app.use("/", authRoutes);
+app.use("/", enrollRoutes);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

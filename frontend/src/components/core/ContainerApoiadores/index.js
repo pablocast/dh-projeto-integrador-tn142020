@@ -16,9 +16,9 @@ const ContainerApoiadores = () => {
             possimus, saepe perferendis omnis culpa vero recusandae nihil
             temporibus animi minus doloribus distinctio! Voluptatum consequatur
             commodi vel repellendus excepturi eaque qui atque beatae explicabo!
-        </p>
+          </p>
         </Col>
-        <Col className='container-img'>
+        <Col className="container-img">
           <img src={ImageEmpresa} alt="empresas parceiras" />
         </Col>
       </Row>

@@ -66,8 +66,42 @@ const destroy = async (req, res) => {
   });
 };
 
+const courseByID = async (req, res, next, id) => {
+  try {
+    let curso = await Curso.findById(id);
+    if (!curso) return res.status("400").js;
+    on({
+      error: "Course not found",
+    });
+    req.course = curso;
+    next();
+  } catch (err) {
+    return res.status("400").json({
+      error: "Could not retrieve course",
+    });
+  }
+};
+
+const courseByIDs = async (req, res) => {
+  const { id } = req.body;
+  try {
+    let curso = await Curso.findById(id);
+    if (!curso) return res.status("400").js;
+    on({
+      error: "Course not found",
+    });
+    res.json(curso);
+  } catch (err) {
+    return res.status("400").json({
+      error: "Could not retrieve course",
+    });
+  }
+};
+
 module.exports = {
   create,
   list,
   destroy,
+  courseByID,
+  courseByIDs,
 };

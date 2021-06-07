@@ -43,5 +43,12 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
 
+  Curso.associate = (models) => {
+    Curso.hasMany(models.Enrollment, {
+      as: "Enrollments",
+      foreignKey: "curso_id",
+    });
+  };
+
   return Curso;
 };

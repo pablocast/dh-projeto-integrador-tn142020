@@ -21,15 +21,6 @@ const HeaderPagesCursos = (props) => {
         <nav class="nav">
           <ul class="menu-navbar">
             <li class="menu-navbar-item">
-              <a href="#">Aprenda</a>
-            </li>
-            <li class="menu-navbar-item">
-              <a href="#">Comunidade</a>
-            </li>
-            <li>
-              <i class="large material-icons">circle_notifications</i>
-            </li>
-            <li class="menu-navbar-item">
               <a href="#">{username}</a>
             </li>
             <li class="menu-navbar-item">
@@ -43,9 +34,6 @@ const HeaderPagesCursos = (props) => {
             </li>
           </ul>
         </nav>
-      </div>
-      <div class="subMenu">
-        <h1>Dashboard</h1>
       </div>
     </header>
   );
