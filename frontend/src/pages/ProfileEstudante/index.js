@@ -8,6 +8,7 @@ import auth from "./../../components/auth/auth-helper";
 import Typography from "@material-ui/core/Typography";
 import Card from "@material-ui/core/Card";
 import Enrollments from "../../components/core/Enrollments";
+import Courses from "../../components/core/Courses";
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -16,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 20,
     marginBottom: theme.spacing(2),
     padding: 20,
-    backgroundColor: "#ffffff",
+    backgroundColor: "#EAEFF5",
   },
   extraTop: {
     marginTop: theme.spacing(12),
@@ -53,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "0 10px",
   },
   enrolledCard: {
-    backgroundColor: "#EAEFF5",
+    backgroundColor: "#fff",
   },
   divider: {
     marginBottom: 16,
@@ -103,6 +104,8 @@ const ProfileCursos = (props) => {
     };
   }, []);
 
+  console.log(courses);
+  console.log(enrolled);
   return (
     <>
       <Header username={username} />
@@ -114,12 +117,23 @@ const ProfileCursos = (props) => {
         >
           Cursos em que você está inscrito
         </Typography>
-        {console.log(enrolled)}
         {enrolled.length !== 0 ? (
           <Enrollments enrollments={enrolled} />
         ) : (
           <Typography variant="body1" className={classes.noTitle}>
-            No courses.
+            Nenhum curso
+          </Typography>
+        )}
+      </Card>
+      <Card className={classes.card}>
+        <Typography variant="h5" component="h2">
+          Todos os cursos
+        </Typography>
+        {courses.length != 0 && courses.length != enrolled.length ? (
+          <Courses courses={courses} common={enrolled} />
+        ) : (
+          <Typography variant="body1" className={classes.noTitle}>
+            No new courses.
           </Typography>
         )}
       </Card>

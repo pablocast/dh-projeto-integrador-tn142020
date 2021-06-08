@@ -52,7 +52,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Enrollments(props) {
   const classes = useStyles();
-  console.log(props);
   return (
     <div>
       <GridList cellHeight={120} className={classes.gridList} cols={4}>
@@ -71,7 +70,15 @@ export default function Enrollments(props) {
                   {course.Curso.curso_name}
                 </Link>
               }
-              actionIcon={<div className={classes.action}></div>}
+              actionIcon={
+                <div className={classes.action}>
+                  {course.completed ? (
+                    <CompletedIcon color="secondary" />
+                  ) : (
+                    <InProgressIcon className={classes.progress} />
+                  )}
+                </div>
+              }
             />
           </GridListTile>
         ))}
