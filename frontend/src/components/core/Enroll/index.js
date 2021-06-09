@@ -36,7 +36,12 @@ export default function Enroll(props) {
       if (data && data.error) {
         setValues({ ...values, error: data.error });
       } else {
-        setValues({ ...values, enrollmentId: data._id, redirect: true });
+        console.log(data);
+        setValues({
+          ...values,
+          enrollmentId: data.inscricao_id,
+          redirect: true,
+        });
       }
     });
   };

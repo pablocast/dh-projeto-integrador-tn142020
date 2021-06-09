@@ -1,5 +1,5 @@
 const Sequelize = require("sequelize"),
-  { Curso } = require("../models");
+  { Curso, Lesson } = require("../models");
 errorHandler = require("../helpers/dbErrorHandler");
 
 const create = async (req, res) => {
@@ -68,12 +68,20 @@ const destroy = async (req, res) => {
 
 const courseByID = async (req, res, next, id) => {
   try {
-    let curso = await Curso.findById(id);
-    if (!curso) return res.status("400").js;
-    on({
-      error: "Course not found",
+    let curso = await Curso.findOne({
+      where: { curso_id: id },
+      include: [
+        {
+          model: Lesson,
+          as: "Lessons",
+        },
+      ],
     });
-    req.course = curso;
+    if (!curso)
+      return res.status("400").json({
+        error: "Curso não encontrado",
+      });
+    req.course = curso.dataValues;
     next();
   } catch (err) {
     return res.status("400").json({

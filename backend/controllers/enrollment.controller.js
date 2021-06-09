@@ -3,15 +3,15 @@ const Sequelize = require("sequelize"),
 errorHandler = require("../helpers/dbErrorHandler");
 
 const create = async (req, res) => {
-  /* TO DO MODIFY THIS OBJECT AND PARAMETERS THAT ARE PASSED */
   let newEnrollment = {
-    curso_id: req.course,
-    student_id: req.auth,
+    curso_id: req.course.curso_id,
+    student_id: req.auth._id,
   };
-  newEnrollment.lessonStatus = req.course.lessons.map((lesson) => {
-    return { lesson: lesson, complete: false };
+  newEnrollment.aula_status = req.course.Lessons.map((lesson, index) => {
+    const lesson_name = index + 1 + ". " + lesson.dataValues.aula_title;
+    return { lesson: lesson_name, complete: false };
   });
-
+  newEnrollment.aula_status = JSON.stringify(newEnrollment.aula_status);
   try {
     let enrollment = await Enrollment.create(newEnrollment);
     return res.status(200).json(enrollment);
@@ -25,9 +25,9 @@ const create = async (req, res) => {
 const findEnrollment = async (req, res, next) => {
   try {
     let enrollments = await Enrollment.findOne({
-      where: { curso_id: req.course._id, student_id: req.auth._id },
+      where: { curso_id: req.course.curso_id, student_id: req.auth._id },
     });
-    if (enrollments.length == 0) {
+    if (!enrollments) {
       next();
     } else {
       res.json(enrollments[0]);
