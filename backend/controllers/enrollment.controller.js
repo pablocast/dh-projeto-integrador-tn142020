@@ -8,7 +8,7 @@ const create = async (req, res) => {
     student_id: req.auth._id,
   };
   newEnrollment.aula_status = req.course.Lessons.map((lesson, index) => {
-    const lesson_name = index + 1 + ". " + lesson.dataValues.aula_title;
+    const lesson_name = lesson.dataValues.aula_title;
     return { lesson: lesson_name, complete: false };
   });
   newEnrollment.aula_status = JSON.stringify(newEnrollment.aula_status);
@@ -48,18 +48,21 @@ const enrollmentByID = async (req, res, next, id) => {
           model: Lesson,
           as: "Lessons",
         },
+        {
+          model: Curso,
+          as: "Curso",
+        },
       ],
     });
-    console.log(enrollment);
     if (!enrollment)
       return res.status("400").json({
         error: "Enrollment not found",
       });
     req.enrollment = {
-      ...enrollment.dataValues.student_id,
-      ...enrollment.dataValues.inscricao_id,
+      curso: enrollment.Curso.dataValues,
+      aula_status: enrollment.dataValues.aula_status,
+      aula_info: enrollment.Lessons,
     };
-
     next();
   } catch (err) {
     return res.status("400").json({

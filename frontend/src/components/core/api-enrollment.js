@@ -41,9 +41,10 @@ const read = async (params, credentials, signal) => {
         Authorization: "Bearer " + credentials.t,
       },
     });
+
     return await response.json();
   } catch (err) {
-    console.log(err);
+    console.log("err");
   }
 };
 

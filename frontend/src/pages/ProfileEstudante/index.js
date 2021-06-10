@@ -130,7 +130,7 @@ const ProfileCursos = (props) => {
           <Courses courses={courses} common={enrolled} />
         ) : (
           <Typography variant="body1" className={classes.noTitle}>
-            No new courses.
+            Não existem novos cursos
           </Typography>
         )}
       </Card>
