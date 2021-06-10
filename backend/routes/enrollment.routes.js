@@ -16,26 +16,14 @@ router
     enrollmentCtrl.create
   );
 
-// router
-//   .route("/api/enrollment/stats/:courseId")
-//   .get(enrollmentCtrl.enrollmentStats);
+router
+  .route("/api/enrollment/complete/:enrollmentId")
+  .put(authCtrl.requireSignin, enrollmentCtrl.complete);
 
-// router
-//   .route("/api/enrollment/complete/:enrollmentId")
-//   .put(
-//     authCtrl.requireSignin,
-//     enrollmentCtrl.isStudent,
-//     enrollmentCtrl.complete
-//   );
-
-// router
-//   .route("/api/enrollment/:enrollmentId")
-//   .get(authCtrl.requireSignin, enrollmentCtrl.isStudent, enrollmentCtrl.read)
-//   .delete(
-//     authCtrl.requireSignin,
-//     enrollmentCtrl.isStudent,
-//     enrollmentCtrl.remove
-//   );
+router
+  .route("/api/enrollment/:enrollmentId")
+  .get(authCtrl.requireSignin, enrollmentCtrl.read)
+  .delete(authCtrl.requireSignin, enrollmentCtrl.remove);
 
 router.route("/api/enrollment/:courseId").post(courseCtrl.courseByIDs);
 

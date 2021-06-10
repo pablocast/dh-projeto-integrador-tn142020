@@ -12,6 +12,7 @@ import BemVindo from "../pages/BemVindo";
 import Contato from "../pages/Contato";
 import AdminDash from "../pages/AdminDash";
 import AdminLogin from "../pages/AdminLogin";
+import Enrollment from "../pages/Enrollment";
 import { BrowserRouter } from "react-router-dom";
 
 const MainRouter = () => {
@@ -43,6 +44,16 @@ const MainRouter = () => {
             <AdminDash />
           ) : (
             <AdminLogin />
+          )
+        }
+      />
+      <Route
+        path="/learn/:enrollmentId"
+        render={(props) =>
+          sessionStorage.getItem("isAuthenticated") ? (
+            <Enrollment {...props} />
+          ) : (
+            <Cadastro isStudent={true} />
           )
         }
       />

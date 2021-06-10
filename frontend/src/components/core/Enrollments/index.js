@@ -57,14 +57,14 @@ export default function Enrollments(props) {
       <GridList cellHeight={120} className={classes.gridList} cols={4}>
         {props.enrollments.map((course, i) => (
           <GridListTile key={i} className={classes.tile}>
-            <Link to={"/learn/" + course.curso_id}>
+            <Link to={"/learn/" + course.inscricao_id}>
               <img className={classes.image} />
             </Link>
             <GridListTileBar
               className={classes.tileBar}
               title={
                 <Link
-                  to={"/learn/" + course.curso_id}
+                  to={"/learn/" + course.inscricao_id}
                   className={classes.tileTitle}
                 >
                   {course.Curso.curso_name}

@@ -38,6 +38,7 @@ const FormCadastro = (props) => {
             username: data.user.name,
           });
         });
+        sessionStorage.setItem("isAuthenticated", true);
       }
     });
   };

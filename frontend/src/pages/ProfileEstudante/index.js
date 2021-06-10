@@ -72,7 +72,6 @@ const ProfileCursos = (props) => {
   const { username } = props.location.state;
   const [courses, setCourses] = useState([]);
   const [enrolled, setEnrolled] = useState([]);
-
   const jwt = auth.isAuthenticated();
   useEffect(() => {
     const abortController = new AbortController();
@@ -104,8 +103,6 @@ const ProfileCursos = (props) => {
     };
   }, []);
 
-  console.log(courses);
-  console.log(enrolled);
   return (
     <>
       <Header username={username} />

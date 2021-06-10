@@ -1,5 +1,5 @@
 const Sequelize = require("sequelize"),
-  { Enrollment, Curso } = require("../models");
+  { Enrollment, Curso, Lesson } = require("../models");
 errorHandler = require("../helpers/dbErrorHandler");
 
 const create = async (req, res) => {
@@ -41,12 +41,25 @@ const findEnrollment = async (req, res, next) => {
 
 const enrollmentByID = async (req, res, next, id) => {
   try {
-    let enrollment = await Enrollment.findById(id);
+    let enrollment = await Enrollment.findOne({
+      where: { inscricao_id: id },
+      include: [
+        {
+          model: Lesson,
+          as: "Lessons",
+        },
+      ],
+    });
+    console.log(enrollment);
     if (!enrollment)
       return res.status("400").json({
         error: "Enrollment not found",
       });
-    req.enrollment = { ...enrollment.student_id, ...enrollment.inscricao_id };
+    req.enrollment = {
+      ...enrollment.dataValues.student_id,
+      ...enrollment.dataValues.inscricao_id,
+    };
+
     next();
   } catch (err) {
     return res.status("400").json({
@@ -75,9 +88,48 @@ const listEnrolled = async (req, res) => {
   }
 };
 
+const read = (req, res) => {
+  return res.json(req.enrollment);
+};
+
+const complete = async (req, res) => {
+  let updatedData = {};
+  updatedData["lessonStatus.$.complete"] = req.body.complete;
+  updatedData.updated = Date.now();
+  if (req.body.courseCompleted)
+    updatedData.completed = req.body.courseCompleted;
+
+  try {
+    let enrollment = await Enrollment.updateOne(
+      { "lessonStatus._id": req.body.lessonStatusId },
+      { $set: updatedData }
+    );
+    res.json(enrollment);
+  } catch (err) {
+    return res.status(400).json({
+      error: errorHandler.getErrorMessage(err),
+    });
+  }
+};
+
+const remove = async (req, res) => {
+  try {
+    let enrollment = req.enrollment;
+    let deletedEnrollment = await enrollment.remove();
+    res.json(deletedEnrollment);
+  } catch (err) {
+    return res.status(400).json({
+      error: errorHandler.getErrorMessage(err),
+    });
+  }
+};
+
 module.exports = {
   create,
   findEnrollment,
   enrollmentByID,
   listEnrolled,
+  read,
+  complete,
+  remove,
 };
