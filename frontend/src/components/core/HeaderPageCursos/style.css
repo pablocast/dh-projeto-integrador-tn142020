@@ -1,11 +1,18 @@
 /* menu */
+.Header-enroll {
+    background-color: #0052FB;
+    padding: 0.5rem 1rem;
+    border-bottom-style: solid;
+    border-bottom-color: #f5f7fa;
+    border-bottom-width: thin;
+    position: sticky;
+    top:0;
+}
 
 .menu {
-
     background-color: #0052FB;
     padding: 0.5rem 1rem;
     display: flex;
-
     justify-content: space-between;
     align-items: center;
     height: 100px;

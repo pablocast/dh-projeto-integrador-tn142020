@@ -10,20 +10,25 @@ const HeaderPagesCursos = (props) => {
   let history = useHistory();
 
   return (
-    <header>
-      <div class="menu">
-        <Link to="/" class="menu-logo">
+    <header className="Header-enroll">
+      <div className="menu">
+        <Link to="/" className="menu-logo">
           <img src={imageLogo} alt="BrainXpert logo" />
         </Link>
         {/* <button class="nav-toggle" aria-label="toggle navegation">
               <span class="hamburguer"></span>
             </button>  */}
-        <nav class="nav">
-          <ul class="menu-navbar">
-            <li class="menu-navbar-item">
-              <a href="#">{username}</a>
+        <nav className="nav">
+          <ul className="menu-navbar">
+            <li className="menu-navbar-item">
+              {
+                username && (<a href="#">{username}</a>)
+              }
+              {
+                !username && (<a href="#">Meu perfil</a>)
+              }
             </li>
-            <li class="menu-navbar-item">
+            <li className="menu-navbar-item">
               <a
                 onClick={() => {
                   auth.clearJWT(() => history.push("/"));

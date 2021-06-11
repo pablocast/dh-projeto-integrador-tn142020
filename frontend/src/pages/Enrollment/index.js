@@ -23,7 +23,7 @@ import Info from "@material-ui/icons/Info";
 import CheckCircle from "@material-ui/icons/CheckCircle";
 import RadioButtonUncheckedIcon from "@material-ui/icons/RadioButtonUnchecked";
 import { CardContent } from "@material-ui/core";
-import Header from "../../components/core/HeaderLearning";
+import Header from "../../components/core/HeaderPageCursos";
 
 const useStyles = makeStyles((theme) => ({
   root: theme.mixins.gutters({
@@ -31,7 +31,6 @@ const useStyles = makeStyles((theme) => ({
     margin: "auto",
     marginTop: theme.spacing(12),
     marginLeft: 250,
-    zIndex:-20,
   }),
   heading: {
     marginBottom: theme.spacing(3),
@@ -43,6 +42,7 @@ const useStyles = makeStyles((theme) => ({
   },
   card: {
     padding: "24px 40px 20px",
+    marginTop: -40,
   },
   subheading: {
     margin: "10px",
@@ -83,12 +83,13 @@ const useStyles = makeStyles((theme) => ({
     display: "inline-block",
   },
   drawer: {
-    width: 240,
+    width: 0,
     flexShrink: 0,
   },
   drawerPaper: {
     width: 240,
     backgroundColor: "#0052FB",
+    zIndex: -1,
   },
   content: {
     flexGrow: 1,
@@ -121,7 +122,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Enrollment({ match }) {
-
+  console.log(match)
   const classes = useStyles();
   const [enrollment, setEnrollment] = useState({
     curso: {},
@@ -211,7 +212,7 @@ export default function Enrollment({ match }) {
             paper: classes.drawerPaper,
           }}
         >
-          <div className={classes.toolbar} style={{paddingTop:120}} />
+          <div className={classes.toolbar} style={{ paddingTop: 120 }} />
           <List>
             <ListItem
               button
@@ -288,7 +289,7 @@ export default function Enrollment({ match }) {
                 totalComplete == eval(enrollment.aula_status).length && (
                   <span className={classes.action}>
                     <Button variant="contained" color="secondary">
-                      <CheckCircle /> &nbsp; Completed
+                      <CheckCircle /> &nbsp; Finalizado
                   </Button>
                   </span>
                 )
