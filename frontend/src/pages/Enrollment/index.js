@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import AppBar from '@material-ui/core/AppBar'
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from "@material-ui/core/CardMedia";
@@ -35,6 +36,7 @@ const useStyles = makeStyles((theme) => ({
   heading: {
     marginBottom: theme.spacing(3),
     fontWeight: 200,
+    marginTop:"150px",
   },
   flex: {
     display: "flex",
@@ -42,7 +44,10 @@ const useStyles = makeStyles((theme) => ({
   },
   card: {
     padding: "24px 40px 20px",
-    marginTop: -40,
+    marginTop:"150px",
+  },
+  lessoncard: {
+    padding: "24px 40px 20px",
   },
   subheading: {
     margin: "10px",
@@ -89,7 +94,6 @@ const useStyles = makeStyles((theme) => ({
   drawerPaper: {
     width: 240,
     backgroundColor: "#0052FB",
-    zIndex: -1,
   },
   content: {
     flexGrow: 1,
@@ -122,7 +126,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Enrollment({ match }) {
-  console.log(match)
   const classes = useStyles();
   const [enrollment, setEnrollment] = useState({
     curso: {},
@@ -200,10 +203,12 @@ export default function Enrollment({ match }) {
       });
     }
   };
-
+  console.log(values)
   return (
     <>
-      <Header className="HeaderEnroll" />
+      <AppBar position="fixed" style={{ zIndex: 12343455 }}>
+        <Header className="HeaderEnroll" />
+      </AppBar>
       <div className={classes.root}>
         <Drawer
           className={classes.drawer}
@@ -216,7 +221,7 @@ export default function Enrollment({ match }) {
           <List>
             <ListItem
               button
-              onClick={selectDrawer(-1)}
+              onClick={() => selectDrawer(-1)}
               className={
                 values.drawer == -1 ? classes.selectedDrawer : classes.unselected
               }
@@ -235,11 +240,11 @@ export default function Enrollment({ match }) {
             {
               enrollment.aula_status && eval(enrollment.aula_status).map((lesson, index) => (
                 <ListItem
-                  button
+                  button={true}
                   key={index}
                   onClick={selectDrawer(index)}
                   className={
-                    values.drawer == index
+                    values.drawer === index
                       ? classes.selectedDrawer
                       : classes.unselected
                   }
@@ -345,7 +350,7 @@ export default function Enrollment({ match }) {
             <Typography variant="h5" className={classes.heading}>
               {enrollment.curso.curso_name}
             </Typography>
-            <Card className={classes.card}>
+            <Card className={classes.lessoncard}>
               <CardHeader
                 title={eval(enrollment.aula_status)[values.drawer].lesson}
                 action={
@@ -359,8 +364,8 @@ export default function Enrollment({ match }) {
                     color="secondary"
                   >
                     {eval(enrollment.aula_status)[values.drawer].complete
-                      ? "Completed"
-                      : "Mark as complete"}
+                      ? "Completado"
+                      : "Marcar com Completado"}
                   </Button>
                 }
               />
@@ -371,8 +376,8 @@ export default function Enrollment({ match }) {
               </CardContent>
               <CardActions>
                 <a>
-                  <Button variant="contained" color="primary">
-                    Resource Link
+                  <Button variant="contained" color="#FFCF26">
+                    Recurso Link
                 </Button>
                 </a>
               </CardActions>
