@@ -12,7 +12,7 @@ const create = async (req, res) => {
     curso_skills,
   } = req.body;
   try {
-    await Curso.create({
+    curso = await Curso.create({
       curso_name,
       curso_description,
       curso_image,
@@ -22,6 +22,7 @@ const create = async (req, res) => {
     });
     return res.status(200).json({
       message: "Successfully added a course!",
+      curso_id: curso.curso_id,
     });
   } catch (err) {
     return res.status(400).json({

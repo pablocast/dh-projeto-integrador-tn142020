@@ -9,8 +9,15 @@ import {
   useRedirect,
 } from "react-admin";
 import { create } from "../core/api-course";
-
+import { createLessons } from "./api-lesson";
 import { BiBookReader } from "react-icons/bi";
+import NewLesson from "./NewLesson";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemAvatar from "@material-ui/core/ListItemAvatar";
+import Avatar from "@material-ui/core/Avatar";
+import ListItemText from "@material-ui/core/ListItemText";
+import Divider from "@material-ui/core/Divider";
+import auth from "../../components/auth/auth-helper";
 
 const CourseIcon = BiBookReader;
 
@@ -53,9 +60,13 @@ const CourseCreate = (props) => {
     error: "",
   });
 
+  const [lessons, setLessons] = useState([]);
+
   const handleChange = (name) => (event) => {
     setValues({ ...values, [name]: event.target.value });
   };
+
+  const jwt = auth.isAuthenticated();
 
   const clickSubmit = () => {
     const course = {
@@ -72,7 +83,17 @@ const CourseCreate = (props) => {
         setValues({ ...values, error: data.error });
       } else {
         setValues({ ...values, error: "", open: true });
-        notify("Curso armazenado");
+        createLessons(
+          { courseId: data.curso_id },
+          { t: jwt.token },
+          lessons
+        ).then((data) => {
+          if (data.error) {
+            setValues({ ...values, error: data.error });
+          } else {
+            notify("Curso armazenado");
+          }
+        });
       }
     });
   };
@@ -110,6 +131,30 @@ const CourseCreate = (props) => {
           source="Course Skills"
           onChange={handleChange("curso_skills")}
         />
+        {lessons &&
+          lessons.length > 0 &&
+          lessons.map((lesson, index) => {
+            return (
+              <span key={index}>
+                <ListItem>
+                  <ListItemAvatar>
+                    <Avatar>{index + 1}</Avatar>
+                  </ListItemAvatar>
+                  <ListItemText
+                    primary={lesson.aula_title}
+                    secondary={lesson.aula_content}
+                  />
+                </ListItem>
+                <Divider
+                  variant="inset"
+                  component="li"
+                  style={{ width: "25%" }}
+                />
+                <p></p>
+              </span>
+            );
+          })}
+        <NewLesson addLesson={setLessons} lesson={lessons} />
       </SimpleForm>
     </Create>
   );

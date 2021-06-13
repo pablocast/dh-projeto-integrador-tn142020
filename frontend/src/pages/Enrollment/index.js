@@ -169,7 +169,7 @@ export default function Enrollment({ match }) {
   };
 
   const selectDrawer = (index) => (event) => {
-    console.log(index)
+    console.log(index);
     setValues({ ...values, drawer: index });
   };
 
@@ -207,7 +207,7 @@ export default function Enrollment({ match }) {
       });
     }
   };
-  
+
   return (
     <>
       <AppBar position="fixed" style={{ zIndex: 12343455 }}>
@@ -222,7 +222,7 @@ export default function Enrollment({ match }) {
           }}
         >
           <div className={classes.toolbar} style={{ paddingTop: 120 }} />
-          <List >
+          <List>
             <ListItem
               button
               onClick={selectDrawer(-1)}
@@ -235,7 +235,7 @@ export default function Enrollment({ match }) {
               <ListItemIcon>
                 <Info />
               </ListItemIcon>
-              <ListItemText primary={"Visão do Curso"}  />
+              <ListItemText primary={"Visão do Curso"} />
             </ListItem>
           </List>
           <Divider />

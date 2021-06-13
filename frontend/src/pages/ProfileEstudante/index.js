@@ -102,7 +102,7 @@ const ProfileCursos = (props) => {
       abortController.abort();
     };
   }, []);
-  
+
   return (
     <>
       <Header username={username} />
