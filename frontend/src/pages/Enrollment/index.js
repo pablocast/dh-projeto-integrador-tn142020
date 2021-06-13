@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import AppBar from '@material-ui/core/AppBar'
+import AppBar from "@material-ui/core/AppBar";
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from "@material-ui/core/CardMedia";
@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
   heading: {
     marginBottom: theme.spacing(3),
     fontWeight: 200,
-    marginTop:"150px",
+    marginTop: "150px",
   },
   flex: {
     display: "flex",
@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
   },
   card: {
     padding: "24px 40px 20px",
-    marginTop:"150px",
+    marginTop: "150px",
   },
   lessoncard: {
     padding: "24px 40px 20px",
@@ -174,12 +174,15 @@ export default function Enrollment({ match }) {
 
   const markComplete = () => {
     if (!eval(enrollment.aula_status)[values.drawer].complete) {
-      const lessonStatus = eval(enrollment.aula_status);
+      const updatedLessonStatus = eval(enrollment.aula_status);
+      const lessonStatus = enrollment.aula_info;
       lessonStatus[values.drawer].complete = true;
+      updatedLessonStatus[values.drawer].complete = true;
+
       let count = totalCompleted(lessonStatus);
 
       let updatedData = {};
-      updatedData.lesson = lessonStatus[values.drawer].lesson;
+      updatedData.lessonStatusId = values.drawer;
       updatedData.complete = true;
 
       if (count === lessonStatus.length) {
@@ -198,12 +201,12 @@ export default function Enrollment({ match }) {
         if (data && data.error) {
           setValues({ ...values, error: data.error });
         } else {
-          setEnrollment({ ...enrollment, aula_status: lessonStatus });
+          setEnrollment({ ...enrollment, aula_status: updatedLessonStatus });
         }
       });
     }
   };
-  console.log(values)
+
   return (
     <>
       <AppBar position="fixed" style={{ zIndex: 12343455 }}>
@@ -223,7 +226,9 @@ export default function Enrollment({ match }) {
               button
               onClick={() => selectDrawer(-1)}
               className={
-                values.drawer == -1 ? classes.selectedDrawer : classes.unselected
+                values.drawer == -1
+                  ? classes.selectedDrawer
+                  : classes.unselected
               }
             >
               <ListItemIcon>
@@ -236,9 +241,9 @@ export default function Enrollment({ match }) {
           <List className={classes.unselected}>
             <ListSubheader component="div" className={classes.subhead}>
               Aulas
-          </ListSubheader>
-            {
-              enrollment.aula_status && eval(enrollment.aula_status).map((lesson, index) => (
+            </ListSubheader>
+            {enrollment.aula_status &&
+              eval(enrollment.aula_status).map((lesson, index) => (
                 <ListItem
                   button={true}
                   key={index}
@@ -261,8 +266,7 @@ export default function Enrollment({ match }) {
                     )}
                   </ListItemSecondaryAction>
                 </ListItem>
-              ))
-            }
+              ))}
           </List>
           <Divider />
           <List>
@@ -271,8 +275,12 @@ export default function Enrollment({ match }) {
                 primary={
                   <div className={classes.progress}>
                     <span>{totalComplete}</span> dos{" "}
-                    <span>{enrollment.aula_status && eval(enrollment.aula_status).length}</span> completados
-                </div>
+                    <span>
+                      {enrollment.aula_status &&
+                        eval(enrollment.aula_status).length}
+                    </span>{" "}
+                    completados
+                  </div>
                 }
               />
             </ListItem>
@@ -295,7 +303,7 @@ export default function Enrollment({ match }) {
                   <span className={classes.action}>
                     <Button variant="contained" color="secondary">
                       <CheckCircle /> &nbsp; Finalizado
-                  </Button>
+                    </Button>
                   </span>
                 )
               }
@@ -318,13 +326,12 @@ export default function Enrollment({ match }) {
                 title={
                   <Typography variant="h6" className={classes.subheading}>
                     Aulas
-                </Typography>
+                  </Typography>
                 }
                 subheader={
                   <Typography variant="body1" className={classes.subheading}>
-                    {eval(enrollment.aula_status).length}{" "}
-                  aulas
-                </Typography>
+                    {eval(enrollment.aula_status).length} aulas
+                  </Typography>
                 }
               />
               <List>
@@ -378,7 +385,7 @@ export default function Enrollment({ match }) {
                 <a>
                   <Button variant="contained" color="#FFCF26">
                     Recurso Link
-                </Button>
+                  </Button>
                 </a>
               </CardActions>
             </Card>

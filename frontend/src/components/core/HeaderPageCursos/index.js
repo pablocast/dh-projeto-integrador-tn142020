@@ -21,12 +21,8 @@ const HeaderPagesCursos = (props) => {
         <nav className="nav">
           <ul className="menu-navbar">
             <li className="menu-navbar-item">
-              {
-                username && (<a href="#">{username}</a>)
-              }
-              {
-                !username && (<a href="#">Meu perfil</a>)
-              }
+              {username && <a href="#">{username}</a>}
+              {!username && <a href="#">Meu perfil</a>}
             </li>
             <li className="menu-navbar-item">
               <a

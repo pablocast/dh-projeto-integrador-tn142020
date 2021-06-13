@@ -96,18 +96,31 @@ const read = (req, res) => {
 };
 
 const complete = async (req, res) => {
-  let updatedData = {};
-  updatedData["lessonStatus.$.complete"] = req.body.complete;
-  updatedData.updated = Date.now();
-  if (req.body.courseCompleted)
-    updatedData.completed = req.body.courseCompleted;
-
   try {
-    let enrollment = await Enrollment.updateOne(
-      { "lessonStatus._id": req.body.lessonStatusId },
-      { $set: updatedData }
-    );
-    res.json(enrollment);
+    Enrollment.findOne({
+      where: { inscricao_id: req.params.enrollmentId },
+    })
+      .then((enrollment) => {
+        if (!enrollment) {
+          throw new Error("No record found");
+        }
+
+        //retrieve and update
+        let lessons = eval(enrollment.dataValues.aula_status);
+        let lessonToUpdate = lessons[req.body.lessonStatusId];
+        lessonToUpdate.complete = req.body.complete;
+        lessons[req.body.lessonStatusId] = lessonToUpdate;
+
+        //udpdate
+        return enrollment.update({
+          aula_status: JSON.stringify(lessons),
+          updated: Date.now(),
+        });
+      })
+      .then((enrollment) => {
+        console.log(enrollment);
+        res.json(enrollment);
+      });
   } catch (err) {
     return res.status(400).json({
       error: errorHandler.getErrorMessage(err),
