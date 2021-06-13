@@ -51,6 +51,15 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Enrollments(props) {
+  
+  const totalCompleted = (lessons) => {
+    let count = lessons.reduce((total, lessonStatus) => {
+      return total + (lessonStatus.complete ? 1 : 0);
+    }, 0);
+    let completed = (count === lessons.length && lessons.length >0) ? 1 : 0
+    return completed;
+  };
+
   const classes = useStyles();
   return (
     <div>
@@ -72,7 +81,7 @@ export default function Enrollments(props) {
               }
               actionIcon={
                 <div className={classes.action}>
-                  {course.completed ? (
+                  {totalCompleted(eval(course.aula_status)) ? (
                     <CompletedIcon color="secondary" />
                   ) : (
                     <InProgressIcon className={classes.progress} />

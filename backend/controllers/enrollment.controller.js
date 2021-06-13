@@ -118,7 +118,6 @@ const complete = async (req, res) => {
         });
       })
       .then((enrollment) => {
-        console.log(enrollment);
         res.json(enrollment);
       });
   } catch (err) {
