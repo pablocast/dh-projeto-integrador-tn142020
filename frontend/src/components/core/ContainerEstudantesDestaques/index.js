@@ -10,6 +10,7 @@ import gold from "../../../assets/img/goldl@1x.png";
 import silver from "../../../assets/img/silverl@1x.png";
 import bronce from "../../../assets/img/bronzel@1x.png";
 import { getTopN } from "../api-user";
+import estudante from "../../../assets/img/estudante.png";
 
 const Estudante = (props) => {
   const {
@@ -25,23 +26,20 @@ const Estudante = (props) => {
   return (
     <div className="Estudante">
       <div className="block-link block-link--bordered">
-        <a className="block-link__anchor" href={"/"+username}></a>
+        <a className="block-link__anchor" href={"/" + username}></a>
         <div className="leaderboards__item-wrapper">
           <div className="leaderboards__rank">{position}</div>
           <div className="leaderboards__tier">
             <img src={nivel} />
           </div>
           <div className="leaderboards__avatar">
-            <a href={"/"+username}>
-              <img
-                alt="thumnailUrl"
-                src="https://storage.googleapis.com/kaggle-avatars/thumbnails/37166-kg.png"
-              />
+            <a href={"/" + username}>
+              <img alt="thumnailUrl" src={estudante} />
             </a>
           </div>
           <div className="leaderboards__name">
             <p>
-              <a href={"/"+username}>{username}</a>
+              <a href={"/" + username}>{username}</a>
             </p>
             <p className="leaderboards__name-joined">{joined}</p>
           </div>
