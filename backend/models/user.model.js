@@ -73,5 +73,13 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
 
+  Usuario.associate = (models) => {
+    Usuario.hasMany(models.Enrollment, {
+      as: "Enrollments",
+      foreignKey: "student_id",
+      targetKey: "user_id"
+    });
+  };
+
   return Usuario;
 };

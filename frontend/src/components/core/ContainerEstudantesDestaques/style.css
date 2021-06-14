@@ -1,5 +1,5 @@
-.content-box {
-  background-color: aliceblue;
+/* .content-box {
+  background-color: white;
   border-radius: 4px;
   box-sizing: border-box;
   color: rgba(0, 0, 0, .7);
@@ -12,7 +12,7 @@
   min-height: 48px;
   position: relative;
   width: 100%;
-}
+} */
 
 .content-box__content-section {
   font-family: sans-serif;
@@ -25,14 +25,17 @@
   font-weight: 400;
   min-height: 40px;
   width: auto;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
-.smart-list__content{
+.smart-list__content {
   text-align: left;
 }
 
 .leaderboards__list-header {
-  border-bottom: 1px solid rgba(222,223,224,.5);
+  border-top: 1px solid rgba(222, 223, 224, .5);
+  border-bottom: 1px solid rgba(222, 223, 224, .5);
   margin: 8px 0 16px;
   padding: 16px 24px 24px;
   display: flex;
@@ -68,7 +71,6 @@
 
 .leaderboards__list-header-count {
   align-items: center;
-  /* flex: 0 0 15px 0px; */
   display: flex;
   justify-content: center;
   font-size: 14px;
@@ -83,11 +85,115 @@
 }
 
 .leaderboards__item-wrapper {
-  padding: 8px 24px 8px 16px;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-around;
+}
+
+.leaderboards__item-wrapper--header>div {
+  color: rgba(0, 0, 0, .4);
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.leaderboards__rank {
+  color: rgba(0, 0, 0, .4);
+  text-align: right;
+  font-weight: 400;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+  flex: 0 0 54px;
+  margin-right: 16px;
+}
+
+.leaderboards__tier {
+  flex: 0 0 50px;
+  text-align: center;
+  margin-right: 16px;
+}
+
+.leaderboards__avatar {
+  flex: 0 0 32px;
+  pointer-events: none;
+  margin-right: 16px;
+}
+
+.leaderboards__name {
+  flex: 1 1 auto;
+  line-height: 16px;
+  margin-right: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.leaderboards__user-label {
+  margin-left: -5px;
+  color: rgba(0, 0, 0, .4);
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.leaderboards__medals {
+  display: flex;
+  align-content: flex-start;
+  flex: 0 0 156px;
+  width: 156px;
+  max-width: 156px;
+  margin-left: auto;
+  margin-right: 32px;
+}
+
+.leaderboards__medals>div {
+  align-items: center;
+  align-content: space-between;
+  display: flex;
+  flex: 0 0 52px;
+  font-weight: 500;
+  margin-right: 5px;
+  max-width: 52px;
+  width: 52px;
+}
+
+.leaderboards__points {
+  color: rgba(0, 0, 0, .4);
+  flex: 0 0 60px;
+  width: 60px;
+  max-width: 60px;
+  font-variant-numeric: tabular-nums;
+  font-weight: 400;
+  text-align: right;
+  margin-right: 0;
+  margin-bottom: 20px;
+}
+
+.leaderboards__points>div {
+  color: rgba(0, 0, 0, .4);
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.block-link__anchor {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.leaderboards__name a {
+  color: black;
+}
+
+.leaderboards__name .leaderboards__name-joined {
+  color: rgba(0, 0, 0, .4);
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
 }
 
 .block-link--bordered {
@@ -96,8 +202,79 @@
   border-width: 1px 0;
   position: relative;
   padding: 8px 24px 8px 16px;
-  display: flex !important;
+  display: list-item;
   flex-flow: row nowrap !important;
   align-items: center;
   justify-content: space-around;
+}
+
+
+.leaderboards__tier img {
+  width: 20px;
+  height: auto;
+}
+
+.leaderboards__avatar {
+  flex: 0 0 32px;
+  pointer-events: none;
+  margin-right: 16px;
+}
+
+.leaderboards__name {
+  flex: 1 1 auto;
+  line-height: 16px;
+  margin-right: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.leaderboards__medals {
+  display: flex;
+  align-content: flex-start;
+  flex: 0 0 156px;
+  width: 156px;
+  max-width: 156px;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: 32px;
+}
+
+.leaderboards__points {
+  color: rgba(0, 0, 0, .4);
+  flex: 0 0 60px;
+  width: 60px;
+  max-width: 60px;
+  font-variant-numeric: tabular-nums;
+  font-weight: 400;
+  text-align: right;
+  margin-right: 0;
+}
+
+.leaderboards__medals>div {
+  align-items: center;
+  align-content: space-between;
+  display: flex;
+  flex: 0 0 52px;
+  font-weight: 500;
+  margin-right: 5px;
+  max-width: 52px;
+  width: 52px;
+}
+
+.leaderboards__medal--gold {
+  color: #b88121;
+}
+
+.leaderboards__medal--silver {
+  color: #838280;
+}
+
+.leaderboards__medal--bronze {
+  color: #8e5b3d;
+}
+
+.leaderboards__medals img {
+  width: 18px;
+  height: 18px;
 }

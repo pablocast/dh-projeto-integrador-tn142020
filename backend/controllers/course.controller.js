@@ -112,5 +112,5 @@ module.exports = {
   list,
   destroy,
   courseByID,
-  courseByIDs,
+  courseByIDs
 };

@@ -6,23 +6,24 @@ import mestre from "../../../assets/img/master@96.png"
 import especialista from "../../../assets/img/expert@96.png"
 import contributor from "../../../assets/img/contributor@96.png"
 import novato from "../../../assets/img/novice@96.png"
+import gold from "../../../assets/img/goldl@1x.png"
+import silver from "../../../assets/img/silverl@1x.png"
+import bronce from "../../../assets/img/bronzel@1x.png"
 
 const Estudante = (props) => {
-  const { position, username, joined, medalhas_ouro, medalhas_prata, medalhas_bronce, pontos } = props;
+  const { position, nivel, username, joined, medalhas_ouro, medalhas_prata, medalhas_bronce, pontos } = props;
   return (
-    <div className="button">
+    <div className="Estudante">
       <div className="block-link block-link--bordered">
         <a className="block-link__anchor" href="/philippsinger"></a>
         <div className="leaderboards__item-wrapper">
-          <div class="leaderboards__rank">{position}</div>
-          <div class="leaderboards__tier">
+          <div className="leaderboards__rank">{position}</div>
+          <div className="leaderboards__tier">
             <img
-              alt="grandmaster"
-              src="/static/images/tiers/grandmaster@96.png"
-              title="grandmaster"
+              src={nivel}
             />
           </div>
-          <div class="leaderboards__avatar">
+          <div className="leaderboards__avatar">
             <a href="/philippsinger" >
               <img
                 alt="thumnailUrl"
@@ -30,7 +31,7 @@ const Estudante = (props) => {
               />
             </a>
           </div>
-          <div class="leaderboards__name">
+          <div className="leaderboards__name">
             <p>
               <a
                 href="/philippsinger"
@@ -38,46 +39,46 @@ const Estudante = (props) => {
                 {username}
               </a>
             </p>
-            <p class="leaderboards__name-joined">
+            <p className="leaderboards__name-joined">
               {joined}
             </p>
           </div>
-          <div class="leaderboards__medals">
-            <div class="leaderboards__medal--gold">
-              <div class="leaderboards__medals-item">
+          <div className="leaderboards__medals">
+            <div className="leaderboards__medal--gold">
+              <div className="leaderboards__medals-item">
                 <img
                   alt="competitions"
-                  src="/static/images/medals/competitions/goldl@1x.png"
+                  src={gold}
                 />
               </div>
-              <div class="leaderboards__medals-item">
+              <div className="leaderboards__medals-item">
                 <span>{medalhas_ouro}</span>
               </div>
             </div>
-            <div class="leaderboards__medal--silver">
-              <div class="leaderboards__medals-item">
+            <div className="leaderboards__medal--silver">
+              <div className="leaderboards__medals-item">
                 <img
                   alt="competitions"
-                  src="/static/images/medals/competitions/silverl@1x.png"
+                  src={silver}
                 />
               </div>
-              <div class="leaderboards__medals-item">
+              <div className="leaderboards__medals-item">
                 <span>{medalhas_prata}</span>
               </div>
             </div>
-            <div class="leaderboards__medal--bronze">
-              <div class="leaderboards__medals-item">
+            <div className="leaderboards__medal--bronze">
+              <div className="leaderboards__medals-item">
                 <img
                   alt="competitions"
-                  src="/static/images/medals/competitions/bronzel@1x.png"
+                  src={bronce}
                 />
               </div>
-              <div class="leaderboards__medals-item">
+              <div className="leaderboards__medals-item">
                 <span>{medalhas_bronce}</span>
               </div>
             </div>
           </div>
-          <div class="leaderboards__points">{pontos}</div>
+          <div className="leaderboards__points">{pontos}</div>
         </div>
       </div>
     </div>
@@ -168,9 +169,32 @@ const EstudantesDestaques = () => {
                   </div>
                   <div className="leaderboards__points">Pontos</div>
                 </div>
-
+                <Estudante 
+                position={1}
+                username={'juan'}
+                nivel={grandmestre}
+                joined={'junto-se ha 1 ano'}
+                medalhas_ouro={20}
+                medalhas_prata={10} 
+                medalhas_bronce={0} 
+                pontos={200000}
+              />
+              <Estudante 
+                position={1}
+                username={'juan'}
+                nivel={grandmestre}
+                joined={'junto-se ha 1 ano'}
+                medalhas_ouro={20}
+                medalhas_prata={10} 
+                medalhas_bronce={0} 
+                pontos={200000}
+              />
               </div>
+
+
             </div>
+
+
           </div>
         </div>
       </Col>
