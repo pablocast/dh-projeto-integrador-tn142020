@@ -38,10 +38,10 @@ const MainRouter = () => {
         render={(props) =>
           sessionStorage.getItem("isAuthenticated") ? (
             <ProfileEstudante {...props} />
-          ):(
+          ) : (
             <Cadastro isStudent={true} />
           )
-         }
+        }
       />
       <Route path="/bemvindo" component={BemVindo} />
       <Route path="/contato" component={Contato} />

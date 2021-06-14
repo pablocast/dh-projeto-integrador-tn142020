@@ -16,26 +16,21 @@ import {
   CompanyIcon,
 } from "../../components/admin/Companies";
 import simpleRestProvider from "ra-data-simple-rest";
-import AdminLogin from "../AdminLogin"
-import { AppBar, Layout, UserMenu, MenuItemLink } from 'react-admin'
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-import { useHistory } from 'react-router-dom'
+import AdminLogin from "../AdminLogin";
+import { AppBar, Layout, UserMenu, MenuItemLink } from "react-admin";
+import ExitToAppIcon from "@material-ui/icons/ExitToApp";
+import { useHistory } from "react-router-dom";
 
 const MyUserMenu = (props) => {
   return (
-    <UserMenu >
-      <MenuItemLink
-        to={"/"}
-        primaryText="Sair"
-        leftIcon={<ExitToAppIcon />}
-      />
+    <UserMenu>
+      <MenuItemLink to={"/"} primaryText="Sair" leftIcon={<ExitToAppIcon />} />
     </UserMenu>
-  )
-}
+  );
+};
 
-const MyAppBar = props => <AppBar {...props} userMenu={<MyUserMenu />} />;
-const MyLayout = props => <Layout {...props} appBar={MyAppBar} />;
-
+const MyAppBar = (props) => <AppBar {...props} userMenu={<MyUserMenu />} />;
+const MyLayout = (props) => <Layout {...props} appBar={MyAppBar} />;
 
 const Dashboard = () => {
   return (
@@ -52,7 +47,12 @@ const dataProvider = simpleRestProvider("http://localhost:3000/api");
 
 const AdminDash = () => {
   return (
-    <Admin dashboard={Dashboard} dataProvider={dataProvider} logoutButton={AdminLogin} layout={MyLayout} >
+    <Admin
+      dashboard={Dashboard}
+      dataProvider={dataProvider}
+      logoutButton={AdminLogin}
+      layout={MyLayout}
+    >
       <Resource
         name="users"
         list={ListGuesser}
