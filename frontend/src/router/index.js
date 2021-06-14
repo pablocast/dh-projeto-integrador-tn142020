@@ -33,7 +33,16 @@ const MainRouter = () => {
       <Route path="/criar-perfil-empresa" component={Empresas} />
       <Route path="/criar-perfil-estudante" component={NovoEstudante} />
       <Route path="/estudantes-destaques" component={EstudantesDestaques} />
-      <Route path="/profile-estudante" component={ProfileEstudante} />
+      <Route
+        path="/profile-estudante"
+        render={(props) =>
+          sessionStorage.getItem("isAuthenticated") ? (
+            <ProfileEstudante {...props} />
+          ):(
+            <Cadastro isStudent={true} />
+          )
+         }
+      />
       <Route path="/bemvindo" component={BemVindo} />
       <Route path="/contato" component={Contato} />
       <Route exact path="/admin" component={AdminLogin} />

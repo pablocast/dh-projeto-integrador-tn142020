@@ -211,7 +211,7 @@ export default function Enrollment({ match }) {
   return (
     <>
       <AppBar position="fixed" style={{ zIndex: 12343455 }}>
-        <Header className="HeaderEnroll" />
+        <Header location={{pathname:''}} className="HeaderEnroll" />
       </AppBar>
       <div className={classes.root}>
         <Drawer

@@ -13,18 +13,22 @@ const isActive = (history, path) => {
 };
 
 const HeaderPagesCursos = (props) => {
-  const { username } = props;
+  const username  = props.username;
+  const { pathname } = props.location;
   let history = useHistory();
-
+  
   return (
     <header className="Header-enroll">
       <div className="menu">
         <Link to="/" className="menu-logo">
           <img src={imageLogo} alt="BrainXpert logo" />
         </Link>
-        <IconButton aria-label="Home" style={isActive(history, "/")}>
-          <HomeIcon onClick={history.goBack} />
-        </IconButton>
+        {
+          pathname !== '/profile-estudante' && (
+            <IconButton aria-label="Home" style={isActive(history, "/")}>
+              <HomeIcon onClick={history.goBack} />
+            </IconButton>)
+        }
 
         {/* <button class="nav-toggle" aria-label="toggle navegation">
               <span class="hamburguer"></span>

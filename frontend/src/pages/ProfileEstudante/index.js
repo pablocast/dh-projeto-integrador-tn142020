@@ -105,7 +105,7 @@ const ProfileCursos = (props) => {
 
   return (
     <>
-      <Header username={username} />
+      <Header {...props} username={username} />
       <Card className={`${classes.card} ${classes.enrolledCard}`}>
         <Typography
           variant="h6"
@@ -115,7 +115,7 @@ const ProfileCursos = (props) => {
           Cursos em que você está inscrito
         </Typography>
         {enrolled.length !== 0 ? (
-          <Enrollments enrollments={enrolled} />
+          <Enrollments {...props} enrollments={enrolled} />
         ) : (
           <Typography variant="body1" className={classes.noTitle}>
             Nenhum curso

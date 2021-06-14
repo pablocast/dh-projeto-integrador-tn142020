@@ -54,7 +54,6 @@ const AdminFormCadastro = (props) => {
   };
   const { redirectToReferrer } = values;
   if (redirectToReferrer) {
-    console.log(values);
     return <Redirect to={from} />;
   }
 
