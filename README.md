@@ -1,5 +1,5 @@
 # BrainExpert
-<img src="https://img.shields.io/github/repo-size/rafaasimi/frontend-digitalhouse"> <img src="https://img.shields.io/github/license/rafaasimi/frontend-digitalhouse"> <img src="https://img.shields.io/github/last-commit/rafaasimi/frontend-digitalhouse">
+<img src="https://img.shields.io/github/repo-size/pablocast/dh-projeto-integrador-tn142020"> <img src="https://img.shields.io/github/license/rafaasimi/frontend-digitalhouse"> <img src="https://img.shields.io/github/last-commit/rafaasimi/frontend-digitalhouse">
 
 ## 🔖 Descrição
 Plataforma de ED Tech fictícia destinada à formação desenvolvedores e à recrutamento deles por parte das empresas
