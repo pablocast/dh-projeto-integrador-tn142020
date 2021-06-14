@@ -31,4 +31,4 @@ Projeto Integrador Grupo 4
 
 
 ### 🖼 Layout
-![Layout BrainXpert](https://raw.githubusercontent.com/rafaasimi/frontend-digitalhouse/master/img/naturalfoods.png)
+![Layout BrainXpert](https://github.com/pablocast/dh-projeto-integrador-tn142020/tree/main/frontend/src/assets/img/Web_14-6-2021_161043_localhost.jpeg)
