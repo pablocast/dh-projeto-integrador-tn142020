@@ -25,14 +25,14 @@ const Estudante = (props) => {
   return (
     <div className="Estudante">
       <div className="block-link block-link--bordered">
-        <a className="block-link__anchor" href="/philippsinger"></a>
+        <a className="block-link__anchor" href={"/"+username}></a>
         <div className="leaderboards__item-wrapper">
           <div className="leaderboards__rank">{position}</div>
           <div className="leaderboards__tier">
             <img src={nivel} />
           </div>
           <div className="leaderboards__avatar">
-            <a href="/philippsinger">
+            <a href={"/"+username}>
               <img
                 alt="thumnailUrl"
                 src="https://storage.googleapis.com/kaggle-avatars/thumbnails/37166-kg.png"
@@ -41,7 +41,7 @@ const Estudante = (props) => {
           </div>
           <div className="leaderboards__name">
             <p>
-              <a href="/philippsinger">{username}</a>
+              <a href={"/"+username}>{username}</a>
             </p>
             <p className="leaderboards__name-joined">{joined}</p>
           </div>
