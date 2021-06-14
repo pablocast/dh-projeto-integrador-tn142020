@@ -77,7 +77,7 @@ module.exports = (sequelize, DataTypes) => {
     Usuario.hasMany(models.Enrollment, {
       as: "Enrollments",
       foreignKey: "student_id",
-      targetKey: "user_id"
+      targetKey: "user_id",
     });
   };
 

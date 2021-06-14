@@ -68,7 +68,7 @@ const list = async (req, res) => {
 };
 
 const listTopN = async (req, res) => {
-  const topn = req.params.topn
+  const topn = Number(req.params.topn);
   try {
     let users = await Usuario.findAll({
       attributes: [
@@ -88,7 +88,8 @@ const listTopN = async (req, res) => {
           model: Enrollment,
           as: "Enrollments",
         },
-      ]
+      ],
+      limit: topn,
     });
     res.json(users);
   } catch (err) {
@@ -98,11 +99,8 @@ const listTopN = async (req, res) => {
   }
 };
 
-
-
-
 module.exports = {
   create,
   list,
-  listTopN
+  listTopN,
 };

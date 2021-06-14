@@ -15,9 +15,9 @@ const create = async (user) => {
   }
 };
 
-const getTop10 = async (topn,signal) => {
+const getTopN = async (topn, signal) => {
   try {
-    let response = await fetch("/api/users/"+topn, {
+    let response = await fetch("/api/users/" + topn, {
       method: "GET",
       signal: signal,
       headers: {
@@ -29,6 +29,6 @@ const getTop10 = async (topn,signal) => {
   } catch (err) {
     console.log(err);
   }
-}
+};
 
-export { create, getTop10 };
+export { create, getTopN };
