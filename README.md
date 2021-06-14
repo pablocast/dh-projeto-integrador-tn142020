@@ -1,6 +1,3 @@
-# dh-projeto-integrador-tn142020
-Projeto Integrador Grupo 4
-
 # BrainExpert
 <img src="https://img.shields.io/github/repo-size/rafaasimi/frontend-digitalhouse"> <img src="https://img.shields.io/github/license/rafaasimi/frontend-digitalhouse"> <img src="https://img.shields.io/github/last-commit/rafaasimi/frontend-digitalhouse">
 
