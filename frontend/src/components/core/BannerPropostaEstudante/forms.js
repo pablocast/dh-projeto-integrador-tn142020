@@ -18,6 +18,7 @@ import b2w from "../../../assets/img/b2w.png";
 import microsoft from "../../../assets/img/microsoft.png";
 import spotify from "../../../assets/img/spotify.png";
 import uber from "../../../assets/img/uber.png";
+import { Alert } from "react-bootstrap";
 
 const empresas = [
   olx,
@@ -273,7 +274,7 @@ const Form_3 = ({ ...props }) => {
 };
 
 const Form_4 = ({ ...props }) => {
-  const { callBack, lastForm, onClick } = props;
+  const { callBack, lastForm, onClick, open } = props;
   return (
     <div>
       <div className="input-icon">
@@ -327,6 +328,11 @@ const Form_4 = ({ ...props }) => {
         className="mybutton"
         onClick={onClick}
       />
+      {open && (
+        <Alert variant="success" className="Alert">
+          <Alert.Heading>Usuario criado com sucesso</Alert.Heading>
+        </Alert>
+      )}
       <div className="next-container">
         <span id="back" className="back" onClick={lastForm()}>
           <i className="material-icons back-icon">arrow_back</i>

@@ -187,3 +187,14 @@ margin-top: 36px;
     margin: 4px 2px;
 }
 
+.Alert {
+    width: 90%;
+    height: 50px;
+    border: none;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 4px 2px;
+}

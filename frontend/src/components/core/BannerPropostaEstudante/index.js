@@ -139,6 +139,7 @@ const BannerPropostaEstudante = () => {
                   nextForm={triggerNextFormState}
                   lastForm={triggerBackFormState}
                   onClick={clickSubmit}
+                  open={values.open}
                 />
               )}
             </div>

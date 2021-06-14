@@ -25,7 +25,7 @@ const HeaderPagesCursos = (props) => {
         </Link>
         {pathname !== "/profile-estudante" && (
           <IconButton aria-label="Home" style={isActive(history, "/")}>
-            <HomeIcon onClick={history.goBack} />
+            <HomeIcon onClick={() => history.go(-1)} />
           </IconButton>
         )}
 
